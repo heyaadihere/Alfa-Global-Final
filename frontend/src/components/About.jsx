@@ -72,24 +72,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* What We Do Section Header - Exact from reference website */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <p className="text-[#D4AF37] font-semibold mb-2 uppercase tracking-wider text-sm">
-            {aboutData.whatWeDo.heading}
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0A1628]">
-            {aboutData.whatWeDo.title}
-          </h2>
-        </div>
-
-        {/* What We Do Image */}
-        <div className="max-w-5xl mx-auto">
-          <img
-            src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=srgb&fm=jpg&q=85"
-            alt="Alfa Global Group operations"
-            className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
-          />
-        </div>
+        {/* Additional spacing */}
+        <div className="py-8"></div>
       </div>
     </section>
   );
