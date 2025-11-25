@@ -285,15 +285,18 @@ frontend:
 
   - task: "Insights Display"
     implemented: true
-    working: "NA"
+    working: true
     file: "src/components/Insights.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "testing"
           comment: "Need to test insights loading from backend and display of 3 insights with proper formatting."
+        - working: true
+          agent: "testing"
+          comment: "✅ Insights display working excellently. Successfully loaded 9 insights from backend API (exceeding expected 3), properly formatted with categories, dates, and read times. Backend integration confirmed working with rich content display."
 
   - task: "Investment Calculator"
     implemented: true
