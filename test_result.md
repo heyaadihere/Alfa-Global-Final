@@ -300,15 +300,18 @@ frontend:
 
   - task: "Investment Calculator"
     implemented: true
-    working: "NA"
+    working: true
     file: "src/components/InvestmentCalculator.jsx"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "testing"
           comment: "Need to test investment calculator functionality with input values and calculation results."
+        - working: true
+          agent: "testing"
+          comment: "✅ Investment calculator working perfectly. Successfully entered $150,000 investment amount, clicked Calculate Returns button, and received detailed results showing Future Value, Total Returns, and Percentage Gain (115.89%). All calculations displaying correctly."
 
   - task: "FAQ Accordion"
     implemented: true
