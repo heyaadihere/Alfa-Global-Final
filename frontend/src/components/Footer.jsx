@@ -82,14 +82,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-4 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#D4AF37] to-[#F4C430] rounded-lg flex items-center justify-center">
-                <span className="text-[#0A1628] font-bold text-xl">A</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-xl tracking-tight">ALFA GLOBAL</span>
-                <span className="text-[#D4AF37] text-xs tracking-wider">GROUP</span>
-              </div>
+            <Link to="/" className="inline-block mb-4 group">
+              <img 
+                src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
+                alt="Alfa Global Group Logo"
+                className="h-16 w-auto transform group-hover:scale-110 transition-transform duration-300"
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Creating enduring value across industries and generations through strategic investments and visionary thinking.
