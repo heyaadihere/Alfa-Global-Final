@@ -16,10 +16,10 @@ const Values = () => {
         {/* Section Header - Exact from reference website */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-[#D4AF37] font-semibold mb-2 uppercase tracking-wider text-sm">
-            {aboutData.howWeDeliver.heading}
+            How We Deliver Value
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#0A1628]">
-            {aboutData.howWeDeliver.title}
+            We Achieve This By
           </h2>
         </div>
 
