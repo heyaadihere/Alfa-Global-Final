@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the Alfa Global Group backend API with comprehensive endpoint testing including contact form, newsletter subscription, testimonials, and insights retrieval."
+user_problem_statement: "Perform comprehensive frontend testing for the Alfa Global Group website including navigation, contact form, newsletter subscription, testimonials carousel, insights display, investment calculator, FAQ accordion, and responsive design testing."
 
 backend:
   - task: "Root API Endpoint"
