@@ -336,7 +336,13 @@ metadata:
 
 test_plan:
   current_focus:
-    - "All backend endpoints tested and working"
+    - "Homepage Navigation & Loading"
+    - "Navigation Menu Testing"
+    - "Contact Form Submission"
+    - "Newsletter Subscription"
+    - "Testimonials Carousel"
+    - "Insights Display"
+    - "Responsive Design"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
