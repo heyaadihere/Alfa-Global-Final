@@ -167,9 +167,23 @@ const Footer = () => {
       <div className="border-t border-[#D4AF37]/20">
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Alfa Global Group. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Alfa Global Group. All rights reserved.
+              </p>
+              <span className="text-gray-600 hidden md:inline">|</span>
+              <p className="text-gray-400 text-sm">
+                Website Powered by{' '}
+                <a
+                  href="https://techbook.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#D4AF37] hover:text-[#F4C430] transition-colors font-medium"
+                >
+                  Techbook Technologies
+                </a>
+              </p>
+            </div>
             <div className="flex items-center space-x-6">
               <a
                 href="#"
