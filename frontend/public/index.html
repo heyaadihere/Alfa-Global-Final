@@ -19,6 +19,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
         <title>Alfa Global Group | Premium Wealth Management</title>
+        <style>
+            /* Hide Emergent badge if dynamically injected */
+            #emergent-badge,
+            a[href*="emergent.sh"],
+            a[href*="emergent-badge"],
+            [id*="emergent"],
+            [class*="emergent-badge"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+        </style>
         <!--
         These two scripts have been added for the testing, please do not edit or remove them
         -->
