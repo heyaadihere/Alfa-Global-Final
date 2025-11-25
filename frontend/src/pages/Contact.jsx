@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - Exact content from reference website */}
       <section className="bg-gradient-to-br from-[#0A1628] via-[#142444] to-[#0A1628] py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
@@ -65,11 +65,11 @@ const Contact = () => {
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get in <span className="text-[#D4AF37]">Touch</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {contactData.heading}
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Reach out to us today to schedule a consultation with one of our experienced wealth managers.
+              {contactData.subheading}
             </p>
           </div>
         </div>
@@ -127,8 +127,8 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="border-2 border-[#D4AF37]/20 shadow-2xl">
                 <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold text-[#0A1628] mb-2">Let's Talk About Your Next Project</h2>
-                  <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                  <h2 className="text-3xl font-bold text-[#0A1628] mb-2">{contactData.title}</h2>
+                  <p className="text-gray-600 mb-8">{contactData.description}</p>
                   
                   {submitSuccess && (
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
