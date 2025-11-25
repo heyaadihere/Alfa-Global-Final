@@ -45,15 +45,15 @@ const Hero = () => {
             {heroData.title}
           </h1>
 
-          {/* Logo placeholder - matching reference website */}
+          {/* Logo - matching reference website */}
           <div className={`mb-8 transition-all duration-1000 delay-300 transform ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}>
-            <div className="inline-block w-24 h-24 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-              <div className="w-full h-full bg-gradient-to-br from-[#D4AF37] to-[#F4C430] rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-4xl">A</span>
-              </div>
-            </div>
+            <img 
+              src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
+              alt="Alfa Global Group Logo"
+              className="h-32 w-auto mx-auto"
+            />
           </div>
 
           {/* Subtitle - Exact from reference website */}

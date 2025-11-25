@@ -29,13 +29,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#D4AF37] to-[#F4C430] rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <span className="text-[#0A1628] font-bold text-xl">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-xl tracking-tight">ALFA GLOBAL</span>
-              <span className="text-[#D4AF37] text-xs tracking-wider">GROUP</span>
-            </div>
+            <img 
+              src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
+              alt="Alfa Global Group Logo"
+              className="h-12 w-auto transform group-hover:scale-110 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation - Only Home and Contact from reference website */}
