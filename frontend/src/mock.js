@@ -1,4 +1,4 @@
-// Mock data for Alfa Global Group website - Complete content from reference website
+// Mock data for Alfa Global Group website - Complete navigation structure
 
 export const heroData = {
   title: "Beyond Capital. Building Futures.",
@@ -9,10 +9,10 @@ export const heroData = {
 };
 
 export const statisticsData = [
-  { label: "Years of Experience", value: "20+", prefix: "", suffix: "" },
-  { label: "Managed Assets", value: "500", prefix: "$", suffix: "M+" },
-  { label: "Certified Experts", value: "20", prefix: "", suffix: "" },
-  { label: "Client Satisfaction Rate", value: "99", prefix: "", suffix: "%" }
+  { label: "Global Clients", value: "700+", prefix: "", suffix: "" },
+  { label: "Years of Leadership", value: "25+", prefix: "", suffix: "" },
+  { label: "Repeat Engagement", value: "85", prefix: "", suffix: "%" },
+  { label: "Countries Presence", value: "10+", prefix: "", suffix: "" }
 ];
 
 export const servicesData = [
@@ -75,24 +75,70 @@ export const valuesData = [
 
 export const aboutData = {
   groupOverview: {
-    heading: "Group Overview",
+    heading: "About Us",
     title: "Who We Are",
-    description: "Alfa Global Group is a diversified global organization driven by vision, innovation, and impact. We invest in ideas, businesses, and projects that shape industries, empower legacies, and create sustainable value across generations. Our strength lies in combining capital markets expertise with entrepreneurial execution to build opportunities that go beyond conventional boundaries."
+    description: "Alfa Global Group is a global investment and ventures platform built on a vision of global transformation, innovation, and lasting impact. We invest in transformative ideas, strategic ventures, and high impact projects that shape industries and create sustainable value across generations. From pioneering funds and strategic holdings to projects in finance, infrastructure, shipping, manufacturing, and technology, our work reflects a commitment to building legacies that go beyond capital."
   },
   purpose: {
     heading: "Our Purpose",
     title: "Why We Exist",
-    description: "We believe wealth is not just financial capital, it is the ability to create, transform, and leave behind something meaningful. Alfa Global Group exists to channel resources, knowledge, and strategy into ventures that redefine growth, spark innovation, and contribute to a better future for our clients, partners, and communities."
+    description: "We believe success lies in more than financial outcomes, it is measured in the ability to spark innovation, empower communities, and leave behind a lasting legacy. By combining global intelligence with disciplined execution, Alfa Global Group continues to transform bold ideas into ventures that define the future of capital, business, and society."
   },
-  whatWeDo: {
-    heading: "What We Do",
-    title: "Alfa Global Group operates across a wide spectrum of verticals:"
-  },
-  howWeDeliver: {
-    heading: "How We Deliver Value",
-    title: "We Achieve This By"
-  }
+  vision: "To be a global catalyst for transformation, shaping industries, empowering legacies, and creating sustainable value that transcends generations.",
+  mission: "Our mission is to invest in transformative ideas, strategic ventures, and high impact projects that drive innovation and growth across industries. By combining global intelligence, disciplined execution, and integrity, Alfa Global Group empowers clients, partners, and communities to build opportunities, legacies, and futures that last."
 };
+
+export const subsidiaries = [
+  {
+    id: 1,
+    name: "Alfa Global Wealth Advisors",
+    shortName: "AGWA",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png",
+    description: "Your trusted partner in comprehensive wealth management and financial advisory. We specialize in portfolio management, investment planning, and financial solutions for HNIs and institutions seeking long-term security and growth.",
+    url: "/companies/alfa-global-wealth-advisors",
+    website: "https://alfaglobalwealth.com/"
+  },
+  {
+    id: 2,
+    name: "Alfa Star Dynamics",
+    shortName: "ASD",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-star-logo-removebg-preview.png",
+    description: "Focused on strategic capital and private equity, Alfa Star Dynamics drives investments across global maritime and industrial sectors, offering tailor made opportunities for high value investors and institutions.",
+    url: "/companies/alfa-star-dynamics"
+  },
+  {
+    id: 3,
+    name: "Alfa Zillion Traders",
+    shortName: "AZT",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-zillion-logo-removebg-preview.png",
+    description: "A cutting-edge fintech firm delivering AI powered trading solutions and alpha-engineering for exclusive partners. Our proprietary models and platforms redefine how trading and investments are executed.",
+    url: "/companies/alfa-zillion-traders"
+  },
+  {
+    id: 4,
+    name: "Gazillion Capital",
+    shortName: "GC",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/gazillon-logo-removebg-preview.png",
+    description: "Innovating the future of wealth through distribution, broking, and investor education. Gazillion Capital is committed to creating access to next gen financial products that empower investors to make informed decisions.",
+    url: "/companies/gazillion-capital"
+  },
+  {
+    id: 5,
+    name: "MK Dairy Farms",
+    shortName: "MKDF",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/mk-dailry-farms-logo.png",
+    description: "A pioneer in agriculture and natural resources distribution. With a focus on innovation and sustainability, MK Dairy Farms connects quality produce with markets while supporting rural economies.",
+    url: "/companies/mk-dairy-farms"
+  },
+  {
+    id: 6,
+    name: "Cyberhakz",
+    shortName: "CH",
+    logo: "https://websitesbytechpioneers.com/alfaglobalnew/image/cyberhakz-logo-removebg-preview.png",
+    description: "Delivering enterprise grade cyber security solutions to safeguard businesses against evolving digital threats. From infrastructure security to compliance, Cyberhakz ensures organizations remain secure in a connected world.",
+    url: "/companies/cyberhakz"
+  }
+];
 
 export const testimonialsData = [
   {
@@ -118,64 +164,6 @@ export const testimonialsData = [
   }
 ];
 
-export const teamData = [
-  {
-    id: 1,
-    name: "James Anderson",
-    position: "Chief Executive Officer",
-    description: "25+ years in global investment banking and wealth management.",
-    linkedin: "#"
-  },
-  {
-    id: 2,
-    name: "Emma Thompson",
-    position: "Chief Investment Officer",
-    description: "Former hedge fund manager with expertise in alternative investments.",
-    linkedin: "#"
-  },
-  {
-    id: 3,
-    name: "Robert Martinez",
-    position: "Head of Strategic Ventures",
-    description: "Serial entrepreneur with successful exits in fintech and infrastructure.",
-    linkedin: "#"
-  },
-  {
-    id: 4,
-    name: "Lisa Zhang",
-    position: "Global Partnerships Director",
-    description: "International business strategist specializing in cross-border transactions.",
-    linkedin: "#"
-  }
-];
-
-export const insightsData = [
-  {
-    id: 1,
-    title: "Market Outlook for 2024",
-    excerpt: "Seasoned advisors provide insights into emerging market trends and investment opportunities.",
-    date: "March 15, 2024",
-    category: "Market Analysis",
-    readTime: "5 min read"
-  },
-  {
-    id: 2,
-    title: "Strategies for Wealth Preservation",
-    excerpt: "Protecting assets for future generations through diversified investment strategies.",
-    date: "February 20, 2024",
-    category: "Wealth Management",
-    readTime: "7 min read"
-  },
-  {
-    id: 3,
-    title: "Alternative Investments in 2024",
-    excerpt: "Exploring opportunities beyond traditional markets for sophisticated investors.",
-    date: "January 10, 2024",
-    category: "Investment Strategy",
-    readTime: "6 min read"
-  }
-];
-
 export const contactData = {
   heading: "Contact Us",
   subheading: "Reach out to us",
@@ -192,55 +180,105 @@ export const contactData = {
 export const navigationLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Solutions", path: "/solutions" },
-  { label: "Insights", path: "/insights" },
-  { label: "Contact", path: "/contact" }
+  { label: "Services", path: "/services" },
+  { label: "Strategy", path: "/strategy" },
+  { label: "Global Access", path: "/global-access" },
+  { 
+    label: "Our Companies", 
+    path: "/companies",
+    dropdown: subsidiaries
+  },
+  { label: "Business News", path: "/business-news" },
+  { label: "Contact", path: "/contact" },
+  { label: "FAQ", path: "/faq" }
 ];
 
 export const footerLinks = {
   solutions: [
-    { label: "Alternative Investments & Funds", path: "/solutions#alternative" },
-    { label: "Strategic Ventures & Holdings", path: "/solutions#ventures" },
-    { label: "High-Impact Projects", path: "/solutions#projects" },
-    { label: "Global Partnerships & Advisory", path: "/solutions#partnerships" }
+    { label: "Alternative Investments & Funds", path: "/services#alternative" },
+    { label: "Strategic Ventures & Holdings", path: "/services#ventures" },
+    { label: "High-Impact Projects", path: "/services#projects" },
+    { label: "Global Partnerships & Advisory", path: "/services#partnerships" }
   ],
   company: [
     { label: "About Us", path: "/about" },
-    { label: "Our Team", path: "/about#team" },
+    { label: "Our Companies", path: "/companies" },
+    { label: "Strategy", path: "/strategy" },
     { label: "Contact", path: "/contact" }
   ],
   resources: [
-    { label: "Insights", path: "/insights" },
-    { label: "Market Updates", path: "/insights" },
-    { label: "Investment Calculator", path: "/#calculator" }
+    { label: "Business News", path: "/business-news" },
+    { label: "FAQ", path: "/faq" },
+    { label: "Global Access", path: "/global-access" }
   ]
 };
 
 export const faqData = [
   {
     id: 1,
-    question: "What types of clients do you work with?",
-    answer: "We work with a wide range of clients, from individuals and families building their financial foundation to business owners and high-net-worth individuals seeking advanced strategies."
+    category: "General Questions",
+    question: "What is Alfa Global Group of Companies?",
+    answer: "Alfa Global Group of Companies is a diversified conglomerate with business interests in wealth management, private equity, fintech trading, financial product distribution, agriculture, and cyber security. We combine innovation, global reach, and client centric solutions to deliver growth and sustainability."
   },
   {
     id: 2,
-    question: "How do I get started with Alfa Global?",
-    answer: "Simply schedule a free consultation using our contact form. One of our advisors will reach out to learn more about your goals and walk you through the next steps."
+    category: "General Questions",
+    question: "Where does Alfa Global operate?",
+    answer: "We have a presence across India, Asia, Europe, the Middle East, and North America, providing global access to investments, trading platforms, and business solutions."
   },
   {
     id: 3,
-    question: "Are your financial plans personalized?",
-    answer: "Yes, every plan we create is tailored to your unique financial situation, goals, risk tolerance, and timeline. We believe custom strategies yield the best results."
+    category: "General Questions",
+    question: "Who are your clients?",
+    answer: "Our clients include high net worth individuals (HNIs), institutions, corporates, and enterprises seeking financial growth, security, and international opportunities."
   },
   {
     id: 4,
-    question: "What makes Alfa Global different from other firms?",
-    answer: "We combine deep financial expertise with a client-first approach, offering transparent advice, ongoing support, and results-driven strategies built for long-term success."
+    category: "Wealth Management & Financial Services",
+    question: "What services does Alfa Global Wealth Advisors provide?",
+    answer: "We offer comprehensive wealth management and advisory services including portfolio management, financial planning, investment strategies, and tax efficient solutions for HNIs and institutions."
   },
   {
     id: 5,
-    question: "Do you offer tax planning and retirement advice?",
-    answer: "Absolutely. We offer comprehensive tax optimization and retirement planning services as part of our holistic wealth management approach."
+    category: "Wealth Management & Financial Services",
+    question: "How does Gazillion Capital support investors?",
+    answer: "Gazillion Capital specializes in financial product distribution, stock broking, and investor education, helping individuals and organizations access next gen financial products and markets."
+  },
+  {
+    id: 6,
+    category: "Private Equity & Trading",
+    question: "What does Alfa Star Dynamics focus on?",
+    answer: "Alfa Star Dynamics manages strategic capital and private equity investments, with a focus on global maritime, infrastructure, and industrial sectors."
+  },
+  {
+    id: 7,
+    category: "Private Equity & Trading",
+    question: "How does Alfa Zillion Traders help partners?",
+    answer: "We provide fintech driven trading platforms, AI powered strategies, and alpha engineering for select high value partners, giving them access to global trading opportunities."
+  },
+  {
+    id: 8,
+    category: "Agriculture & Resources",
+    question: "What role does MK Dairy Farms play in the group?",
+    answer: "MK Dairy Farms brings innovation in agriculture and natural resources distribution. It focuses on sustainable farming, dairy solutions, and supply chain efficiency."
+  },
+  {
+    id: 9,
+    category: "Cyber Security",
+    question: "What solutions does Cyberhakz provide?",
+    answer: "Cyberhakz delivers enterprise grade cyber security services, including network protection, compliance (GDPR, ISO, HIPAA), and advanced threat detection for multinational clients."
+  },
+  {
+    id: 10,
+    category: "Partnerships & Onboarding",
+    question: "How can I partner with Alfa Global Group of Companies?",
+    answer: "You can reach out via our contact form or official email to discuss partnership opportunities. Our team will guide you through the onboarding process tailored to your requirements."
+  },
+  {
+    id: 11,
+    category: "Partnerships & Onboarding",
+    question: "How do I start using your services?",
+    answer: "Simply share your company details and requirements, and our team will provide a tailored proposal, pricing, and next steps to get started."
   }
 ];
 

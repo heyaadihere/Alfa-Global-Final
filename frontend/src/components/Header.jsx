@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Menu, X, LogIn } from 'lucide-react';
+import { Menu, X, LogIn, ChevronDown } from 'lucide-react';
 import { navigationLinks } from '../mock';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -36,25 +37,55 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Only Home and Contact from reference website */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-6">
             {navigationLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors duration-300 relative group ${
-                  location.pathname === link.path
-                    ? 'text-[#D4AF37]'
-                    : 'text-white hover:text-[#D4AF37]'
-                }`}
-              >
-                {link.label}
-                <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-[#D4AF37] transition-all duration-300 ${
-                    location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
-                />
-              </Link>
+              <div key={link.path} className="relative group">
+                {link.dropdown ? (
+                  <>
+                    <button
+                      className={`text-sm font-medium transition-colors duration-300 flex items-center space-x-1 ${
+                        location.pathname.startsWith(link.path)
+                          ? 'text-[#D4AF37]'
+                          : 'text-white hover:text-[#D4AF37]'
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                      <div className="py-2">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.id}
+                            to={item.url}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-medium transition-colors duration-300 relative group ${
+                      location.pathname === link.path
+                        ? 'text-[#D4AF37]'
+                        : 'text-white hover:text-[#D4AF37]'
+                    }`}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-[#D4AF37] transition-all duration-300 ${
+                        location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -85,18 +116,45 @@ const Header = () => {
         <div className="lg:hidden bg-[#0A1628] border-t border-[#D4AF37]/20">
           <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {navigationLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-base font-medium transition-colors py-2 ${
-                  location.pathname === link.path
-                    ? 'text-[#D4AF37]'
-                    : 'text-white hover:text-[#D4AF37]'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              <div key={link.path}>
+                {link.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => setActiveDropdown(activeDropdown === link.path ? null : link.path)}
+                      className="text-base font-medium text-white hover:text-[#D4AF37] py-2 flex items-center justify-between w-full"
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.path ? 'rotate-180' : ''}`} />
+                    </button>
+                    {activeDropdown === link.path && (
+                      <div className="pl-4 mt-2 space-y-2">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.id}
+                            to={item.url}
+                            className="block text-sm text-gray-400 hover:text-[#D4AF37] py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`text-base font-medium transition-colors py-2 block ${
+                      location.pathname === link.path
+                        ? 'text-[#D4AF37]'
+                        : 'text-white hover:text-[#D4AF37]'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
             <div className="pt-4 border-t border-[#D4AF37]/20">
               <Button
