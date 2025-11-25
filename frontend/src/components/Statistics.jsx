@@ -53,27 +53,29 @@ const Statistics = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-[#0A1628] to-[#142444] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#D4AF37] rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F4C430] rounded-full blur-3xl" />
-      </div>
-
+    <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0A1628] mb-4">
+            Your Partner in <span className="text-[#D4AF37]">Financial Success</span>
+          </h2>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {statisticsData.map((stat, index) => (
             <div
               key={index}
-              className={`text-center p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 transform hover:scale-105 ${
+              className={`text-center p-8 transition-all duration-500 transform hover:scale-105 ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl font-bold bg-gradient-to-r from-[#D4AF37] to-[#F4C430] bg-clip-text text-transparent mb-3">
+              <div className="text-5xl lg:text-6xl font-bold text-[#D4AF37] mb-2">
                 {stat.prefix}{counts[index]}{stat.suffix}
               </div>
-              <div className="text-gray-300 text-sm font-medium uppercase tracking-wider">
+              <div className="text-[#0A1628] text-sm font-medium uppercase tracking-wider">
                 {stat.label}
               </div>
             </div>

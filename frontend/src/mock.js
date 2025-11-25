@@ -1,43 +1,43 @@
 // Mock data for Alfa Global Group website
 
 export const heroData = {
-  title: "Beyond Capital. Building Futures.",
-  subtitle: "Alfa Global Group is a diversified global organization committed to creating enduring value across industries and generations.",
+  title: "Smart Wealth. Secure Future.",
+  subtitle: "Trusted financial strategies to help you grow, protect, and optimize your wealth across industries and generations.",
   description: "We invest in transformative ideas, strategic ventures, and high impact projects that shape the future of capital, business, and society.",
-  ctaText: "Explore Our World",
+  ctaText: "Schedule a Free Consultation",
   ctaLink: "/contact"
 };
 
 export const statisticsData = [
-  { label: "Assets Under Management", value: "5B+", prefix: "$", suffix: "" },
-  { label: "Global Clients", value: "500+", prefix: "", suffix: "" },
-  { label: "Years of Excellence", value: "25+", prefix: "", suffix: "" },
-  { label: "Success Rate", value: "98", prefix: "", suffix: "%" }
+  { label: "Years of Experience", value: "20+", prefix: "", suffix: "" },
+  { label: "Managed Assets", value: "500", prefix: "$", suffix: "M+" },
+  { label: "Certified Experts", value: "20", prefix: "", suffix: "" },
+  { label: "Client Satisfaction Rate", value: "99", prefix: "", suffix: "%" }
 ];
 
 export const servicesData = [
   {
     id: 1,
-    title: "Alternative Investments & Funds",
-    description: "Structured investment platforms, AIFs, hedge-style LLPs, and specialized capital strategies.",
+    title: "Investment Management",
+    description: "Grow and protect your portfolio with customized strategies backed by expert financial insight and market analysis.",
     icon: "TrendingUp"
   },
   {
     id: 2,
-    title: "Strategic Ventures & Holdings",
-    description: "Proprietary investments in companies, joint ventures, and scalable businesses across sectors.",
+    title: "Wealth Planning",
+    description: "Build a comprehensive financial roadmap tailored to your goals, lifestyle, and long-term aspirations.",
     icon: "Briefcase"
   },
   {
     id: 3,
-    title: "High-Impact Projects",
-    description: "Initiating and funding projects in industries such as finance, infrastructure, shipping, manufacturing, and technology.",
+    title: "Retirement Planning",
+    description: "Prepare for a secure and confident retirement with smart, structured planning and income strategies.",
     icon: "Rocket"
   },
   {
     id: 4,
-    title: "Global Partnerships & Advisory",
-    description: "Cross-border alliances, family office structures, and institutional collaborations that unlock global opportunities.",
+    title: "Tax Optimization",
+    description: "Keep more of what you earn with proactive, personalized strategies designed to reduce your tax liabilities.",
     icon: "Users"
   }
 ];
@@ -46,30 +46,23 @@ export const valuesData = [
   {
     id: 1,
     number: "01",
-    title: "Blending Insight & Foresight",
-    description: "Leveraging advanced analytics, AI-driven research, and global intelligence.",
+    title: "Schedule Your Free Consultation",
+    description: "Book a no-obligation call with one of our financial experts to discuss your goals and current financial landscape.",
     icon: "Brain"
   },
   {
     id: 2,
     number: "02",
-    title: "Diversified Strength",
-    description: "Balancing financial innovation with entrepreneurial risk-taking and sector diversification.",
+    title: "Get a Personalized Strategy",
+    description: "We'll create a tailored financial plan built around your needs—whether it's growing wealth, planning for retirement, or optimizing taxes.",
     icon: "Shield"
   },
   {
     id: 3,
     number: "03",
-    title: "Integrity & Alignment",
-    description: "Ensuring transparency, compliance, and long-term alignment of interests.",
+    title: "Start Building With Confidence",
+    description: "Partner with Alfa Global to implement your strategy, track your progress, and make informed decisions with ongoing expert support.",
     icon: "Award"
-  },
-  {
-    id: 4,
-    number: "04",
-    title: "Vision in Action",
-    description: "Turning bold ideas into transformative ventures through disciplined execution and global reach.",
-    icon: "Target"
   }
 ];
 
@@ -87,23 +80,23 @@ export const aboutData = {
 export const testimonialsData = [
   {
     id: 1,
-    name: "Michael Chen",
-    position: "CEO, TechVentures Inc.",
-    content: "Alfa Global's strategic insights and disciplined approach transformed our investment portfolio. Their team's expertise in alternative investments delivered exceptional returns.",
+    name: "Mark R.",
+    position: "Entrepreneur",
+    content: "Alfa Global transformed my financial future! Their expert guidance helped me grow my investments and plan for retirement with confidence.",
     rating: 5
   },
   {
     id: 2,
-    name: "Sarah Williams",
-    position: "Family Office Director",
-    content: "Working with Alfa Global has been transformative. Their global partnerships and advisory services opened doors we never thought possible.",
+    name: "Jessica M.",
+    position: "Business Executive",
+    content: "The team at Alfa Global is top-notch. Their personalized approach to wealth management gave me peace of mind knowing my finances are in good hands.",
     rating: 5
   },
   {
     id: 3,
-    name: "David Rodriguez",
-    position: "Investment Director",
-    content: "The high-impact projects Alfa Global identified for us have consistently outperformed market expectations. True visionaries in wealth management.",
+    name: "Sarah T.",
+    position: "Physician",
+    content: "Trust, transparency, and results—that's what Alfa Global delivers. Their expertise helped me optimize my portfolio and secure my family's financial future.",
     rating: 5
   }
 ];
@@ -167,10 +160,11 @@ export const insightsData = [
 ];
 
 export const contactData = {
-  address: "123 Financial District, New York, NY 10004",
-  phone: "+1 (212) 555-0100",
-  email: "info@alfaglobalgroup.com",
-  hours: "Monday - Friday: 9:00 AM - 6:00 PM EST"
+  address: "No. 6/8, Second Floor, Lakshmi Nagar, 10th Street, Nanganallur, Chennai - 600 061",
+  phone: "+91 44-2224-2929",
+  phone2: "+91 73580-65999",
+  email: "contact@alfaglobalwealth.com",
+  hours: "Monday - Friday: 9:00 AM - 6:00 PM IST"
 };
 
 export const navigationLinks = [
@@ -183,10 +177,10 @@ export const navigationLinks = [
 
 export const footerLinks = {
   solutions: [
-    { label: "Alternative Investments", path: "/solutions#alternative" },
-    { label: "Strategic Ventures", path: "/solutions#ventures" },
-    { label: "High-Impact Projects", path: "/solutions#projects" },
-    { label: "Global Partnerships", path: "/solutions#partnerships" }
+    { label: "Investment Management", path: "/solutions#investment" },
+    { label: "Wealth Planning", path: "/solutions#wealth" },
+    { label: "Retirement Planning", path: "/solutions#retirement" },
+    { label: "Tax Optimization", path: "/solutions#tax" }
   ],
   company: [
     { label: "About Us", path: "/about" },
@@ -201,3 +195,46 @@ export const footerLinks = {
     { label: "FAQ", path: "#" }
   ]
 };
+
+export const faqData = [
+  {
+    id: 1,
+    question: "What types of clients do you work with?",
+    answer: "We work with a wide range of clients, from individuals and families building their financial foundation to business owners and high-net-worth individuals seeking advanced strategies."
+  },
+  {
+    id: 2,
+    question: "How do I get started with Alfa Global?",
+    answer: "Simply schedule a free consultation using our contact form. One of our advisors will reach out to learn more about your goals and walk you through the next steps."
+  },
+  {
+    id: 3,
+    question: "Are your financial plans personalized?",
+    answer: "Yes, every plan we create is tailored to your unique financial situation, goals, risk tolerance, and timeline. We believe custom strategies yield the best results."
+  },
+  {
+    id: 4,
+    question: "What makes Alfa Global different from other firms?",
+    answer: "We combine deep financial expertise with a client-first approach, offering transparent advice, ongoing support, and results-driven strategies built for long-term success."
+  },
+  {
+    id: 5,
+    question: "Do you offer tax planning and retirement advice?",
+    answer: "Absolutely. We offer comprehensive tax optimization and retirement planning services as part of our holistic wealth management approach."
+  }
+];
+
+export const companyTypes = [
+  { value: "company", label: "Company" },
+  { value: "family-office", label: "Family Office" },
+  { value: "individual", label: "Individual" }
+];
+
+export const areasOfInterest = [
+  { value: "wealth-advisory", label: "Wealth Advisory" },
+  { value: "private-equity", label: "Private Equity/Capital" },
+  { value: "trading-fintech", label: "Trading/Fintech" },
+  { value: "cybersecurity", label: "Cybersecurity" },
+  { value: "agri-resources", label: "Agri/Natural Resources" },
+  { value: "other", label: "Other" }
+];
