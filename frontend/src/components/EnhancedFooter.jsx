@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const EnhancedFooter = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white overflow-hidden">
-      {/* Top Decorative Border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-600/60 to-transparent" />
+    <footer className="relative bg-black text-white overflow-hidden">
+      {/* Top Elegant Border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       
-      {/* Ultra-Detailed City Skyline with Depth */}
-      <div className="absolute inset-0">
+      {/* Professional Sleek Building Skyline */}
+      <div className="absolute inset-0 opacity-100">
         <svg className="w-full h-full" viewBox="0 0 1600 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
             {/* Gradient Definitions */}
