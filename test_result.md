@@ -222,6 +222,9 @@ frontend:
         - working: true
           agent: "testing"
           comment: "✅ Luxury hero section working perfectly! Found luxury hero section with 2 sliding images from Unsplash, main heading 'Beyond Capital. Building Futures.' displays correctly, 'Explore Our World' CTA button found and functional, 2 slide indicators working for navigation. Hero slides automatically every 5 seconds as designed."
+        - working: true
+          agent: "testing"
+          comment: "✅ REDESIGNED HERO SECTION CONFIRMED: Single luxury building hero image (no carousel) working perfectly! Hero section displays correctly with single luxury corporate building image from Unsplash, main heading 'Beyond Capital. Building Futures.' found and visible, 'Explore Our World' CTA button functional and clickable. Design matches client requirements - no carousel, single professional building image only."
 
   - task: "Luxury Navigation Header"
     implemented: true
