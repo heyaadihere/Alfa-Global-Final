@@ -241,7 +241,7 @@ const ProfessionalFooter = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-zinc-500">Contact</h3>
+            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-amber-500/90">Contact</h3>
             <ul className="space-y-4 mb-8">
               <li>
                 <a href="mailto:info@alfaglobalgroup.com" className="text-sm text-zinc-400 hover:text-white transition-colors font-light flex items-start">
