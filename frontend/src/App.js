@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LuxuryHeader from './components/LuxuryHeader';
-import LuxuryFooter from './components/LuxuryFooter';
+import EnhancedFooter from './components/EnhancedFooter';
 import NewHome from './pages/NewHome';
 import NewAbout from './pages/NewAbout';
 import NewServices from './pages/NewServices';
