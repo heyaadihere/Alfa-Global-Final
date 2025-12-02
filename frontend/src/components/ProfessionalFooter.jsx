@@ -158,8 +158,8 @@ const ProfessionalFooter = () => {
         </svg>
       </div>
 
-      {/* Subtle Ground Glow */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-900/30 to-transparent" />
+      {/* Subtle Ground Glow with Warm Tone */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-amber-950/20 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Elegant Header */}
