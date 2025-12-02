@@ -195,9 +195,9 @@ const ProfessionalFooter = () => {
                 <li key={index}>
                   <Link 
                     to={link.to} 
-                    className="text-sm text-zinc-400 hover:text-white transition-colors duration-300 font-light inline-flex items-center group"
+                    className="text-sm text-slate-300 hover:text-amber-400 transition-colors duration-300 font-light inline-flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-3 h-px bg-zinc-500 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                    <span className="w-0 group-hover:w-3 h-px bg-amber-500 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                     {link.label}
                   </Link>
                 </li>
