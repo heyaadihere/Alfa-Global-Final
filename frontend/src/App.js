@@ -8,6 +8,7 @@ import NewAbout from './pages/NewAbout';
 import NewServices from './pages/NewServices';
 import TeamPage from './pages/TeamPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import CareersPage from './pages/CareersPage';
 import InsightsPage from './pages/InsightsPage';
 import FAQPage from './pages/FAQPage';
 import Contact from './pages/Contact';
