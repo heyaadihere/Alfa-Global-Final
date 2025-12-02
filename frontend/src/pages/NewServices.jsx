@@ -11,7 +11,7 @@ const NewServices = () => {
         'Alternative Investment Funds (AIFs)',
         'Structured Products'
       ],
-      image: 'https://images.unsplash.com/photo-1682187516046-addee7e1ffc4?q=85&w=1200'
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=85&w=1200'
     },
     {
       title: 'Strategic Ventures & Holdings',
@@ -22,7 +22,7 @@ const NewServices = () => {
         'Growth Capital',
         'Management Buyouts'
       ],
-      image: 'https://images.unsplash.com/photo-1641760387096-b309eb085758?q=85&w=1200'
+      image: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=85&w=1200'
     },
     {
       title: 'High-Impact Projects',
@@ -33,7 +33,7 @@ const NewServices = () => {
         'Maritime Investments',
         'Technology Ventures'
       ],
-      image: 'https://images.pexels.com/photos/34998068/pexels-photo-34998068.jpeg?auto=compress&w=1200'
+      image: 'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=85&w=1200'
     },
     {
       title: 'Global Partnerships & Advisory',
@@ -44,33 +44,26 @@ const NewServices = () => {
         'Strategic Advisory',
         'Institutional Consulting'
       ],
-      image: 'https://images.pexels.com/photos/1470405/pexels-photo-1470405.jpeg?auto=compress&w=1200'
+      image: 'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&w=1200'
     }
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="relative h-96 bg-gray-900 mb-20">
-        <img
-          src="https://images.unsplash.com/photo-1760969006935-ca9f9cf5b117?q=85&w=2000"
-          alt="Services"
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-4">Our Services</h1>
-            <p className="text-base max-w-2xl mx-auto">
-              Comprehensive solutions for sophisticated investors and institutions
-            </p>
-          </div>
+      <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight">Our Services</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
+            Comprehensive solutions for sophisticated investors and institutions
+          </p>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-base text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             At Alfa Global Group, we offer a comprehensive suite of investment and advisory services 
             tailored to meet the sophisticated needs of high-net-worth individuals, family offices, 
             and institutional investors. Our diversified approach ensures your capital works effectively 
@@ -80,29 +73,29 @@ const NewServices = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
+          <div className="space-y-32">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <h2 className="text-3xl sm:text-4xl font-light mb-6">{service.title}</h2>
-                  <p className="text-base text-gray-600 leading-relaxed mb-8">{service.description}</p>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-6 text-gray-900">{service.title}</h2>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-10">{service.description}</p>
                   
                   <div className="space-y-3">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-4">Key Offerings:</h3>
-                    <ul className="space-y-2">
+                    <h3 className="text-sm font-semibold text-gray-900 mb-6 tracking-widest uppercase">Key Offerings</h3>
+                    <ul className="space-y-4">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
-                          <svg className="w-5 h-5 text-gray-900 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          <svg className="w-6 h-6 text-gray-900 mt-0.5 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span className="text-sm text-gray-600">{feature}</span>
+                          <span className="text-base text-gray-600">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -113,7 +106,7 @@ const NewServices = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-96 object-cover shadow-2xl"
+                    className="w-full h-[500px] object-cover shadow-2xl"
                   />
                 </div>
               </div>
@@ -123,13 +116,14 @@ const NewServices = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-light mb-6">Why Choose Alfa Global?</h2>
+          <div className="text-center mb-20">
+            <p className="text-xs font-semibold text-gray-500 mb-4 tracking-widest uppercase">Why Choose Us</p>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-6 text-gray-900">Alfa Global Advantage</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               {
                 title: 'Proven Expertise',
@@ -156,8 +150,8 @@ const NewServices = () => {
                 description: 'Building sustainable value across generations'
               }
             ].map((item, index) => (
-              <div key={index} className="text-center">
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+              <div key={index} className="border-l-2 border-gray-900 pl-6">
+                <h3 className="text-xl font-light mb-3 text-gray-900">{item.title}</h3>
                 <p className="text-base text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -166,15 +160,15 @@ const NewServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-24 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-light mb-6">Ready to Explore Opportunities?</h2>
-          <p className="text-base text-gray-300 mb-8 leading-relaxed">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-8">Ready to Explore Opportunities?</h2>
+          <p className="text-lg text-gray-400 mb-12 leading-relaxed font-light">
             Let's discuss how our services can help you achieve your investment goals.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-white text-gray-900 px-8 py-4 text-sm font-medium hover:bg-gray-100 transition-colors duration-300"
+            className="inline-block bg-white text-gray-900 px-10 py-4 text-base font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Schedule a Consultation
           </a>
