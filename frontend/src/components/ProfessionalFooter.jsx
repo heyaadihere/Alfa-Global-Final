@@ -183,7 +183,7 @@ const ProfessionalFooter = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-zinc-500">Quick Links</h3>
+            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-amber-500/90">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { to: '/about', label: 'About Us' },
