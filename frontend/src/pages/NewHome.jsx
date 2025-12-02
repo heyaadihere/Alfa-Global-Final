@@ -1,16 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import LuxuryHero from '../components/LuxuryHero';
+import StatsCounter from '../components/StatsCounter';
 
 const NewHome = () => {
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <LuxuryHero />
+      
+      {/* Stats Counter */}
+      <StatsCounter />
       
       {/* Group Overview Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="scroll-animate">
               <p className="text-xs font-semibold text-gray-500 mb-4 tracking-widest uppercase">Group Overview</p>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-8 text-gray-900">Who We Are</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
