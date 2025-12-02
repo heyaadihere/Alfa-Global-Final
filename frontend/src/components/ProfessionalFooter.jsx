@@ -176,7 +176,7 @@ const ProfessionalFooter = () => {
               alt="Alfa Global Group"
               className="h-14 mb-6 filter brightness-110 hover:brightness-125 transition-all duration-300"
             />
-            <p className="text-sm text-zinc-400 leading-relaxed font-light">
+            <p className="text-sm text-slate-300 leading-relaxed font-light">
               A diversified global organization committed to creating enduring value across industries and generations.
             </p>
           </div>
