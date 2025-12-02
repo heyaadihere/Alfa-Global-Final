@@ -207,7 +207,7 @@ const ProfessionalFooter = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-zinc-500">Resources</h3>
+            <h3 className="text-xs font-medium tracking-widest uppercase mb-6 text-amber-500/90">Resources</h3>
             <ul className="space-y-3">
               {[
                 { to: '/insights', label: 'Insights' },
