@@ -164,8 +164,8 @@ const ProfessionalFooter = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Elegant Header */}
         <div className="mb-16 text-center">
-          <h3 className="text-3xl font-extralight tracking-wider mb-3 text-white">Alfa Global Group</h3>
-          <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
+          <h3 className="text-3xl font-extralight tracking-wider mb-3 text-amber-50">Alfa Global Group</h3>
+          <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-amber-500/70 to-transparent"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
