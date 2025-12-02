@@ -291,18 +291,18 @@ const ProfessionalFooter = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="relative pt-8 border-t border-zinc-900">
+        <div className="relative pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p className="text-zinc-600 font-light">
+            <p className="text-slate-400 font-light">
               © {new Date().getFullYear()} Alfa Global Group. All rights reserved.
             </p>
             <div className="flex items-center gap-2">
-              <span className="text-zinc-600 font-light">Website Powered by</span>
+              <span className="text-slate-400 font-light">Website Powered by</span>
               <a
                 href="https://techbook.co.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white font-normal transition-colors duration-300"
+                className="text-amber-500 hover:text-amber-400 font-normal transition-colors duration-300"
               >
                 Techbook Technologies
               </a>
