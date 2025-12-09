@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <LuxuryHeader />
+        <CorporateHeader />
         <main>
           <Routes>
             <Route path="/" element={<ProfessionalHome />} />
