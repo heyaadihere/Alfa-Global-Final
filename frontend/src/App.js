@@ -24,7 +24,7 @@ function App() {
         <LuxuryHeader />
         <main>
           <Routes>
-            <Route path="/" element={<NewHome />} />
+            <Route path="/" element={<ProfessionalHome />} />
             <Route path="/about" element={<NewAbout />} />
             <Route path="/services" element={<NewServices />} />
             <Route path="/team" element={<TeamPage />} />
