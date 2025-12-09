@@ -10,7 +10,7 @@ const ProfessionalHome = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=2000"
-            alt="Corporate Building"
+            alt="Corporate Headquarters"
             className="w-full h-full object-cover"
           />
         </div>
