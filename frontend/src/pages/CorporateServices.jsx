@@ -55,7 +55,7 @@ const CorporateServices = () => {
       <section className="relative text-white pt-40 pb-32 overflow-hidden min-h-[500px]">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=2000"
+            src="https://images.unsplash.com/photo-1515263487990-61b07816b324?q=85&w=2000"
             alt="Our Services"
             className="w-full h-full object-cover"
           />
