@@ -21,10 +21,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <CorporateHeader />
+        <WaterfieldHeader />
         <main>
           <Routes>
-            <Route path="/" element={<ProfessionalHome />} />
+            <Route path="/" element={<WaterfieldHome />} />
             <Route path="/about" element={<CorporateAbout />} />
             <Route path="/services" element={<CorporateServices />} />
             <Route path="/team" element={<CorporateTeam />} />
