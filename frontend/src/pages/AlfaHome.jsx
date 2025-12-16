@@ -248,7 +248,11 @@ const AlfaHome = () => {
               </Link>
             </div>
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=800" alt="Alfa Global Office" className="w-full aspect-[4/3] object-cover" />
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=85&w=800" alt="Alfa Global Office" className="w-full aspect-[4/3] object-cover" />
+              </div>
+              {/* Decorative frame */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-[#1a6b64] rounded-2xl -z-10"></div>
             </div>
           </div>
         </div>
