@@ -184,16 +184,17 @@ const AlfaHome = () => {
           </div>
         </div>
       </section>
-        <div className="bg-[#e8e8e8] py-4 mt-8">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="flex flex-wrap justify-between items-center gap-4">
-              {complianceBadges.map((badge, index) => (
-                <div key={index} className="flex items-center space-x-2 text-gray-700">
-                  {renderIcon(badge.icon)}
-                  <span className="text-sm font-medium">{badge.label}</span>
-                </div>
-              ))}
-            </div>
+
+      {/* Compliance Badges Bar */}
+      <section className="bg-[#e8e8e8] py-4">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="flex flex-wrap justify-between items-center gap-4">
+            {complianceBadges.map((badge, index) => (
+              <div key={index} className="flex items-center space-x-2 text-gray-700">
+                {renderIcon(badge.icon)}
+                <span className="text-sm font-medium">{badge.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
