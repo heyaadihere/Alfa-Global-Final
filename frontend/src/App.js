@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import WaterfieldHeader from './components/WaterfieldHeader';
-import WaterfieldFooter from './components/WaterfieldFooter';
-import WaterfieldHome from './pages/WaterfieldHome';
+import AlfaHeader from './components/AlfaHeader';
+import AlfaFooter from './components/AlfaFooter';
+import AlfaHome from './pages/AlfaHome';
 import CorporateAbout from './pages/CorporateAbout';
 import CorporateServices from './pages/CorporateServices';
 import CorporateTeam from './pages/CorporateTeam';
@@ -21,10 +21,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <WaterfieldHeader />
+        <AlfaHeader />
         <main>
           <Routes>
-            <Route path="/" element={<WaterfieldHome />} />
+            <Route path="/" element={<AlfaHome />} />
             <Route path="/about" element={<CorporateAbout />} />
             <Route path="/services" element={<CorporateServices />} />
             <Route path="/team" element={<CorporateTeam />} />
@@ -35,7 +35,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <WaterfieldFooter />
+        <AlfaFooter />
       </BrowserRouter>
     </div>
   );
