@@ -154,7 +154,7 @@ const AlfaHome = () => {
               Local Insight.<br />
               <span className="text-[#4ecdc4]">Institutional Discipline.</span>
             </h1>
-            <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
+            <p className="text-lg text-gray-300 mb-6 max-w-xl leading-relaxed">
               We invest in ideas, businesses, and projects that shape industries, empower legacies, and create sustainable value across generations.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -200,9 +200,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Key Strategies Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-12">Key Strategies</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Key Strategies</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {strategies.map((strategy, index) => (
               <div key={index}>
@@ -217,9 +217,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Why Alfa Global Capital Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Why Alfa Global Capital</h2>
             <Link to="/about" className="text-[#1a6b64] text-sm font-medium hover:underline flex items-center">
               Explore All <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -238,7 +238,7 @@ const AlfaHome = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-[#1a6b64]">
+      <section className="py-6 bg-[#1a6b64]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -252,9 +252,9 @@ const AlfaHome = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-4">About Us</p>
               <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Who We Are</h2>
@@ -280,7 +280,7 @@ const AlfaHome = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-12 bg-[#f5f5f5]">
+      <section className="py-6 bg-[#f5f5f5]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex justify-between items-center mb-8">
             <div>
@@ -309,9 +309,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-2">Our Foundation</p>
             <h2 className="text-3xl font-semibold text-gray-900">Core Values</h2>
           </div>
@@ -330,9 +330,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-12 bg-[#f5f5f5]">
+      <section className="py-6 bg-[#f5f5f5]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-2">Leadership</p>
             <h2 className="text-3xl font-semibold text-gray-900">Meet Our Team</h2>
           </div>
@@ -358,9 +358,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Awards Section */}
-      <section className="py-12 bg-[#1a1a1a]">
+      <section className="py-6 bg-[#1a1a1a]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-2">Recognition</p>
             <h2 className="text-3xl font-semibold text-white">Awards & Achievements</h2>
           </div>
@@ -378,9 +378,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-2">Testimonials</p>
             <h2 className="text-3xl font-semibold text-gray-900">What Our Clients Say</h2>
           </div>
@@ -402,7 +402,7 @@ const AlfaHome = () => {
       </section>
 
       {/* Insights Section */}
-      <section className="py-12 bg-[#f5f5f5]">
+      <section className="py-6 bg-[#f5f5f5]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex justify-between items-center mb-8">
             <div>
@@ -433,9 +433,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Offices Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-2">Locations</p>
             <h2 className="text-3xl font-semibold text-gray-900">Our Offices</h2>
           </div>
@@ -455,9 +455,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-12 bg-[#1a6b64]">
+      <section className="py-6 bg-[#1a6b64]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl font-semibold text-white mb-4">Stay Informed</h2>
               <p className="text-white/80">Get our latest insights, market updates, and investment strategies delivered straight to your inbox.</p>
@@ -473,9 +473,9 @@ const AlfaHome = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <p className="text-[#1a6b64] text-sm tracking-[0.2em] uppercase mb-4">Contact Us</p>
               <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">Ready to Start Your Investment Journey?</h2>
