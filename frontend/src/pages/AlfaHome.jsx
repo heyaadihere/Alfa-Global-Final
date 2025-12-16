@@ -272,8 +272,8 @@ const AlfaHome = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white group overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden">
+              <div key={index} className="bg-white group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                <div className="aspect-[4/3] overflow-hidden rounded-t-xl">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
