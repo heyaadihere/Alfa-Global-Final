@@ -317,9 +317,13 @@ const AlfaHome = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="aspect-square overflow-hidden mb-4">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+              <div key={index} className="text-center group">
+                <div className="relative mb-4">
+                  <div className="aspect-square overflow-hidden rounded-2xl shadow-lg border-4 border-transparent group-hover:border-[#1a6b64] transition-all duration-500">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                  </div>
+                  {/* Corner accent */}
+                  <div className="absolute -bottom-2 -right-2 w-12 h-12 border-r-2 border-b-2 border-[#1a6b64] rounded-br-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                 <p className="text-sm text-gray-600">{member.role}</p>
