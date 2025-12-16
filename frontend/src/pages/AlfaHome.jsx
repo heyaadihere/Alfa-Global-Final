@@ -132,38 +132,58 @@ const AlfaHome = () => {
 
   return (
     <div className="min-h-screen bg-[#f5f5f5]">
-      {/* Hero Section */}
-      <section className="pt-20 min-h-[600px] relative">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[500px]">
-            <div className="py-16 lg:py-24">
-              <h1 className="text-4xl md:text-5xl lg:text-[52px] font-semibold text-gray-900 leading-tight mb-8">
-                Global Fund Management.<br />
-                Local Insight. Institutional<br />
-                Discipline.
-              </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-lg">
-                We invest in ideas, businesses, and projects that shape industries, empower legacies, and create sustainable value across generations.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/services" className="px-8 py-4 bg-[#1a6b64] text-white font-medium hover:bg-[#145550] transition-colors">
-                  Explore Our Funds
-                </Link>
-                <Link to="/contact" className="px-8 py-4 bg-[#1a6b64] text-white font-medium hover:bg-[#145550] transition-colors">
-                  Book a Consultation
-                </Link>
-              </div>
+      {/* Hero Section - Full Width Gradient with Faded Image */}
+      <section className="relative min-h-[650px] overflow-hidden">
+        {/* Background Image - Right Side with Fade */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute right-0 top-0 w-full lg:w-[60%] h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?q=85&w=1920')` }}
+          />
+          {/* Gradient overlay - fades image from left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2e2b] via-[#0a2e2b]/95 via-40% to-transparent"></div>
+          {/* Additional gradient for bottom fade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a2e2b]/80 via-transparent to-[#0a2e2b]/30"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 pb-20">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-tight mb-6">
+              Global Fund Management.<br />
+              Local Insight.<br />
+              <span className="text-[#4ecdc4]">Institutional Discipline.</span>
+            </h1>
+            <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
+              We invest in ideas, businesses, and projects that shape industries, empower legacies, and create sustainable value across generations.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/services" className="px-8 py-4 bg-[#1a6b64] text-white font-medium hover:bg-[#4ecdc4] hover:text-[#0a2e2b] transition-all duration-300 rounded-lg">
+                Explore Our Funds
+              </Link>
+              <Link to="/contact" className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-medium hover:bg-white hover:text-[#0a2e2b] transition-all duration-300 rounded-lg">
+                Book a Consultation
+              </Link>
             </div>
-            <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
-              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?q=85&w=1200')` }} />
+
+            {/* Stats Row */}
+            <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-white/20">
+              <div>
+                <div className="text-3xl font-bold text-[#4ecdc4]">₹5000+ Cr</div>
+                <div className="text-sm text-gray-400 mt-1">Assets Under Management</div>
               </div>
-              {/* Decorative corner accent */}
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 border-l-4 border-b-4 border-[#1a6b64] rounded-bl-3xl"></div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 border-r-4 border-t-4 border-[#1a6b64] rounded-tr-3xl"></div>
+              <div>
+                <div className="text-3xl font-bold text-[#4ecdc4]">25+</div>
+                <div className="text-sm text-gray-400 mt-1">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-[#4ecdc4]">500+</div>
+                <div className="text-sm text-gray-400 mt-1">Satisfied Clients</div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
         <div className="bg-[#e8e8e8] py-4 mt-8">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="flex flex-wrap justify-between items-center gap-4">
