@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CorporateHeader from './components/CorporateHeader';
-import CorporateFooter from './components/CorporateFooter';
-import ProfessionalHome from './pages/ProfessionalHome';
+import WaterfieldHeader from './components/WaterfieldHeader';
+import WaterfieldFooter from './components/WaterfieldFooter';
+import WaterfieldHome from './pages/WaterfieldHome';
 import CorporateAbout from './pages/CorporateAbout';
 import CorporateServices from './pages/CorporateServices';
 import CorporateTeam from './pages/CorporateTeam';
