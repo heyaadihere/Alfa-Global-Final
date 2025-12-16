@@ -121,3 +121,5 @@ test_plan:
 agent_communication:
   - agent: "testing"
     message: "Starting comprehensive testing of Alfa Global Capital homepage design and functionality"
+  - agent: "testing"
+    message: "TESTING COMPLETED: Most features working correctly. Found critical content typos that need fixing: 'Category III Funde' → 'Funds', 'ReJust' → 'Robust', 'dedsions' → 'decisions', duplicate 'asset asset classes'. Mobile menu not working on mobile viewport. Navigation and core functionality working well."
