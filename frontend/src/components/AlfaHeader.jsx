@@ -25,14 +25,12 @@ const AlfaHeader = () => {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex items-center">
-              {/* Triangle Logo */}
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 5L35 35H5L20 5Z" fill="#1a6b64"/>
-              </svg>
-              <span className="ml-2 text-2xl font-medium text-gray-800">Alfa</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
+              alt="Alfa Global Group"
+              className="h-14"
+            />
           </Link>
 
           {/* Desktop Navigation */}

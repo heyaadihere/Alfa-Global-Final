@@ -9,14 +9,15 @@ const AlfaFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-6">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 5L35 35H5L20 5Z" fill="#1a6b64"/>
-              </svg>
-              <span className="ml-2 text-2xl font-medium text-white">Alfa</span>
+            <div className="mb-6">
+              <img
+                src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
+                alt="Alfa Global Group"
+                className="h-14 brightness-0 invert"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Global Fund Management. Local Insight. Institutional Discipline.
+              A diversified global organization driven by vision, innovation, and impact. We invest in ideas, businesses, and projects that shape industries.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 border border-gray-700 flex items-center justify-center hover:border-[#1a6b64] hover:bg-[#1a6b64] transition-all duration-300">
