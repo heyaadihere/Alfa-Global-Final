@@ -394,7 +394,7 @@ const AlfaHome = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {insights.map((insight, index) => (
-              <div key={index} className="group bg-white">
+              <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img src={insight.image} alt={insight.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
