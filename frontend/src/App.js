@@ -38,13 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <GlobePreloader onComplete={() => setIsLoading(false)} />}
+      {isLoading && <Globe3DPreloader onComplete={() => setIsLoading(false)} />}
       
       <BrowserRouter>
-        <ElegantHeader theme={getComponentTheme()} />
+        <UltraHeader theme={getComponentTheme()} />
         <main>
           <Routes>
-            <Route path="/" element={<ElegantHome theme={getComponentTheme()} />} />
+            <Route path="/" element={<UltraHome theme={getComponentTheme()} />} />
             <Route path="/about" element={<CorporateAbout />} />
             <Route path="/services" element={<CorporateServices />} />
             <Route path="/team" element={<CorporateTeam />} />
@@ -55,7 +55,7 @@ function App() {
             <Route path="/contact" element={<PremiumContact theme={theme === 'purple' || theme === 'teal' ? theme : 'purple'} />} />
           </Routes>
         </main>
-        <ElegantFooter theme={getComponentTheme()} />
+        <UltraFooter theme={getComponentTheme()} />
         
         {/* Theme Switcher */}
         <div className="fixed bottom-6 right-6 z-50">
