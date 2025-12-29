@@ -30,11 +30,8 @@ function App() {
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
 
-  // Map theme for header/footer (gold/silver for elegant, purple/teal stay same)
-  const getComponentTheme = () => {
-    if (theme === 'gold' || theme === 'silver') return theme;
-    return 'gold'; // Default to gold style for purple/teal since they use dark backgrounds
-  };
+  // Pass actual theme to all components
+  const getComponentTheme = () => theme;
 
   return (
     <div className="App">
