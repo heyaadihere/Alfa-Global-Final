@@ -153,7 +153,7 @@ const UltraHeader = ({ theme = 'gold' }) => {
                     } transition-colors relative group`}
                   >
                     {item.label}
-                    <span className={`absolute -bottom-1 left-0 h-0.5 ${theme === 'gold' ? 'bg-amber-500' : 'bg-gray-500'} transition-all ${
+                    <span className={`absolute -bottom-1 left-0 h-0.5 ${t.underline} transition-all ${
                       location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
                     }`} />
                   </Link>
