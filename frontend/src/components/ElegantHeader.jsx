@@ -93,7 +93,11 @@ const ElegantHeader = ({ theme = 'gold' }) => {
               <img
                 src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
                 alt="Alfa Global Group"
-                className="h-14 transition-transform group-hover:scale-105"
+                className="h-12 sm:h-14 transition-transform group-hover:scale-105"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="50"><text x="10" y="35" font-size="24" fill="%231a6b64">ALFA GLOBAL</text></svg>';
+                }}
               />
             </Link>
 
