@@ -14,7 +14,8 @@ const UltraHeader = ({ theme = 'gold' }) => {
       button: 'bg-amber-600 hover:bg-amber-700',
       border: 'border-amber-200',
       gradient: 'from-amber-50 to-white',
-      logoColor: '#d97706'
+      logoColor: '#d97706',
+      underline: 'bg-amber-500'
     },
     silver: {
       accent: 'text-gray-600',
@@ -22,11 +23,30 @@ const UltraHeader = ({ theme = 'gold' }) => {
       button: 'bg-gray-700 hover:bg-gray-800',
       border: 'border-gray-200',
       gradient: 'from-gray-50 to-white',
-      logoColor: '#374151'
+      logoColor: '#374151',
+      underline: 'bg-gray-500'
+    },
+    purple: {
+      accent: 'text-purple-600',
+      accentHover: 'hover:text-purple-700',
+      button: 'bg-purple-600 hover:bg-purple-700',
+      border: 'border-purple-200',
+      gradient: 'from-purple-50 to-white',
+      logoColor: '#9333ea',
+      underline: 'bg-purple-500'
+    },
+    teal: {
+      accent: 'text-teal-600',
+      accentHover: 'hover:text-teal-700',
+      button: 'bg-teal-600 hover:bg-teal-700',
+      border: 'border-teal-200',
+      gradient: 'from-teal-50 to-white',
+      logoColor: '#0d9488',
+      underline: 'bg-teal-500'
     }
   };
 
-  const t = themes[theme];
+  const t = themes[theme] || themes.gold;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
