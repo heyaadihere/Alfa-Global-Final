@@ -147,19 +147,16 @@ const UltraFooter = ({ theme = 'gold' }) => {
 
           {/* Offices */}
           <div>
-            <h4 className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-4`}>Offices</h4>
-            <ul className="space-y-3">
-              {offices.map((office) => (
-                <li key={office.city} className="text-gray-400 text-sm">
-                  <span className="text-white font-medium">{office.city}</span>
-                  <span className="text-gray-500 ml-2">({office.type})</span>
-                </li>
-              ))}
-            </ul>
+            <h4 className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-4`}>Office</h4>
+            <div className="text-gray-400 text-sm">
+              <p className="text-white font-medium mb-2">Chennai (HQ)</p>
+              <p>No. 6/8, Second Floor, Lakshmi Nagar, 10th Street, Nanganallur, Chennai - 600 061.</p>
+            </div>
             <div className="mt-6 pt-6 border-t border-gray-800">
               <p className="text-gray-400 text-sm mb-2">Contact Us</p>
-              <p className="text-white text-sm">+91-22-6621-0700</p>
-              <p className={`${t.accent} text-sm`}>info@alfaglobalgroup.com</p>
+              <p className="text-white text-sm">+91 44-2224-2929</p>
+              <p className="text-white text-sm">+91 73580-65999</p>
+              <p className={`${t.accent} text-sm mt-1`}>contact@alfaglobalwealth.com</p>
             </div>
           </div>
         </div>
