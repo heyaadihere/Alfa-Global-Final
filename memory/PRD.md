@@ -109,16 +109,14 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 
 ## Pending Tasks
 
-### P1 - Contact Form Backend
-- Implement SMTP email logic using Resend integration
-- Backend API endpoint exists but doesn't send emails
-
-### P2 - Codebase Cleanup
-- Remove obsolete components from 10+ failed design attempts
-- Files to clean: Premium*, Elegant*, Alfa*, Corporate*, Waterfield*, Luxury* components/pages
+### P1 - Contact Form Email (Optional)
+- Implement SMTP email logic using Resend integration (user opted to skip for now)
+- Backend API endpoint exists and saves to database, just doesn't send emails
 
 ## API Endpoints
-- `POST /api/contact` - Contact form submission (EMAIL NOT IMPLEMENTED)
+- `POST /api/contact` - Contact form submission (saves to DB, email not sent)
+- `POST /api/newsletter` - Newsletter subscription
+- `GET /api/newsletter` - Get all subscribers
 - `GET /api/testimonials` - Get testimonials
 - `GET /api/insights` - Get insights
 
