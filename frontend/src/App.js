@@ -18,6 +18,8 @@ import AlfaZillionTradersPage from './pages/AlfaZillionTradersPage';
 import GazillionCapitalPage from './pages/GazillionCapitalPage';
 import MKDairyFarmsPage from './pages/MKDairyFarmsPage';
 import CyberhakzPage from './pages/CyberhakzPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
