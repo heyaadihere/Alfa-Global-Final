@@ -62,6 +62,9 @@ function App() {
             <Route path="/gazillion-capital" element={<GazillionCapitalPage theme={getComponentTheme()} />} />
             <Route path="/mk-dairy-farms" element={<MKDairyFarmsPage theme={getComponentTheme()} />} />
             <Route path="/cyberhakz" element={<CyberhakzPage theme={getComponentTheme()} />} />
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPage theme={getComponentTheme()} />} />
+            <Route path="/terms" element={<TermsPage theme={getComponentTheme()} />} />
           </Routes>
         </main>
         <UltraFooter theme={getComponentTheme()} />
