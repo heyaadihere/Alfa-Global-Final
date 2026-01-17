@@ -38,38 +38,20 @@ const UltraFooter = ({ theme = 'gold' }) => {
   const quickLinks = [
     { label: 'About Us', path: '/about' },
     { label: 'Services', path: '/services' },
-    { label: 'Team', path: '/team' },
-    { label: 'Insights', path: '/insights' },
+    { label: 'Strategy', path: '/strategy' },
+    { label: 'Global Access', path: '/global-access' },
+    { label: 'FAQs', path: '/faqs' },
     { label: 'Contact', path: '/contact' }
   ];
 
-  const services = [
-    'Alternative Investments',
-    'Strategic Ventures',
-    'High-Impact Projects',
-    'Global Advisory',
-    'Family Office'
+  const companies = [
+    { label: 'Alfa Global Wealth Advisors', path: '/alfa-global-wealth-advisors' },
+    { label: 'Alfa Star Dynamics', path: '/alfa-star-dynamics' },
+    { label: 'Alfa Zillion Traders', path: '/alfa-zillion-traders' },
+    { label: 'Gazillion Capital', path: '/gazillion-capital' },
+    { label: 'MK Dairy Farms', path: '/mk-dairy-farms' },
+    { label: 'Cyberhakz', path: '/cyberhakz' }
   ];
-
-  const offices = [
-    { city: 'Mumbai', type: 'HQ' },
-    { city: 'GIFT City', type: 'IFSC' },
-    { city: 'Delhi NCR', type: 'North' },
-    { city: 'Bengaluru', type: 'South' }
-  ];
-
-  // SVG Logo Component
-  const LogoSVG = ({ className = '' }) => (
-    <svg className={className} viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(0, 5)">
-        <path d="M20 0L40 35H0L20 0Z" fill={t.logoColor} opacity="0.9"/>
-        <path d="M20 8L32 30H8L20 8Z" fill="white" opacity="0.2"/>
-        <circle cx="20" cy="18" r="4" fill="white" opacity="0.6"/>
-      </g>
-      <text x="50" y="24" fontFamily="system-ui, -apple-system, sans-serif" fontSize="18" fontWeight="700" fill={t.logoColor}>ALFA</text>
-      <text x="50" y="42" fontFamily="system-ui, -apple-system, sans-serif" fontSize="12" fontWeight="500" fill="#9ca3af" letterSpacing="0.1em">GLOBAL GROUP</text>
-    </svg>
-  );
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -78,7 +60,7 @@ const UltraFooter = ({ theme = 'gold' }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <LogoSVG className="h-12 w-auto mb-4" />
+            <img src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png" alt="Alfa Global Group" className="h-12 w-auto mb-4" />
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
               A diversified global organization driven by vision, innovation, and impact. Building wealth and creating legacies across generations.
             </p>
