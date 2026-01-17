@@ -38,14 +38,20 @@ const PremiumContact = ({ theme = 'purple' }) => {
 
   const t = themes[theme];
 
+  // Contact info from reference site
   const offices = [
-    { city: 'Mumbai', address: 'Nariman Point, Mumbai - 400021', lat: 18.9256, lng: 72.8242, phone: '+91-22-6621-0700' },
-    { city: 'GIFT City', address: 'GIFT IFSC, Gujarat - 382355', lat: 23.1556, lng: 72.6821, phone: '+91-79-4902-0000' },
-    { city: 'Delhi NCR', address: 'Sector 16B, Noida - 201301', lat: 28.5708, lng: 77.3213, phone: '+91-120-458-0000' },
-    { city: 'Bengaluru', address: 'Ulsoor Road, Bengaluru - 560042', lat: 12.9716, lng: 77.5946, phone: '+91-80-4112-0000' },
-    { city: 'Singapore', address: 'Marina Bay Financial Centre', lat: 1.2789, lng: 103.8536, phone: '+65-6123-4567' },
-    { city: 'Dubai', address: 'DIFC, Dubai, UAE', lat: 25.2117, lng: 55.2817, phone: '+971-4-123-4567' }
+    { city: 'Chennai (HQ)', address: 'No. 6/8, Second Floor, Lakshmi Nagar, 10th Street, Nanganallur, Chennai - 600 061', lat: 12.9817, lng: 80.1869, phone: '+91 44-2224-2929' }
   ];
+
+  const contactInfo = {
+    phone1: '+91 44-2224-2929',
+    phone2: '+91 73580-65999',
+    email: 'contact@alfaglobalwealth.com',
+    address: 'No. 6/8, Second Floor, Lakshmi Nagar, 10th Street, Nanganallur, Chennai - 600 061'
+  };
+
+  const companyTypes = ['Company', 'Family Office', 'Individual'];
+  const areasOfInterest = ['Wealth Advisory', 'Private Equity/Capital', 'Trading/Fintech', 'Cybersecurity', 'Agri/Natural Resources', 'Other'];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
