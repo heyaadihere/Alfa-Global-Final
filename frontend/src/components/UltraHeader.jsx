@@ -5,45 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 const UltraHeader = ({ theme = 'gold' }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   const themes = {
-    gold: {
-      accent: 'text-amber-600',
-      accentHover: 'hover:text-amber-700',
-      button: 'bg-amber-600 hover:bg-amber-700',
-      border: 'border-amber-200',
-      gradient: 'from-amber-50 to-white',
-      logoColor: '#d97706',
-      underline: 'bg-amber-500'
-    },
-    silver: {
-      accent: 'text-gray-600',
-      accentHover: 'hover:text-gray-800',
-      button: 'bg-gray-700 hover:bg-gray-800',
-      border: 'border-gray-200',
-      gradient: 'from-gray-50 to-white',
-      logoColor: '#374151',
-      underline: 'bg-gray-500'
-    },
-    purple: {
-      accent: 'text-purple-600',
-      accentHover: 'hover:text-purple-700',
-      button: 'bg-purple-600 hover:bg-purple-700',
-      border: 'border-purple-200',
-      gradient: 'from-purple-50 to-white',
-      logoColor: '#9333ea',
-      underline: 'bg-purple-500'
-    },
-    teal: {
-      accent: 'text-teal-600',
-      accentHover: 'hover:text-teal-700',
-      button: 'bg-teal-600 hover:bg-teal-700',
-      border: 'border-teal-200',
-      gradient: 'from-teal-50 to-white',
-      logoColor: '#0d9488',
-      underline: 'bg-teal-500'
-    }
+    gold: { accent: 'text-amber-600', accentHover: 'hover:text-amber-700', button: 'bg-amber-600 hover:bg-amber-700', border: 'border-amber-200', gradient: 'from-amber-50 to-white', logoColor: '#d97706', underline: 'bg-amber-500' },
+    silver: { accent: 'text-gray-600', accentHover: 'hover:text-gray-800', button: 'bg-gray-700 hover:bg-gray-800', border: 'border-gray-200', gradient: 'from-gray-50 to-white', logoColor: '#374151', underline: 'bg-gray-500' },
+    purple: { accent: 'text-purple-600', accentHover: 'hover:text-purple-700', button: 'bg-purple-600 hover:bg-purple-700', border: 'border-purple-200', gradient: 'from-purple-50 to-white', logoColor: '#9333ea', underline: 'bg-purple-500' },
+    teal: { accent: 'text-teal-600', accentHover: 'hover:text-teal-700', button: 'bg-teal-600 hover:bg-teal-700', border: 'border-teal-200', gradient: 'from-teal-50 to-white', logoColor: '#0d9488', underline: 'bg-teal-500' }
   };
 
   const t = themes[theme] || themes.gold;
@@ -56,31 +25,27 @@ const UltraHeader = ({ theme = 'gold' }) => {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsDropdownOpen(false);
   }, [location]);
 
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Services', path: '/services' },
-    { label: 'Team', path: '/team' },
-    { label: 'Insights', path: '/insights' },
+    { label: 'Strategy', path: '/strategy' },
+    { label: 'Global Access', path: '/global-access' },
+    { label: 'FAQs', path: '/faqs' },
     { label: 'Contact', path: '/contact' }
   ];
 
-  // SVG Logo Component - Inline for reliability
-  const LogoSVG = ({ className = '' }) => (
-    <svg className={className} viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Geometric Icon */}
-      <g transform="translate(0, 5)">
-        <path d="M20 0L40 35H0L20 0Z" fill={t.logoColor} opacity="0.9"/>
-        <path d="M20 8L32 30H8L20 8Z" fill="white" opacity="0.3"/>
-        <circle cx="20" cy="18" r="4" fill="white" opacity="0.8"/>
-      </g>
-      {/* Text */}
-      <text x="50" y="24" fontFamily="system-ui, -apple-system, sans-serif" fontSize="18" fontWeight="700" fill={t.logoColor}>ALFA</text>
-      <text x="50" y="42" fontFamily="system-ui, -apple-system, sans-serif" fontSize="12" fontWeight="500" fill="#6b7280" letterSpacing="0.1em">GLOBAL GROUP</text>
-    </svg>
-  );
+  const companyDropdown = [
+    { label: 'Alfa Global Wealth Advisors', path: '/alfa-global-wealth-advisors' },
+    { label: 'Alfa Star Dynamics', path: '/alfa-star-dynamics' },
+    { label: 'Alfa Zillion Traders', path: '/alfa-zillion-traders' },
+    { label: 'Gazillion Capital', path: '/gazillion-capital' },
+    { label: 'MK Dairy Farms', path: '/mk-dairy-farms' },
+    { label: 'Cyberhakz', path: '/cyberhakz' }
+  ];
 
   return (
     <>
@@ -88,9 +53,7 @@ const UltraHeader = ({ theme = 'gold' }) => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg shadow-black/5' 
-            : 'bg-white/80 backdrop-blur-sm'
+          isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg shadow-black/5' : 'bg-white/80 backdrop-blur-sm'
         }`}
       >
         {/* Top Bar */}
@@ -132,51 +95,81 @@ const UltraHeader = ({ theme = 'gold' }) => {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center group">
-              <LogoSVG className="h-10 sm:h-12 w-auto transition-transform group-hover:scale-105" />
+              <img 
+                src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png" 
+                alt="Alfa Global Group" 
+                className="h-10 sm:h-12 w-auto transition-transform group-hover:scale-105" 
+              />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item, index) => (
-                <motion.div
+            <nav className="hidden lg:flex items-center space-x-6">
+              {navItems.slice(0, 2).map((item, index) => (
+                <Link
                   key={index}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  to={item.path}
+                  className={`text-sm font-medium ${
+                    location.pathname === item.path ? t.accent + ' font-semibold' : 'text-gray-700 ' + t.accentHover
+                  } transition-colors relative group`}
                 >
-                  <Link
-                    to={item.path}
-                    className={`text-sm font-medium ${
-                      location.pathname === item.path 
-                        ? t.accent + ' font-semibold' 
-                        : 'text-gray-700 ' + t.accentHover
-                    } transition-colors relative group`}
-                  >
-                    {item.label}
-                    <span className={`absolute -bottom-1 left-0 h-0.5 ${t.underline} transition-all ${
-                      location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`} />
-                  </Link>
-                </motion.div>
+                  {item.label}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 ${t.underline} transition-all ${
+                    location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
+              ))}
+
+              {/* Dropdown for Alfa Global Group */}
+              <div className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
+                <button className={`text-sm font-medium text-gray-700 ${t.accentHover} transition-colors flex items-center gap-1`}>
+                  Alfa Global Group
+                  <svg className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {isDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
+                    >
+                      {companyDropdown.map((company, i) => (
+                        <Link
+                          key={i}
+                          to={company.path}
+                          className={`block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 ${t.accentHover} transition-colors`}
+                        >
+                          {company.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {navItems.slice(2).map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={`text-sm font-medium ${
+                    location.pathname === item.path ? t.accent + ' font-semibold' : 'text-gray-700 ' + t.accentHover
+                  } transition-colors relative group`}
+                >
+                  {item.label}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 ${t.underline} transition-all ${
+                    location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
               ))}
             </nav>
 
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="https://portal.alfaglobalgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-sm font-medium ${t.accent} ${t.accentHover} transition-colors flex items-center gap-1`}
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                Client Portal
-              </a>
+            {/* CTA Button */}
+            <div className="hidden lg:flex items-center">
               <Link
                 to="/contact"
-                className={`px-6 py-2.5 ${t.button} text-white text-sm font-medium rounded-full transition-all hover:shadow-lg hover:shadow-${theme === 'gold' ? 'amber' : 'gray'}-500/25`}
+                className={`px-6 py-2.5 ${t.button} text-white text-sm font-medium rounded-full transition-all hover:shadow-lg`}
               >
                 Get Started
               </Link>
@@ -207,46 +200,50 @@ const UltraHeader = ({ theme = 'gold' }) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white lg:hidden"
+            className="fixed inset-0 z-40 bg-white lg:hidden overflow-y-auto"
           >
-            <div className="pt-24 px-6">
-              {/* Mobile Logo */}
-              <div className="flex justify-center mb-8">
-                <LogoSVG className="h-12 w-auto" />
-              </div>
-              
-              <nav className="flex flex-col items-center space-y-6">
+            <div className="pt-24 px-6 pb-8">
+              <nav className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
-                  <motion.div
+                  <Link
                     key={index}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    to={item.path}
+                    className={`text-lg font-medium py-2 ${
+                      location.pathname === item.path ? t.accent : 'text-gray-700'
+                    } transition-colors border-b border-gray-100`}
                   >
-                    <Link
-                      to={item.path}
-                      className={`text-xl font-medium ${
-                        location.pathname === item.path 
-                          ? t.accent 
-                          : 'text-gray-700 ' + t.accentHover
-                      } transition-colors`}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
+                    {item.label}
+                  </Link>
                 ))}
+                
+                {/* Mobile Dropdown */}
+                <div className="py-2 border-b border-gray-100">
+                  <p className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-3`}>Alfa Global Group</p>
+                  <div className="space-y-2 pl-4">
+                    {companyDropdown.map((company, i) => (
+                      <Link
+                        key={i}
+                        to={company.path}
+                        className="block text-gray-600 hover:text-gray-900 py-1 text-sm"
+                      >
+                        {company.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
                 <Link
                   to="/contact"
-                  className={`mt-6 px-8 py-3 ${t.button} text-white rounded-full font-medium`}
+                  className={`mt-4 px-8 py-3 ${t.button} text-white rounded-full font-medium text-center`}
                 >
                   Get Started
                 </Link>
               </nav>
               
               {/* Mobile Contact Info */}
-              <div className="mt-12 text-center text-sm text-gray-500 space-y-2">
-                <p>+91-22-6621-0700</p>
-                <p>info@alfaglobalgroup.com</p>
+              <div className="mt-8 text-center text-sm text-gray-500 space-y-2">
+                <p>+91 44-2224-2929</p>
+                <p>contact@alfaglobalwealth.com</p>
               </div>
             </div>
           </motion.div>
