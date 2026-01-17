@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useInView, AnimatePresence, useSpring, useTransform } from 'framer-motion';
+import NewsletterSubscription from '../components/NewsletterSubscription';
+import ClientTestimonials from '../components/ClientTestimonials';
+import { PartnersLogos, QuickStats, ServiceHighlights } from '../components/ProfessionalSections';
 
 const UltraHome = ({ theme = 'gold' }) => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
