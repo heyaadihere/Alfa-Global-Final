@@ -341,7 +341,7 @@ const UltraHome = ({ theme = 'gold' }) => {
       <section className={`py-6 sm:py-8 ${t.statsBg}`}>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
-            {stats.map((stat, i) => <StatItem key={i} {...stat} />)}
+            {stats.map((stat, i) => <AnimatedStatItem key={i} {...stat} textColor={t.statsText} />)}
           </div>
         </div>
       </section>
