@@ -8,6 +8,7 @@ import { PartnersLogos, QuickStats, ServiceHighlights } from '../components/Prof
 // Animated Counter Component - moved outside to prevent re-creation
 const AnimatedStatItem = memo(({ value, prefix = '', suffix = '', label, textColor }) => {
   const [count, setCount] = useState(0);
+  const [hasCompleted, setHasCompleted] = useState(false);
   const ref = useRef(null);
   const hasAnimated = useRef(false);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -31,7 +32,8 @@ const AnimatedStatItem = memo(({ value, prefix = '', suffix = '', label, textCol
         if (progress < 1) {
           animationFrame = requestAnimationFrame(animate);
         } else {
-          setCount(value); // Ensure final value is exact
+          setCount(value);
+          setHasCompleted(true);
         }
       };
       
@@ -45,16 +47,24 @@ const AnimatedStatItem = memo(({ value, prefix = '', suffix = '', label, textCol
     }
   }, [isInView, value]);
   
+  // Once completed, always show the final value
+  const displayValue = hasCompleted ? value : count;
+  
   return (
     <div ref={ref} className="text-center px-4 py-6 md:py-8">
       <div className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${textColor}`}>
-        {prefix}{count}{suffix}
+        {prefix}{displayValue}{suffix}
       </div>
       <div className={`${textColor} text-xs sm:text-sm mt-2 uppercase tracking-wider opacity-90`}>
         {label}
       </div>
     </div>
   );
+}, (prevProps, nextProps) => {
+  // Only re-render if these specific props change
+  return prevProps.value === nextProps.value && 
+         prevProps.label === nextProps.label &&
+         prevProps.textColor === nextProps.textColor;
 });
 
 const UltraHome = ({ theme = 'gold' }) => {
