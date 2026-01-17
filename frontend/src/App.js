@@ -64,8 +64,11 @@ function App() {
         </main>
         <UltraFooter theme={getComponentTheme()} />
         
+        {/* Floating Widgets (WhatsApp, Back to Top, Cookie Consent, Scroll Progress) */}
+        <FloatingWidgets theme={getComponentTheme()} />
+        
         {/* Theme Switcher */}
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-6 left-6 z-50">
           {/* Theme Menu */}
           {showThemeMenu && (
             <div className="absolute bottom-16 right-0 bg-white rounded-xl shadow-2xl border border-gray-100 p-2 min-w-[180px]">
