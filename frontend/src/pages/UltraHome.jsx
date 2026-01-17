@@ -508,50 +508,6 @@ const UltraHome = ({ theme = 'gold' }) => {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Our Team</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Meet the Minds Behind Your Digital Success</h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group text-center">
-                <div className={`relative overflow-hidden rounded-xl mb-4`}>
-                  <img src={member.image} alt={member.name} className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                </div>
-                <h3 className="text-gray-900 font-semibold">{member.name}</h3>
-                <p className={`${t.accentText} text-sm`}>{member.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className={`py-16 sm:py-24 ${t.accentBgLight}`}>
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Testimonials</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">Client Stories</h2>
-          </motion.div>
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div key={activeTestimonial} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="text-center">
-                <img src={testimonials[activeTestimonial].image} alt="" className={`w-20 h-20 rounded-full mx-auto mb-6 border-4 ${t.accentBorder}`} />
-                <p className="text-xl md:text-2xl text-gray-700 italic mb-6 leading-relaxed">"{testimonials[activeTestimonial].content}"</p>
-                <p className="text-gray-900 font-semibold">{testimonials[activeTestimonial].author}</p>
-                <p className={`${t.accentText} text-sm`}>{testimonials[activeTestimonial].role}</p>
-              </motion.div>
-            </AnimatePresence>
-            <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, i) => (<button key={i} onClick={() => setActiveTestimonial(i)} className={`w-3 h-3 rounded-full transition-all ${activeTestimonial === i ? t.accentBg : 'bg-gray-200'}`} />))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* INSIGHTS */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
