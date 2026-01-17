@@ -110,24 +110,24 @@ const UltraFooter = ({ theme = 'gold' }) => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Companies */}
           <div>
-            <h4 className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-4`}>Services</h4>
+            <h4 className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-4`}>Our Companies</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
+              {companies.map((company) => (
+                <li key={company.path}>
                   <Link
-                    to="/services"
+                    to={company.path}
                     className={`text-gray-400 text-sm ${t.accentHover} transition-colors`}
                   >
-                    {service}
+                    {company.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Offices */}
+          {/* Office */}
           <div>
             <h4 className={`text-sm font-semibold ${t.accent} uppercase tracking-wider mb-4`}>Office</h4>
             <div className="text-gray-400 text-sm">
