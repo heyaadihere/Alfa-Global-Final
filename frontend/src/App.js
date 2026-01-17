@@ -46,14 +46,19 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<UltraHome theme={getComponentTheme()} />} />
-            <Route path="/about" element={<CorporateAbout />} />
-            <Route path="/services" element={<CorporateServices />} />
-            <Route path="/team" element={<CorporateTeam />} />
-            <Route path="/case-studies" element={<CorporateCaseStudies />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/insights" element={<InsightsPage />} />
-            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/about" element={<AboutPage theme={getComponentTheme()} />} />
+            <Route path="/services" element={<ServicesPage theme={getComponentTheme()} />} />
+            <Route path="/strategy" element={<StrategyPage theme={getComponentTheme()} />} />
+            <Route path="/global-access" element={<GlobalAccessPage theme={getComponentTheme()} />} />
+            <Route path="/faqs" element={<FAQsPage theme={getComponentTheme()} />} />
             <Route path="/contact" element={<PremiumContact theme={theme === 'purple' || theme === 'teal' ? theme : 'purple'} />} />
+            {/* Alfa Global Group Companies */}
+            <Route path="/alfa-global-wealth-advisors" element={<AlfaGlobalWealthAdvisorsPage theme={getComponentTheme()} />} />
+            <Route path="/alfa-star-dynamics" element={<AlfaStarDynamicsPage theme={getComponentTheme()} />} />
+            <Route path="/alfa-zillion-traders" element={<AlfaZillionTradersPage theme={getComponentTheme()} />} />
+            <Route path="/gazillion-capital" element={<GazillionCapitalPage theme={getComponentTheme()} />} />
+            <Route path="/mk-dairy-farms" element={<MKDairyFarmsPage theme={getComponentTheme()} />} />
+            <Route path="/cyberhakz" element={<CyberhakzPage theme={getComponentTheme()} />} />
           </Routes>
         </main>
         <UltraFooter theme={getComponentTheme()} />
