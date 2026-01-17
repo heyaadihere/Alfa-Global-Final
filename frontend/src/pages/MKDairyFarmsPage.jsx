@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const MKDairyFarmsPage = ({ theme = 'gold' }) => {
   const themes = {
-    gold: { accentText: 'text-amber-600', accentBg: 'bg-amber-600', accentBgLight: 'bg-amber-50', accentBorder: 'border-amber-200', gradient: 'from-amber-600 to-amber-700', heroBg: 'from-slate-950 via-slate-900 to-slate-950', heroAccent: 'text-amber-400', accentHover: 'hover:bg-amber-700' },
-    silver: { accentText: 'text-gray-700', accentBg: 'bg-gray-700', accentBgLight: 'bg-gray-100', accentBorder: 'border-gray-300', gradient: 'from-gray-700 to-gray-800', heroBg: 'from-gray-950 via-gray-900 to-gray-950', heroAccent: 'text-gray-300', accentHover: 'hover:bg-gray-800' },
-    purple: { accentText: 'text-purple-600', accentBg: 'bg-purple-600', accentBgLight: 'bg-purple-50', accentBorder: 'border-purple-200', gradient: 'from-purple-600 to-purple-700', heroBg: 'from-purple-950 via-slate-950 to-purple-950', heroAccent: 'text-purple-400', accentHover: 'hover:bg-purple-700' },
-    teal: { accentText: 'text-teal-600', accentBg: 'bg-teal-600', accentBgLight: 'bg-teal-50', accentBorder: 'border-teal-200', gradient: 'from-teal-600 to-teal-700', heroBg: 'from-teal-950 via-slate-950 to-teal-950', heroAccent: 'text-teal-400', accentHover: 'hover:bg-teal-700' }
+    gold: { accentText: 'text-amber-600', accentBg: 'bg-amber-600', accentBgLight: 'bg-amber-50', gradient: 'from-amber-600 to-amber-700', heroBg: 'from-slate-950 via-slate-900 to-slate-950', accentHover: 'hover:bg-amber-700' },
+    silver: { accentText: 'text-gray-700', accentBg: 'bg-gray-700', accentBgLight: 'bg-gray-100', gradient: 'from-gray-700 to-gray-800', heroBg: 'from-gray-950 via-gray-900 to-gray-950', accentHover: 'hover:bg-gray-800' },
+    purple: { accentText: 'text-purple-600', accentBg: 'bg-purple-600', accentBgLight: 'bg-purple-50', gradient: 'from-purple-600 to-purple-700', heroBg: 'from-purple-950 via-slate-950 to-purple-950', accentHover: 'hover:bg-purple-700' },
+    teal: { accentText: 'text-teal-600', accentBg: 'bg-teal-600', accentBgLight: 'bg-teal-50', gradient: 'from-teal-600 to-teal-700', heroBg: 'from-teal-950 via-slate-950 to-teal-950', accentHover: 'hover:bg-teal-700' }
   };
   const t = themes[theme] || themes.gold;
 
@@ -29,21 +28,40 @@ const MKDairyFarmsPage = ({ theme = 'gold' }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className={`relative py-32 bg-gradient-to-br ${t.heroBg}`}>
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
+      {/* Hero Section with Transparency Effect */}
+      <section className={`relative py-32 bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
+        {/* Transparent Overlay Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%)`,
+          }}></div>
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: 'linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%)',
+            backgroundSize: '200% 200%',
+          }}></div>
+        </div>
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+        
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <motion.img initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} src="https://websitesbytechpioneers.com/alfaglobalnew/image/mk-dailry-farms-logo.png" alt="MK Dairy Farms" className="h-20 w-auto mx-auto mb-6" />
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">MK Dairy Farms</motion.h1>
           <p className="text-white/60 text-lg mb-8">Private Limited</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className={`inline-flex items-center justify-center gap-2 px-8 py-4 ${t.accentBg} text-white font-semibold rounded-lg ${t.accentHover} transition-all`}>
-              Partner With Us
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </Link>
-            <Link to="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all border border-white/20">
-              Learn Our Story
-            </Link>
-          </div>
+          <a 
+            href="https://mkdairyfarms.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`inline-flex items-center justify-center gap-2 px-8 py-4 ${t.accentBg} text-white font-semibold rounded-lg ${t.accentHover} transition-all`}
+            data-testid="find-out-more-cta"
+          >
+            Find out More
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
         </div>
       </section>
 
@@ -60,12 +78,9 @@ const MKDairyFarmsPage = ({ theme = 'gold' }) => {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 MK Dairy Farms Private Limited is the agriculture and natural resources arm of Alfa Global Group of Companies. We specialize in distribution, sourcing, and supply chain solutions for dairy, natural resources, and agricultural products.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Through sustainable practices and modern logistics, MK Dairy Farms ensures quality, freshness, and reliability for our partners, suppliers, and end consumers while supporting agricultural communities and promoting healthier lifestyles.
               </p>
-              <Link to="/contact" className={`inline-flex items-center gap-2 ${t.accentText} font-semibold hover:gap-3 transition-all`}>
-                Explore Our Products <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </Link>
             </motion.div>
           </div>
         </div>
@@ -109,11 +124,6 @@ const MKDairyFarmsPage = ({ theme = 'gold' }) => {
                   </motion.div>
                 ))}
               </div>
-              <div className="mt-8">
-                <Link to="/contact" className={`inline-flex items-center gap-2 px-6 py-3 ${t.accentBg} text-white font-semibold rounded-lg ${t.accentHover} transition-all`}>
-                  Request a Catalog <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </Link>
-              </div>
             </div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <img src="https://images.unsplash.com/photo-1758486158487-92f2752c889d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxkYWlyeSUyMGZhcm0lMjBhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlfGVufDB8fHx8MTc2ODY1NzMwMXww&ixlib=rb-4.1.0&q=85" alt="Farm Operations" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
@@ -123,21 +133,13 @@ const MKDairyFarmsPage = ({ theme = 'gold' }) => {
       </section>
 
       {/* Promise Section */}
-      <section className={`py-16 sm:py-24 bg-gradient-to-r ${t.gradient}`}>
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Our Promise</h2>
-          <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Through sustainable practices and modern logistics, MK Dairy Farms ensures quality, freshness, and reliability for our partners, suppliers, and end consumers while supporting agricultural communities and promoting healthier lifestyles while supporting the agricultural and natural resource economy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all">
-              Become a Supplier
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </Link>
-            <a href="tel:+914422242929" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              Call Us Now
-            </a>
+      <section className={`py-16 sm:py-24 ${t.accentBgLight}`}>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className={`p-12 rounded-2xl bg-gradient-to-r ${t.gradient} text-center`}>
+            <h2 className="text-3xl font-bold text-white mb-4">Our Promise</h2>
+            <p className="text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Through sustainable practices and modern logistics, MK Dairy Farms ensures quality, freshness, and reliability for our partners, suppliers, and end consumers while supporting agricultural communities and promoting healthier lifestyles while supporting the agricultural and natural resource economy.
+            </p>
           </div>
         </div>
       </section>
