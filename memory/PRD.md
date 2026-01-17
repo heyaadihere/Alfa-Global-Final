@@ -57,6 +57,17 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] **Hero CTAs on all company pages** (two buttons per hero section)
 - [x] **Multiple CTAs throughout all company pages** (section-level + bottom CTAs)
 - [x] **Call Us Now phone links** on all company pages
+- [x] **Newsletter subscription** with backend API (POST /api/newsletter)
+- [x] **WhatsApp floating chat button** for instant customer contact
+- [x] **Back to Top button** appears on scroll
+- [x] **Cookie consent banner** with localStorage persistence
+- [x] **Scroll progress indicator** at top of page
+- [x] **Client testimonials section** with 4 testimonials, star ratings, and trust stats
+- [x] **Partners/Certifications section** (SEBI, ISO 27001, NSE, BSE, AMFI, NSDL, CDSL)
+- [x] **Service Highlights section** with 4 clickable cards linking to company pages
+- [x] **Privacy Policy page** at /privacy
+- [x] **Terms of Service page** at /terms
+- [x] **Codebase cleanup** - Removed 25+ obsolete component/page files
 
 ### Testing Status
 - Frontend: 100% PASS (all 13 pages tested)
