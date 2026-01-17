@@ -6,13 +6,17 @@ import UltraHeader from './components/UltraHeader';
 import UltraFooter from './components/UltraFooter';
 import UltraHome from './pages/UltraHome';
 import PremiumContact from './pages/PremiumContact';
-import CorporateAbout from './pages/CorporateAbout';
-import CorporateServices from './pages/CorporateServices';
-import CorporateTeam from './pages/CorporateTeam';
-import CorporateCaseStudies from './pages/CorporateCaseStudies';
-import CareersPage from './pages/CareersPage';
-import InsightsPage from './pages/InsightsPage';
-import FAQPage from './pages/FAQPage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import StrategyPage from './pages/StrategyPage';
+import GlobalAccessPage from './pages/GlobalAccessPage';
+import FAQsPage from './pages/FAQsPage';
+import AlfaGlobalWealthAdvisorsPage from './pages/AlfaGlobalWealthAdvisorsPage';
+import AlfaStarDynamicsPage from './pages/AlfaStarDynamicsPage';
+import AlfaZillionTradersPage from './pages/AlfaZillionTradersPage';
+import GazillionCapitalPage from './pages/GazillionCapitalPage';
+import MKDairyFarmsPage from './pages/MKDairyFarmsPage';
+import CyberhakzPage from './pages/CyberhakzPage';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
