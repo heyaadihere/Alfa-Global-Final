@@ -53,6 +53,10 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] 3D Globe preloader
 - [x] Mobile responsive navigation
 - [x] All content populated from reference website
+- [x] **Working images on all company pages** (replaced broken external URLs with Unsplash)
+- [x] **Hero CTAs on all company pages** (two buttons per hero section)
+- [x] **Multiple CTAs throughout all company pages** (section-level + bottom CTAs)
+- [x] **Call Us Now phone links** on all company pages
 
 ### Testing Status
 - Frontend: 100% PASS (all 13 pages tested)
