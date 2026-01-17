@@ -325,27 +325,6 @@ const UltraHome = ({ theme = 'gold' }) => {
         </div>
       </section>
 
-      {/* CLIENT LOGOS - from reference site */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-          <p className="text-center text-gray-400 text-sm uppercase tracking-widest mb-8">Powering Success for Top Brands</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {clientLogos.map((client, i) => (
-              <motion.img
-                key={i}
-                src={client.logo}
-                alt={client.name}
-                className="h-12 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 0.6, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ABOUT SECTION - Content from reference */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
