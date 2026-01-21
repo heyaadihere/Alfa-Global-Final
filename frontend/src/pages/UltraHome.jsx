@@ -412,7 +412,7 @@ const UltraHome = ({ theme = 'gold' }) => {
                     <img src={service.icon} alt={service.title} className="w-12 h-12 object-contain" />
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
-                      <p className="text-gray-600 text-sm mt-1">{service.desc}</p>
+                      <p className="text-gray-600 text-sm mt-1 text-justify">{service.desc}</p>
                     </div>
                   </div>
                 </motion.div>
