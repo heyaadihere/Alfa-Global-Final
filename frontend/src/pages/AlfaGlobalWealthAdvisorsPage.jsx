@@ -119,7 +119,7 @@ const AlfaGlobalWealthAdvisorsPage = ({ theme = 'gold' }) => {
               </div>
             </div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.unsplash.com/photo-1642522029686-5485ea7e6042?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzY4NjU3MzE1fDA&ixlib=rb-4.1.0&q=85" alt="Regulatory Compliance" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
+              <img src="https://images.pexels.com/photos/7581115/pexels-photo-7581115.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Regulatory Compliance" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
             </motion.div>
           </div>
         </div>
