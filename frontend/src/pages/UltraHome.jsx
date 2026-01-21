@@ -457,7 +457,7 @@ const UltraHome = ({ theme = 'gold' }) => {
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                 <div className={`${t.heroAccent} mb-4`}>{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-white/60 leading-relaxed">{item.desc}</p>
+                <p className="text-white/60 leading-relaxed text-justify">{item.desc}</p>
               </motion.div>
             ))}
           </div>
