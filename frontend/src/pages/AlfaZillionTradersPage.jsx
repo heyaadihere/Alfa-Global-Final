@@ -50,7 +50,7 @@ const AlfaZillionTradersPage = ({ theme = 'gold' }) => {
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <motion.img initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-zillion-logo-removebg-preview.png" alt="Alfa Zillion Traders" className="h-20 w-auto mx-auto mb-6" />
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">Alfa Zillion Traders</motion.h1>
-          <p className="text-white/60 text-lg mb-8">LLP</p>
+          <p className="text-white/60 text-lg mb-8"></p>
           <a 
             href="https://alfazillion.com/" 
             target="_blank" 
