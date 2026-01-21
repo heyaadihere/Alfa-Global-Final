@@ -69,15 +69,15 @@ const AlfaZillionTradersPage = ({ theme = 'gold' }) => {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.unsplash.com/photo-1651129525259-a283dc1a66a6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwdHJhZGluZyUyMHBsYXRmb3JtJTIwQUl8ZW58MHx8fHwxNzY4NjU3Mjg2fDA&ixlib=rb-4.1.0&q=85" alt="Fintech Trading" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
+              <img src="https://images.pexels.com/photos/7580643/pexels-photo-7580643.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fintech Trading" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Where Technology Meets Trading Excellence</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">Fintech Driven Trading</h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Alfa Zillion Traders LLP is a fintech driven trading firm operating under the Alfa Global Group of Companies. Specializing in advanced proprietary trading, AI powered strategies, and alpha engineering, we redefine how capital works for our partners.
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
+                Alfa Zillion Traders is a fintech driven trading firm operating under the Alfa Global Group of Companies. Specializing in advanced proprietary trading, AI powered strategies, and alpha engineering, we redefine how capital works for our partners.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 We work exclusively with select, high value partners who seek precision, performance, and innovation. Through cutting edge trading platforms, data analytics, and global market access, we turn complex market opportunities into tangible, long term returns.
               </p>
             </motion.div>
