@@ -66,6 +66,7 @@ function App() {
             {/* Legal Pages */}
             <Route path="/privacy" element={<PrivacyPage theme={getComponentTheme()} />} />
             <Route path="/terms" element={<TermsPage theme={getComponentTheme()} />} />
+            <Route path="/team" element={<TeamPage theme={getComponentTheme()} />} />
           </Routes>
         </main>
         <UltraFooter theme={getComponentTheme()} />
