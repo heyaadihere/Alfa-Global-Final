@@ -34,6 +34,7 @@ const UltraHeader = ({ theme = 'gold' }) => {
     { label: 'Services', path: '/services' },
     { label: 'Strategy', path: '/strategy' },
     { label: 'Global Access', path: '/global-access' },
+    { label: 'Team', path: '/team' },
     { label: 'FAQs', path: '/faqs' },
     { label: 'Contact', path: '/contact' }
   ];
