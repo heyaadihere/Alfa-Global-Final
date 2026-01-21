@@ -1,71 +1,9 @@
-import React, { useState, useEffect, useRef, memo } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useInView, AnimatePresence, useSpring, useTransform } from 'framer-motion';
 import NewsletterSubscription from '../components/NewsletterSubscription';
 import ClientTestimonials from '../components/ClientTestimonials';
 import { PartnersLogos, QuickStats, ServiceHighlights } from '../components/ProfessionalSections';
-
-// Animated Counter Component - moved outside to prevent re-creation
-const AnimatedStatItem = memo(({ value, prefix = '', suffix = '', label, textColor }) => {
-  const [count, setCount] = useState(0);
-  const [hasCompleted, setHasCompleted] = useState(false);
-  const ref = useRef(null);
-  const hasAnimated = useRef(false);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
-  useEffect(() => {
-    if (isInView && !hasAnimated.current) {
-      hasAnimated.current = true;
-      let startTime = null;
-      let animationFrame;
-      const duration = 2000;
-      
-      const animate = (timestamp) => {
-        if (!startTime) startTime = timestamp;
-        const elapsed = timestamp - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        const currentCount = Math.floor(easeOut * value);
-        
-        setCount(currentCount);
-        
-        if (progress < 1) {
-          animationFrame = requestAnimationFrame(animate);
-        } else {
-          setCount(value);
-          setHasCompleted(true);
-        }
-      };
-      
-      animationFrame = requestAnimationFrame(animate);
-      
-      return () => {
-        if (animationFrame) {
-          cancelAnimationFrame(animationFrame);
-        }
-      };
-    }
-  }, [isInView, value]);
-  
-  // Once completed, always show the final value
-  const displayValue = hasCompleted ? value : count;
-  
-  return (
-    <div ref={ref} className="text-center px-4 py-6 md:py-8">
-      <div className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${textColor}`}>
-        {prefix}{displayValue}{suffix}
-      </div>
-      <div className={`${textColor} text-xs sm:text-sm mt-2 uppercase tracking-wider opacity-90`}>
-        {label}
-      </div>
-    </div>
-  );
-}, (prevProps, nextProps) => {
-  // Only re-render if these specific props change
-  return prevProps.value === nextProps.value && 
-         prevProps.label === nextProps.label &&
-         prevProps.textColor === nextProps.textColor;
-});
 
 const UltraHome = ({ theme = 'gold' }) => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
