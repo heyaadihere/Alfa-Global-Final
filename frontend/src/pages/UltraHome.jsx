@@ -119,14 +119,6 @@ const UltraHome = ({ theme = 'gold' }) => {
 
   const t = themes[theme] || themes.gold;
 
-  // Stats - exact values from reference
-  const stats = [
-    { value: 213, prefix: '₹', suffix: 'Cr+', label: 'Assets Under Management' },
-    { value: 15, suffix: '+', label: 'Years of Excellence' },
-    { value: 21, suffix: '+', label: 'Satisfied Clients' },
-    { value: 10, suffix: '+', label: 'Global Markets' }
-  ];
-
   // Market indices
   const marketData = [
     { name: 'SENSEX', value: '72,568.45', change: '+0.85%', up: true },
