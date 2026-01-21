@@ -295,29 +295,6 @@ const UltraHome = ({ theme = 'gold' }) => {
                   ))}
                 </motion.div>
               </div>
-
-              {/* Performance Card */}
-              <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="lg:col-span-5 hidden lg:block">
-                <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
-                  <h3 className="text-white/80 text-sm font-medium uppercase tracking-wider mb-6">Performance Overview</h3>
-                  <div className="space-y-6">
-                    {[
-                      { label: 'Assets Under Management', value: '₹585Cr+', sublabel: '+24% YoY' },
-                      { label: 'Client Portfolios', value: '58+', sublabel: 'Active accounts' },
-                      { label: 'Avg. Annual Returns', value: '18.5%', sublabel: 'Since inception' },
-                      { label: 'Client Satisfaction', value: '98%', sublabel: 'NPS Score' }
-                    ].map((item, i) => (
-                      <div key={i} className="flex justify-between items-center pb-4 border-b border-white/5 last:border-0 last:pb-0">
-                        <div>
-                          <p className="text-white/50 text-xs uppercase tracking-wide">{item.label}</p>
-                          <p className="text-white/40 text-xs mt-1">{item.sublabel}</p>
-                        </div>
-                        <p className={`text-2xl font-bold ${t.heroAccent}`}>{item.value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </motion.div>
