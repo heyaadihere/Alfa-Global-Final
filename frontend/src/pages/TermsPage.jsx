@@ -82,7 +82,7 @@ const TermsPage = ({ theme = 'teal' }) => {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-gray-600 mb-12 text-lg leading-relaxed"
+            className="text-gray-600 mb-12 text-lg leading-relaxed text-justify"
           >
             Welcome to Alfa Global Group. These Terms of Service govern your use of our website and services. Please read them carefully before using our platform.
           </motion.p>
@@ -99,7 +99,7 @@ const TermsPage = ({ theme = 'teal' }) => {
               <h2 className={`text-xl font-bold text-gray-900 mb-4 ${t.accentText}`}>
                 {i + 1}. {section.title}
               </h2>
-              <p className="text-gray-600 whitespace-pre-line leading-relaxed">
+              <p className="text-gray-600 whitespace-pre-line leading-relaxed text-justify">
                 {section.content}
               </p>
             </motion.div>
