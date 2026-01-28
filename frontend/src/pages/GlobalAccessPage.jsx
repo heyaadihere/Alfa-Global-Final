@@ -40,7 +40,7 @@ const GlobalAccessPage = ({ theme = 'teal' }) => {
 
           <div className={`p-8 rounded-2xl ${t.accentBgLight} mb-12`}>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Global Reach</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-justify">
               We work with clients and partners across Asia, Europe, Middle East, and North America, ensuring they gain access to world class financial products, private equity opportunities, agricultural trade, and cyber security solutions.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
