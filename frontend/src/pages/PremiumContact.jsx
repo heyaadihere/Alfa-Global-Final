@@ -12,31 +12,20 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-const PremiumContact = ({ theme = 'purple' }) => {
+const PremiumContact = ({ theme = 'teal' }) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const themes = {
-    purple: {
-      gradient: 'from-[#1a1a2e] via-[#16213e] to-[#0f0f23]',
-      accentBg: 'bg-purple-600',
-      accentHover: 'hover:bg-purple-500',
-      accentText: 'text-purple-400',
-      accentBorder: 'border-purple-500',
-      cardBg: 'bg-[#1a1a2e]/50'
-    },
-    teal: {
-      gradient: 'from-[#0a2e2b] via-[#0d3d38] to-[#071a18]',
-      accentBg: 'bg-teal-600',
-      accentHover: 'hover:bg-teal-500',
-      accentText: 'text-amber-400',
-      accentBorder: 'border-amber-500',
-      cardBg: 'bg-[#0a2e2b]/50'
-    }
+  // Teal theme configuration
+  const t = {
+    gradient: 'from-[#0a2e2b] via-[#0d3d38] to-[#071a18]',
+    accentBg: 'bg-teal-600',
+    accentHover: 'hover:bg-teal-500',
+    accentText: 'text-amber-400',
+    accentBorder: 'border-amber-500',
+    cardBg: 'bg-[#0a2e2b]/50'
   };
-
-  const t = themes[theme];
 
   // Contact info from reference site
   const offices = [
