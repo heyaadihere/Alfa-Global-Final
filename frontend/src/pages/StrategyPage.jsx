@@ -41,7 +41,7 @@ const StrategyPage = ({ theme = 'teal' }) => {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our Strategic Approach</h2>
-            <p className="text-gray-600 mt-4 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-gray-600 mt-4 max-w-4xl mx-auto leading-relaxed text-justify">
               At Alfa Global Group, strategy drives everything we do. Our portfolio spans alternative investments, private equity, fintech trading, infrastructure, shipping, manufacturing, agriculture, and cybersecurity – yet all businesses are guided by a unified approach: combining innovation, disciplined risk management, and long term vision to deliver sustainable growth and impact.
             </p>
           </motion.div>
