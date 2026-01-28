@@ -44,7 +44,7 @@ const ServicesPage = ({ theme = 'teal' }) => {
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`p-8 rounded-2xl border ${t.accentBorder} hover:shadow-xl transition-all`}>
                 <img src={service.icon} alt={service.title} className="w-16 h-16 object-contain mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                <p className="text-gray-600 leading-relaxed text-justify">{service.desc}</p>
               </motion.div>
             ))}
           </div>
