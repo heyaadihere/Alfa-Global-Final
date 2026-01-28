@@ -5,7 +5,7 @@ import NewsletterSubscription from '../components/NewsletterSubscription';
 import ClientTestimonials from '../components/ClientTestimonials';
 import { PartnersLogos, QuickStats, ServiceHighlights } from '../components/ProfessionalSections';
 
-const UltraHome = ({ theme = 'gold' }) => {
+const UltraHome = ({ theme = 'teal' }) => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(0);
