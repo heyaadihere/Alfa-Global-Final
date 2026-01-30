@@ -139,6 +139,41 @@ const AlfaGlobalWealthAdvisorsPage = ({ theme = 'teal' }) => {
           </div>
         </div>
       </section>
+
+      {/* Investment Calculator */}
+      <section className={`py-16 sm:py-24 ${t.accentBgLight}`}>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Planning Tool</span>
+                <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-8">Investment Calculator</h2>
+                <div className="space-y-6">
+                  {[
+                    { label: 'Investment (₹)', key: 'amount', min: 100000, max: 10000000, step: 100000, format: (v) => `₹${(v/100000).toFixed(1)}L` },
+                    { label: 'Period', key: 'years', min: 1, max: 30, step: 1, format: (v) => `${v} Years` },
+                    { label: 'Expected Return', key: 'rate', min: 5, max: 25, step: 1, format: (v) => `${v}%` }
+                  ].map((s) => (
+                    <div key={s.key}>
+                      <div className="flex justify-between mb-2">
+                        <label className="text-gray-700 text-sm font-medium">{s.label}</label>
+                        <span className={`${t.accentText} font-semibold text-sm`}>{s.format(calculatorValues[s.key])}</span>
+                      </div>
+                      <input type="range" min={s.min} max={s.max} step={s.step} value={calculatorValues[s.key]} onChange={(e) => setCalculatorValues({...calculatorValues, [s.key]: parseInt(e.target.value)})} className={`w-full h-2 rounded-full appearance-none cursor-pointer ${t.accentBg}`} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className={`p-8 rounded-2xl bg-gradient-to-br ${t.gradient} text-white text-center`}>
+                <p className="text-white/80 text-sm mb-2">Estimated Future Value</p>
+                <div className="text-5xl font-bold mb-4">₹{(calculateReturns()/10000000).toFixed(2)}Cr</div>
+                <p className="text-white/60 text-sm mb-8">After {calculatorValues.years} years</p>
+                <Link to="/contact" className="inline-block px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all">Start Investing</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
