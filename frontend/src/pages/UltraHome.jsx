@@ -9,7 +9,6 @@ const UltraHome = ({ theme = 'teal' }) => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(0);
-  const [calculatorValues, setCalculatorValues] = useState({ amount: 1000000, years: 10, rate: 12 });
   const [currentTime, setCurrentTime] = useState(new Date());
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
