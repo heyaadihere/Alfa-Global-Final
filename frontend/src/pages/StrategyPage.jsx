@@ -22,9 +22,7 @@ const StrategyPage = ({ theme = 'teal' }) => {
   ];
 
   const stats = [
-    { value: '700+', label: 'Clients and partners engaged across sectors globally' },
-    { value: '25+', label: 'Years of combined leadership experience' },
-    { value: '85%', label: 'Repeat engagement rate' },
+    { value: '30+', label: 'Years of combined leadership experience' },
     { value: 'Proven', label: 'Track record in investments and multi-sector growth' }
   ];
 
