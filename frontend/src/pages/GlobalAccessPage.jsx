@@ -15,9 +15,7 @@ const GlobalAccessPage = ({ theme = 'teal' }) => {
 
   const stats = [
     { value: '10+', label: 'Presence in 10+ countries with strategic partnerships worldwide' },
-    { value: '25+', label: '25+ years of combined leadership experience across international markets' },
-    { value: '700+', label: 'Trusted by 700+ clients including HNIs, institutions, and enterprises' },
-    { value: '85%', label: '85% repeat engagement rate, proof of lasting global relationships' }
+    { value: '30+', label: '30+ years of combined leadership experience across international markets' }
   ];
 
   return (
