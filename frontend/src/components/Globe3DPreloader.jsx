@@ -238,11 +238,14 @@ const Globe3DPreloader = ({ onComplete }) => {
               transition={{ delay: 0.5 }}
               className="text-center"
             >
-              <img
-                src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png"
-                alt="Alfa Global"
-                className="h-16 mx-auto mb-4 brightness-0 invert"
-              />
+              <div className="mb-4">
+                <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
+                  ALFA GLOBAL
+                </span>
+                <span className="block text-lg md:text-xl font-light text-white/60 tracking-widest mt-1">
+                  GROUP
+                </span>
+              </div>
               <p className="text-cyan-400/80 text-sm tracking-[0.3em] uppercase">
                 Global Wealth Solutions
               </p>
