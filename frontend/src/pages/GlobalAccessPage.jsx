@@ -73,7 +73,7 @@ const GlobalAccessPage = ({ theme = 'teal' }) => {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Why Global Access with Alfa Global?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {stats.map((stat, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`p-6 rounded-xl border ${t.accentBorder} text-center`}>
                 <div className={`text-3xl font-bold ${t.accentText} mb-2`}>{stat.value}</div>
