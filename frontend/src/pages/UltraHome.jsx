@@ -393,9 +393,6 @@ const UltraHome = ({ theme = 'teal' }) => {
       {/* Service Highlights */}
       <ServiceHighlights theme={theme} />
 
-      {/* Client Testimonials */}
-      <ClientTestimonials theme={theme} />
-
       {/* Partners & Certifications */}
       <PartnersLogos theme={theme} />
 
