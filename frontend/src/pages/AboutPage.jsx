@@ -92,7 +92,15 @@ const AboutPage = ({ theme = 'teal' }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {companies.map((company, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`p-6 rounded-2xl border ${t.accentBorder} hover:shadow-xl transition-all group`}>
-                <img src={company.logo} alt={company.name} className="h-16 w-auto mb-4 object-contain" />
+                {company.logo ? (
+                  <img src={company.logo} alt={company.name} className="h-16 w-auto mb-4 object-contain" />
+                ) : (
+                  <div className={`h-16 w-16 mb-4 ${t.accentBg} rounded-lg flex items-center justify-center`}>
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                  </div>
+                )}
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{company.name}</h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed text-justify">{company.desc}</p>
                 <Link to={company.link} className={`inline-flex items-center gap-2 ${t.accentText} font-semibold text-sm hover:gap-3 transition-all`}>
