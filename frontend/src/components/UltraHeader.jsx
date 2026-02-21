@@ -39,7 +39,8 @@ const UltraHeader = ({ theme = 'teal' }) => {
     { label: 'Alfa Zillion Traders', path: '/alfa-zillion-traders' },
     { label: 'Gazillion Capital', path: '/gazillion-capital' },
     { label: 'MK Dairy Farms', path: '/mk-dairy-farms' },
-    { label: 'Cyberhakz', path: '/cyberhakz' }
+    { label: 'Cyberhakz', path: '/cyberhakz' },
+    { label: 'Dhanveir Groups Shipping', path: '/dhanveir-groups-shipping' }
   ];
 
   return (
