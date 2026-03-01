@@ -11,7 +11,6 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import StrategyPage from './pages/StrategyPage';
 import GlobalAccessPage from './pages/GlobalAccessPage';
-import FAQsPage from './pages/FAQsPage';
 import AlfaGlobalWealthAdvisorsPage from './pages/AlfaGlobalWealthAdvisorsPage';
 import AlfaStarDynamicsPage from './pages/AlfaStarDynamicsPage';
 import AlfaZillionTradersPage from './pages/AlfaZillionTradersPage';
@@ -44,7 +43,6 @@ function App() {
             <Route path="/services" element={<ServicesPage theme={theme} />} />
             <Route path="/strategy" element={<StrategyPage theme={theme} />} />
             <Route path="/global-access" element={<GlobalAccessPage theme={theme} />} />
-            <Route path="/faqs" element={<FAQsPage theme={theme} />} />
             <Route path="/contact" element={<PremiumContact theme={theme} />} />
             {/* Alfa Global Group Companies */}
             <Route path="/alfa-global-wealth-advisors" element={<AlfaGlobalWealthAdvisorsPage theme={theme} />} />
