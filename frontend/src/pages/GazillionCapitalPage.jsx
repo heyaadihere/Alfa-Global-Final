@@ -241,6 +241,9 @@ const GazillionCapitalPage = ({ theme = 'teal' }) => {
           </div>
         </div>
       </section>
+
+      {/* Regulated & Certified By */}
+      <PartnersLogos theme={theme} />
     </div>
   );
 };
