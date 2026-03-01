@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useInView, AnimatePresence, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useInView, useSpring, useTransform } from 'framer-motion';
 import NewsletterSubscription from '../components/NewsletterSubscription';
-import { PartnersLogos, QuickStats, ServiceHighlights } from '../components/ProfessionalSections';
+import { ServiceHighlights } from '../components/ProfessionalSections';
 
 const UltraHome = ({ theme = 'teal' }) => {
-  const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(0);
   const [currentTime, setCurrentTime] = useState(new Date());
   const heroRef = useRef(null);
