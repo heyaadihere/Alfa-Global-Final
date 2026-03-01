@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PartnersLogos } from '../components/ProfessionalSections';
 
 const GazillionCapitalPage = ({ theme = 'teal' }) => {
   // Teal theme configuration
