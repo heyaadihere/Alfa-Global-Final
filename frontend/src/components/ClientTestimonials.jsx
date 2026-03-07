@@ -9,28 +9,28 @@ const ClientTestimonials = ({ theme = 'teal' }) => {
     {
       name: 'Rajesh Sharma',
       role: 'CEO, TechVentures India',
-      image: 'https://images.unsplash.com/photo-1742119971773-57e0131095b0?w=100&h=100&fit=crop&crop=face',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/231c8dcadf26427e9049f7bd398dae6bda491bd788338ab7acb23f20bc073071.png',
       content: 'Alfa Global Wealth Advisors transformed our investment strategy. Their personalized approach and deep market insights helped us achieve 35% portfolio growth in just 18 months.',
       rating: 5
     },
     {
       name: 'Priya Patel',
       role: 'Managing Director, Patel Holdings',
-      image: 'https://images.unsplash.com/photo-1669659033487-203d254e35a4?w=100&h=100&fit=crop&crop=face',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2487dfd76782db0248bd08973ea4ded052c79dd5f0d450c1573f0d1113f32278.png',
       content: 'The team at Alfa Star Dynamics demonstrated exceptional expertise in private equity. Their strategic guidance in our maritime investments exceeded all expectations.',
       rating: 5
     },
     {
       name: 'Suresh Menon',
       role: 'Founder, Menon Capital',
-      image: 'https://images.unsplash.com/photo-1737574994780-e31827afaed7?w=100&h=100&fit=crop&crop=face',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/a52d636dafc65200360c58dc207e992e5c02d85c9cfd0c21f5796b7b681f8b7e.png',
       content: 'Working with Gazillion Capital has been a game-changer. Their investor education programs and product distribution network are unmatched in the industry.',
       rating: 5
     },
     {
       name: 'Anita Desai',
       role: 'CFO, Global Enterprises',
-      image: 'https://images.unsplash.com/photo-1528082414335-adbd64f18d12?w=100&h=100&fit=crop&crop=face',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/28f71e14c72102af93e0f3d90d0c6bdda5f11f972819f82538cc40de078b8b33.png',
       content: 'Cyberhakz provided enterprise-grade security solutions that protected our business from multiple cyber threats. Their proactive approach is truly commendable.',
       rating: 5
     }

@@ -59,7 +59,7 @@ const UltraHome = ({ theme = 'teal' }) => {
       title: 'Global Partnerships',
       desc: 'Cross-border alliances, family office structures, and institutional collaborations.',
       features: ['Family Office Services', 'Cross-Border M&A', 'Strategic Consulting', 'Institutional Consulting'],
-      image: 'https://images.unsplash.com/photo-1563457039413-0c39b8e8963d?w=800'
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/bf52fff87a71bbd76ffad7e58336e973072d1215c98810ef58b845f88a84d52c.png'
     }
   ];
 
@@ -73,10 +73,10 @@ const UltraHome = ({ theme = 'teal' }) => {
   ];
 
   const team = [
-    { name: 'Vikram Singh', role: 'Head of Investments', image: 'https://images.unsplash.com/photo-1771244678811-50c22f17c791?w=400' },
-    { name: 'Meera Krishnan', role: 'Senior Analyst', image: 'https://images.pexels.com/photos/7580822/pexels-photo-7580822.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { name: 'Amit Deshmukh', role: 'Portfolio Manager', image: 'https://images.pexels.com/photos/7580918/pexels-photo-7580918.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { name: 'Kavita Iyer', role: 'Director - Strategy', image: 'https://images.unsplash.com/photo-1770627016447-cb9d29ed0398?w=400' }
+    { name: 'Vikram Singh', role: 'Head of Investments', image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/cfd26998e857f18fb3b781db437ef602290724f403d9913029aa32d6b6246a90.png' },
+    { name: 'Meera Krishnan', role: 'Senior Analyst', image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2b3129d6d241554bf19947e0b1a16540e099cef4415087d623e75b6022c1c069.png' },
+    { name: 'Amit Deshmukh', role: 'Portfolio Manager', image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/f5afafd8d1834f3154890ee0f3867d07d7e9d30b3f817713f9dd5dc1712ac70d.png' },
+    { name: 'Kavita Iyer', role: 'Director - Strategy', image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/16745fe51d0f23337b47ab67e77139a7aef09c225e8c9caebe7355bce36c5ffa.png' }
   ];
 
   const insights = [

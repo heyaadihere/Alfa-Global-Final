@@ -153,7 +153,7 @@ const AlfaZillionTradersPage = ({ theme = 'teal' }) => {
               </ul>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.pexels.com/photos/7580643/pexels-photo-7580643.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Investment Partners" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
+              <img src="https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2017e9e6ae808ff9352347f47bfb5f89c1ac250aa043a3ca873df0f23e599579.png" alt="Investment Partners" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
             </motion.div>
           </div>
         </div>

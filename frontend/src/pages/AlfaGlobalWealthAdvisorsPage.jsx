@@ -84,7 +84,7 @@ const AlfaGlobalWealthAdvisorsPage = ({ theme = 'teal' }) => {
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.pexels.com/photos/7580643/pexels-photo-7580643.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Global Reach" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
+              <img src="https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2017e9e6ae808ff9352347f47bfb5f89c1ac250aa043a3ca873df0f23e599579.png" alt="Global Reach" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
             </motion.div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const AlfaGlobalWealthAdvisorsPage = ({ theme = 'teal' }) => {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.pexels.com/photos/7581115/pexels-photo-7581115.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Global Investment" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
+              <img src="https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/cd479a8a24bbbcaf5ab57e3a996f8da45175d4fe5668fae72e2715ae78b352f7.png" alt="Global Investment" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Alfa Global Access – Global Investment Insights</h2>

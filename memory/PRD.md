@@ -51,7 +51,12 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] 3D Globe preloader
 - [x] Mobile responsive navigation
 - [x] Text justification applied site-wide
-- [x] Indian origin stock photos for all people images (Team, Home, Testimonials)
+- [x] Indian origin AI-generated professional photos for ALL people images across entire site
+  - Team page: 6 unique Indian professional headshots
+  - Homepage team: 4 unique Indian professional headshots
+  - Client testimonials: 4 Indian professional photos
+  - Company pages (Wealth Advisors, Star Dynamics, Zillion Traders): Indian businessman and businesswoman corporate photos
+  - Business meeting scene on homepage: Indian professionals in boardroom
 - [x] Team page with 6 Indian team members
 - [x] Client testimonials with Indian names and photos
 - [x] Newsletter subscription with backend API

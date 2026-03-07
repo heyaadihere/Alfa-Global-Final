@@ -10,37 +10,37 @@ const TeamPage = ({ theme = 'teal' }) => {
     { 
       name: 'Rajesh Kumar', 
       role: 'Managing Director', 
-      image: 'https://images.pexels.com/photos/7580643/pexels-photo-7580643.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/231c8dcadf26427e9049f7bd398dae6bda491bd788338ab7acb23f20bc073071.png',
       description: 'Over 20 years of experience in wealth management and strategic investments across global markets.'
     },
     { 
       name: 'Priya Sharma', 
       role: 'Chief Investment Officer', 
-      image: 'https://images.unsplash.com/photo-1620333198023-1fb846888d25?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxzb3V0aCUyMGFzaWFuJTIwcHJvZmVzc2lvbmFsJTIwd29tYW4lMjBvZmZpY2UlMjBibGF6ZXJ8ZW58MHx8fHwxNzY5MDA1MjY2fDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/28f71e14c72102af93e0f3d90d0c6bdda5f11f972819f82538cc40de078b8b33.png',
       description: 'Expert in alternative investments with a proven track record in private equity and hedge fund strategies.'
     },
     { 
       name: 'Vikram Patel', 
       role: 'Head of Strategy', 
-      image: 'https://images.unsplash.com/photo-1771244678811-50c22f17c791?w=400',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/a52d636dafc65200360c58dc207e992e5c02d85c9cfd0c21f5796b7b681f8b7e.png',
       description: 'Specializes in cross-border alliances and institutional collaborations with expertise in emerging markets.'
     },
     { 
       name: 'Ananya Reddy', 
       role: 'Director - Client Relations', 
-      image: 'https://images.unsplash.com/photo-1622925492560-854334a7cf56?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxzb3V0aCUyMGFzaWFuJTIwcHJvZmVzc2lvbmFsJTIwd29tYW4lMjBvZmZpY2UlMjBibGF6ZXJ8ZW58MHx8fHwxNzY5MDA1MjY2fDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/d82039efc762f84da72b9cee21def76791029cf619984bc60fd7e8a91873a6f5.png',
       description: 'Dedicated to building lasting relationships with HNIs and family offices through personalized service.'
     },
     { 
       name: 'Arjun Mehta', 
       role: 'Head of Research', 
-      image: 'https://images.unsplash.com/photo-1659355894406-977b8c4503d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBidXNpbmVzc21hbiUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwc3VpdHxlbnwwfHx8fDE3NjkwMDUyMzh8MA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2017e9e6ae808ff9352347f47bfb5f89c1ac250aa043a3ca873df0f23e599579.png',
       description: 'Leads our research division with deep expertise in market analysis and investment opportunities.'
     },
     { 
       name: 'Neha Gupta', 
       role: 'Head of Operations', 
-      image: 'https://images.unsplash.com/photo-1660066142936-732a1cc0abb9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBidXNpbmVzc3dvbWFuJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXQlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzY5MDA1MjQwfDA&ixlib=rb-4.1.0&q=85',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2487dfd76782db0248bd08973ea4ded052c79dd5f0d450c1573f0d1113f32278.png',
       description: 'Ensures seamless execution of investment strategies and operational excellence across all verticals.'
     }
   ];
