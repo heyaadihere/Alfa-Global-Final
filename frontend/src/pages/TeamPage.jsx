@@ -1,47 +1,187 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const TeamPage = ({ theme = 'teal' }) => {
-  // Teal theme configuration
   const t = { accentText: 'text-teal-600', accentBg: 'bg-teal-600', accentBgLight: 'bg-teal-50', gradient: 'from-teal-600 to-teal-700', heroBg: 'from-teal-950 via-slate-950 to-teal-950' };
+  const [selectedMember, setSelectedMember] = useState(null);
 
   const team = [
-    { 
-      name: 'Rajesh Kumar', 
-      role: 'Managing Director', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/231c8dcadf26427e9049f7bd398dae6bda491bd788338ab7acb23f20bc073071.png',
-      description: 'Over 20 years of experience in wealth management and strategic investments across global markets.'
+    {
+      name: 'Hariharan Ramachandran',
+      role: 'Principal Fund Manager & Advisory Board Member',
+      image: '/team/hariharan.jpeg',
+      shortBio: 'A highly accomplished finance professional with over three decades of international experience in fund management, portfolio construction, capital markets, and financial analysis across various sectors.',
+      fullBio: `Mr. Hariharan Ramachandran is a highly accomplished finance professional with over three decades of international experience in fund management, portfolio construction, capital markets, and financial analysis. His multi-sectoral expertise spans technology, financial services, healthcare, oil & gas, and real estate, offering a comprehensive perspective on global capital allocation strategies and macro-financial frameworks.
+
+He has held senior leadership roles at prominent investment firms and corporate institutions, including as Principal Fund Manager responsible for managing portfolios in excess of USD 1 billion, notably for Eurostar Group/Family Offices in the Middle East. He also served as Principal Fund Manager at Avici Investments Pte Ltd, a Singapore-based fund management and corporate advisory firm promoted by GR Visions Pte Ltd and TANO Capital LLC — an affiliate of Franklin Templeton.
+
+Mr. Ramachandran brings deep expertise in portfolio structuring, risk assessment, investment research, and disciplined capital deployment. His experience spans regulatory engagements with DFSA-regulated entities in the Middle East, as well as companies in Singapore and Malaysia, reinforcing his familiarity with international compliance and institutional governance frameworks.
+
+His professional strengths include structuring and managing investment funds and portfolios, conducting financial and risk analysis, and undertaking comprehensive investment research across capital markets. He is adept at navigating institutional investment processes, aligning strategies with regulatory frameworks, and providing governance-level insights for strategic planning and market positioning.
+
+Mr. Ramachandran serves as an Advisory Board member for various SEBI-registered Alternative Investment Funds (AIFs), including the Bharat Heritage Asset Fund.`
     },
-    { 
-      name: 'Priya Sharma', 
-      role: 'Chief Investment Officer', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/28f71e14c72102af93e0f3d90d0c6bdda5f11f972819f82538cc40de078b8b33.png',
-      description: 'Expert in alternative investments with a proven track record in private equity and hedge fund strategies.'
+    {
+      name: 'Chetan Bharkhada',
+      role: 'Chief Executive Officer & Treasury Expert',
+      image: '/team/chetan.jpeg',
+      shortBio: 'A seasoned financial services professional with over 30 years of experience in consultancy, treasury management, risk management, and international business across Capital Markets, Commodities, and Treasury Operations.',
+      fullBio: `With over 30 years of extensive experience in consultancy, treasury management, risk management strategies (including hedging), and international business, Chetan Bharkhada is a seasoned financial services professional with a proven track record across Capital Markets, Commodities, Treasury Operations, and Strategic Financial Management.
+
+Key Achievements:
+- Managed commodities risk for Sterlite Industries by developing hedging strategies on the London Metal Exchange (LME).
+- Played a pivotal role in business development for large treasury desks and corporate broking houses while serving as Chief Executive Officer.
+- Contributed to government advisory committees for designing the business model of Gujarat International Finance Tec-City (GIFT IFSC).
+- Successfully managed businesses with a balance sheet size exceeding INR 10,000 Crores.
+
+Core Expertise: Designing and implementing business strategies, leading business development initiatives, overseeing profit and loss management, and developing and mentoring leadership teams.
+
+A recognized thought leader and a prominent speaker at national and international forums on Commodities and Forex markets, Chetan combines deep industry knowledge with practical expertise to deliver results-driven financial solutions.
+
+Qualifications: Certified Treasury Manager (ACTM - India), MBA/PGDBM in Finance, and Diploma in Commodities Market (DICM).`
     },
-    { 
-      name: 'Vikram Patel', 
-      role: 'Head of Strategy', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/a52d636dafc65200360c58dc207e992e5c02d85c9cfd0c21f5796b7b681f8b7e.png',
-      description: 'Specializes in cross-border alliances and institutional collaborations with expertise in emerging markets.'
+    {
+      name: 'Navin Hariharan',
+      role: 'Cybersecurity Leader & Ethical Hacking Expert',
+      image: '/team/navin.png',
+      shortBio: 'A seasoned cybersecurity professional with over six years of experience in Ethical Hacking and Cybersecurity, leading a team dedicated to strengthening digital security and promoting cyber awareness.',
+      fullBio: `Mr. Navin Hariharan is a seasoned cybersecurity professional with over six years of experience in the field of Ethical Hacking and Cybersecurity. He leads a dynamic cross-functional team dedicated to strengthening digital security and building a safer cyber ecosystem.
+
+Driven by a deep passion for cybersecurity, Mr. Navin focuses on delivering trusted and impactful services that help individuals and organizations protect themselves in an increasingly complex digital environment. He has been actively involved in promoting cyber awareness, strengthening security frameworks, and supporting initiatives aimed at combating cybercrime.
+
+He is actively engaged in efforts to improve cyber safety by addressing critical issues such as cybercrime, cyberbullying, and online harassment, while advocating for stronger cybersecurity practices and responsible digital behavior.
+
+In addition to his leadership role, Mr. Navin holds influential positions across nearly 20 companies and communities, contributing significantly to collaborative initiatives aimed at improving national cyber safety.
+
+His core functional strengths include cybersecurity research, ethical hacking, vulnerability assessment, and digital risk management. Mr. Navin is also associated with several cybersecurity platforms and initiatives, including Hackersdaddy, The Cyber Agents, X-Security, and RESETHACKER, where he contributes to advancing cybersecurity knowledge and strengthening the cybersecurity community.`
     },
-    { 
-      name: 'Ananya Reddy', 
-      role: 'Director - Client Relations', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/d82039efc762f84da72b9cee21def76791029cf619984bc60fd7e8a91873a6f5.png',
-      description: 'Dedicated to building lasting relationships with HNIs and family offices through personalized service.'
+    {
+      name: 'Captain Govindarajan Senthilkumar',
+      role: 'Director - Maritime Operations',
+      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/a56bc483fe778ded67b4adcfea57f383fbbe3b8b2c2c0aad62ac50fbc92d1800.png',
+      shortBio: 'Director overseeing vessel acquisition, technical evaluation, commercial negotiations, chartering contracts, maritime logistics, and ensuring regulatory compliance with over 30 years of maritime experience.',
+      fullBio: `Captain Kumar, Director, leads the acquisition and technical evaluation of vessels, oversees commercial negotiations, and manages chartering contracts and maritime logistics. He is responsible for ensuring full regulatory compliance with DG Shipping, classification societies, and international maritime laws, playing a pivotal role in aligning operational efficiency with global maritime standards.
+
+Captain Kumar started his sea career in 1991 and served in Great Eastern Shipping (India), Acomarit (UK), Colonel Marine Industries (USA), ETA Shipping (Chennai) in ascending ranks as Navigating Officer and Captain.
+
+He was assigned in-charge of the major conversion of M.V. Gem of Ennore self-unloading vessel, which operated under Tamil Nadu Electricity Board for more than 10 years with huge cost savings to the Government.
+
+Besides having sailed as master mariner for more than a decade, he has also accomplished various shore-based projects such as dry docking, new vessel acquisition, old vessel acquisition, scrap deliveries, vessel inspections, surveys, and emergencies. He also has vast experience in chartering and commercial operation of vessels.
+
+During his association with Titanics India Ltd, he imported about 1,10,000 metric tons of river sand into Cochin, India and further about 1,60,000 metric tons into Krishnapattnam port for the Karnataka Government.
+
+During his ETA serving period, he boarded a grounded vessel at Tuticorin, salvaged the vessel, and re-commissioned it (M.V. Coastal Pride). He has handled various emergencies involving collision, fire, flooding etc.
+
+He has been chartering vessels for various companies such as EMPEE Groups, Total Care Consultancy, Shipment Solutions, Titanics India, etc. He has served as Principal, HOD of PKIMSE Maritime College, Tamil Nadu.`
     },
-    { 
-      name: 'Arjun Mehta', 
-      role: 'Head of Research', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2017e9e6ae808ff9352347f47bfb5f89c1ac250aa043a3ca873df0f23e599579.png',
-      description: 'Leads our research division with deep expertise in market analysis and investment opportunities.'
+    {
+      name: 'Raj Navneeth',
+      role: 'Capital Markets & Wealth Strategy Expert',
+      image: '/team/raj.jpeg',
+      shortBio: 'An expert in Capital Markets, Wealth Strategy, and Private Banking with a global track record, delivering bespoke wealth management solutions and strategic advisory services.',
+      fullBio: `Raj Navneeth is a seasoned expert in Capital Markets, Wealth Strategy, and Private Banking, with a global track record of excellence. Drawing upon deep insights into asset classes such as private equity, venture capital, hedge funds, real assets, and a wide range of financial products, Raj has successfully served clients across international markets.
+
+He delivers bespoke wealth management solutions to affluent individuals, family offices, and institutions, leveraging extensive experience in navigating the complexities of high-net-worth wealth management. Raj specializes in asset allocation, risk management, and long-term financial planning with a global perspective.
+
+Furthermore, he offers strategic advisory services in merchant banking, encompassing private equity placements, corporate advisory, and value creation strategies for businesses operating in diverse economies.
+
+Notable Achievements:
+- Successfully managed over $60 million in assets under advisory, delivering innovative solutions that consistently outperformed market benchmarks.
+- Repeatedly recognized in the Prestigious League of Extraordinaire at Yes Bank.
+- Spearheaded multiple cross-border transactions and strategic partnerships, enhancing global client portfolios and driving sustainable growth and revenue.
+
+Known for building trusted relationships and delivering client-centric strategies with a focus on discretion, integrity, and long-term value creation.
+
+Academic Credentials: BBA, MBA, MS in International Business (HULT, USA), MS in International Marketing (HULT, USA).`
     },
-    { 
-      name: 'Neha Gupta', 
-      role: 'Head of Operations', 
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/2487dfd76782db0248bd08973ea4ded052c79dd5f0d450c1573f0d1113f32278.png',
-      description: 'Ensures seamless execution of investment strategies and operational excellence across all verticals.'
+    {
+      name: 'Dr. K.G. Raghunath',
+      role: 'Senior Legal & Taxation Advisor',
+      image: '/team/raghunath.jpeg',
+      shortBio: 'A veteran legal strategist with over three decades of experience in corporate law, taxation, regulatory enforcement, and criminal litigation, renowned for navigating India\'s legal frameworks.',
+      fullBio: `Dr. K.G. Raghunath is a veteran legal strategist with over three decades of experience spanning corporate law, taxation (both direct and indirect), regulatory enforcement, and criminal litigation. Renowned for his ability to navigate India's intricate legal frameworks, he is a trusted advisor to corporations, investors, and high-net-worth individuals dealing with complex, high-stakes legal challenges.
+
+A Ph.D. holder in Criminology and M.L graduate from the University of Madras, Dr. Raghunath combines academic rigor with courtroom agility. His legal practice spans civil, criminal, constitutional, and tax litigation, with frequent appearances before High Courts of Madras, Karnataka, and Kerala, Income Tax Appellate Tribunal (ITAT), Sales Tax and VAT Appellate Authorities, CESTAT, and special courts under the PMLA, NDPS, and Companies Act.
+
+Criminal & White-Collar Litigation: Dr. Raghunath is widely respected for his defence in high-profile criminal cases involving economic and regulatory offenses, including white-collar crimes, corporate fraud, insider trading, ED investigations under PMLA and FEMA, and customs and GST offenses.
+
+Investment Structuring & Regulatory Advisory: He has architected several fund structures and SPVs, with a focus on compliance, tax efficiency, and cross-border legality. He regularly advises on fund setup under SEBI AIF, RBI, FEMA, and Income Tax regulations.
+
+Author of "Indian Criminal Judiciary System and Custodial Dignity" - seminal works exploring legal reform, judicial integrity, and the rights of the accused within India's criminal justice framework.`
+    },
+    {
+      name: 'Mehul Dhokai',
+      role: 'Entrepreneur | Investor | Strategic Business Leader',
+      image: '/team/mehul.png',
+      shortBio: 'A seasoned entrepreneur and business leader with over 22 years of management experience, including founding Fund Buddy and scaling startups across Capital Markets, AdTech, AgriTech, and CleanTech.',
+      fullBio: `Mehul Dhokai is a seasoned entrepreneur and business leader with over 22 years of management experience, including 17+ years in senior leadership roles across reputed organizations such as Anand Rathi, Kotak Mahindra, Angel Broking, Shell, and Gillette. His background spans capital markets, investment banking, technology platforms, and sustainable innovation.
+
+In 2017, he founded Fund Buddy, a venture investment and business-building platform through which he has invested in and actively scaled startups across Capital Markets, AdTech, AgriTech, and CleanTech.
+
+Current Roles & Leadership:
+- Director, Raru Capital: Leading the NSE IFSC membership setup at GIFT City, with a focus on financial markets, investment banking, and cross-border opportunities.
+- Director, Toya (AgriTech Platform): Driving growth of an AgriTech marketplace platform. Played a key role in raising USD 2 million in pre-Series A funding.
+- Founder, OmniIon (CleanTech): Leading the development of patented CleanTech solutions for air pollution control, developed in collaboration with IIT Delhi and certified by CCMB, Hyderabad.
+- Director, Advision (AdTech / PPP Projects): Spearheading PPP-based OOH media monetization projects, achieving a 3x increase in revenue for Ahmedabad Municipal Corporation over five years.
+
+Core Strengths: Capital Markets & Investment Banking, Startup Investing & Scale-up, Technology-enabled Business Models, Public-Private Partnerships (PPP), CleanTech & Sustainable Innovation.`
+    },
+    {
+      name: 'Ambika Aranganathan',
+      role: 'Director - Gazillion Capital Pvt Ltd',
+      image: '/team/ambika.jpeg',
+      shortBio: 'A finance and technology expert with 5 years of specialized experience in capital markets, trading strategies, and portfolio management, spearheading initiatives at Gazillion Capital Pvt Ltd.',
+      fullBio: `Ambika Aranganathan is a finance and technology expert with 5 years of specialized experience in capital markets, trading strategies, and portfolio management. As Director of Gazillion Capital Pvt Ltd, she spearheads the firm's initiatives in equity, derivatives, and commodity trading, Portfolio Management Services, delivering innovative, data-driven investment solutions tailored for institutional and high-net-worth clients.
+
+Expertise & Skills: Strong foundation in engineering and analytical skills, integration of algorithmic trading systems with market research to optimize risk-adjusted returns, and navigating complex regulatory environments with compliance and business growth focus.
+
+Leadership & Management: Leading innovation, transparency, and sustainable growth within the firm. Managing day-to-day trading operations, guiding product development in algorithmic trading strategies, overseeing risk management frameworks, and championing continuous learning and mentorship within teams.
+
+Industry Representation: Representing Gazillion Capital at industry forums, advocating thought leadership and collaboration in the capital markets ecosystem, and providing strategic insights to anticipate market trends.
+
+Education & Certifications: B.Tech - Electronics and Communication Engineering. NISM Certifications: Series V-A (Mutual Fund Distributors), Series VIII (Equity Derivatives), Series XVI (Commodity Derivatives), Series XXI-A (Portfolio Management Services), Series VII (Securities Operations and Risk Management). CMA certified.`
+    },
+    {
+      name: 'Nithyasri Balakrishnan',
+      role: 'Accounting, Finance & Compliance',
+      image: '/team/nithyasri.jpeg',
+      shortBio: 'An energetic and enthusiastic professional with strong work ethic and over half a decade of experience in Accounting, Finance, and Compliance across various industries.',
+      fullBio: `Ms. Nithya is an exceptionally energetic and enthusiastic professional known for her strong work ethic and unwavering commitment to her responsibilities. She is inherently self-motivated and possesses a remarkable ability to evaluate situations from multiple perspectives, enabling her to approach challenges with clarity and practical insight.
+
+With over half a decade of experience in Accounting, Finance, and Compliance across various industries, she has developed a well-rounded understanding of financial operations and regulatory requirements.
+
+Nithya consistently approaches her work with integrity and maintains a high level of engagement in organizational activities. She is confident in handling matters with both government authorities and private entities, ensuring that processes are managed efficiently and in compliance with applicable regulations.
+
+Her experience includes conducting feasibility analyses related to finance and accounting functions, supporting operational decision-making, and overseeing operational aspects such as maintenance and management.
+
+Her professional approach is characterized by a positive attitude, strong organizational skills, and the ability to manage multiple responsibilities simultaneously while maintaining accuracy and efficiency. Recognized for her reliability and proactive mindset, Nithya continues to enhance her expertise through practical experience and continuous learning.`
+    },
+    {
+      name: 'Hemalatha Karthikeyan',
+      role: 'Operations & Leadership',
+      image: '/team/hemalatha.jpeg',
+      shortBio: 'An enterprising professional with over four years of experience in followership, leadership, and entrepreneurship, holding a Master\'s degree in Mathematics.',
+      fullBio: `Mrs. Hemalatha Karthikeyan brings over four years of professional experience spanning followership, leadership, and entrepreneurship. She possesses a Master's degree in Mathematics, which strengthens her analytical and problem-solving capabilities and supports her structured approach to management and decision-making.
+
+She is an enterprising professional with a proven track record of contributing to organizational growth and collaborative initiatives. Her experience includes managing operational units alongside team members, streamlining processes, improving productivity, strengthening internal controls, and effectively coordinating cross-functional teams to achieve operational objectives.
+
+Her professional profile reflects a balanced blend of leadership capability, collaborative mindset, and entrepreneurial insight. Through her proactive approach and strategic thinking, she has consistently supported operational efficiency and organizational development.
+
+Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adaptability, and strong sense of responsibility. She continues to contribute positively to the organizations she is associated with, focusing on operational effectiveness, teamwork, and continuous improvement.`
+    },
+    {
+      name: 'Dhamodharan Gopalakrishnan',
+      role: 'Certified Management Accountant - Finance',
+      image: '/team/dhamodharan.jpeg',
+      shortBio: 'A finance professional and Certified Management Accountant with experience in Finance and Accounts, focusing on accounting operations, reconciliations, and financial reporting.',
+      fullBio: `Dhamodharan is a finance professional and Certified Management Accountant with experience in Finance and Accounts. He has gained hands-on exposure to key financial functions, including accounting operations, reconciliations, and financial reporting, building a solid foundation in financial management.
+
+He approaches his responsibilities with dedication, discipline, and a strong willingness to learn, enabling him to steadily strengthen his professional capabilities. His attention to detail and structured approach to work help ensure accuracy and consistency in financial tasks and reporting.
+
+Recognized for his reliability and adaptability, Dhamodharan is capable of working effectively both independently and as part of a collaborative team. He performs particularly well in structured, detail-oriented environments where precision and organization are essential.
+
+Committed to continuous professional development, he actively seeks opportunities to expand his knowledge and enhance his expertise through ongoing learning and practical experience in the field of finance and accounting.`
     }
   ];
 
@@ -83,7 +223,7 @@ const TeamPage = ({ theme = 'teal' }) => {
             transition={{ delay: 0.2 }}
             className="text-white/70 text-lg max-w-2xl mx-auto text-justify"
           >
-            Our leadership team brings decades of combined experience in wealth management, investment advisory, and strategic consulting to help you achieve your financial goals.
+            Our leadership team brings decades of combined experience in wealth management, investment advisory, cybersecurity, maritime operations, and strategic consulting to help you achieve your goals.
           </motion.p>
         </div>
       </section>
@@ -91,17 +231,18 @@ const TeamPage = ({ theme = 'teal' }) => {
       {/* Team Grid */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {team.map((member, i) => (
               <motion.div
                 key={i}
+                data-testid={`team-member-card-${i}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
                 className="group"
               >
-                <div className="relative overflow-hidden rounded-2xl mb-4">
+                <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100">
                   <img 
                     src={member.image} 
                     alt={member.name}
@@ -110,13 +251,75 @@ const TeamPage = ({ theme = 'teal' }) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className={`${t.accentText} font-medium mb-2`}>{member.role}</p>
-                <p className="text-gray-600 text-sm text-justify">{member.description}</p>
+                <p className={`${t.accentText} font-medium mb-2 text-sm`}>{member.role}</p>
+                <p className="text-gray-600 text-sm text-justify mb-3">{member.shortBio}</p>
+                <button
+                  data-testid={`read-more-btn-${i}`}
+                  onClick={() => setSelectedMember(member)}
+                  className={`${t.accentText} text-sm font-semibold hover:underline inline-flex items-center gap-1 cursor-pointer`}
+                >
+                  Read Full Profile
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Profile Modal */}
+      <AnimatePresence>
+        {selectedMember && (
+          <motion.div
+            data-testid="profile-modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedMember(null)}
+          >
+            <motion.div
+              data-testid="profile-modal-content"
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-6 sm:p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <img 
+                    src={selectedMember.image} 
+                    alt={selectedMember.name}
+                    className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl object-cover object-top flex-shrink-0"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">{selectedMember.name}</h2>
+                    <p className={`${t.accentText} font-semibold mb-3`}>{selectedMember.role}</p>
+                    <p className="text-gray-500 text-sm text-justify">{selectedMember.shortBio}</p>
+                  </div>
+                  <button
+                    data-testid="close-modal-btn"
+                    onClick={() => setSelectedMember(null)}
+                    className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                  >
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </button>
+                </div>
+                <div className={`border-t border-gray-200 pt-6`}>
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Full Profile</h3>
+                  <div className="text-gray-700 text-sm leading-relaxed text-justify whitespace-pre-line">
+                    {selectedMember.fullBio}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Values Section */}
       <section className={`py-16 sm:py-24 ${t.accentBgLight}`}>
