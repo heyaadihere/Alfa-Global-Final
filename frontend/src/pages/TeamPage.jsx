@@ -59,7 +59,7 @@ His core functional strengths include cybersecurity research, ethical hacking, v
     {
       name: 'Captain Govindarajan Senthilkumar',
       role: 'Director - Maritime Operations',
-      image: 'https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/a56bc483fe778ded67b4adcfea57f383fbbe3b8b2c2c0aad62ac50fbc92d1800.png',
+      image: '/team/captain.jpg',
       shortBio: 'Director overseeing vessel acquisition, technical evaluation, commercial negotiations, chartering contracts, maritime logistics, and ensuring regulatory compliance with over 30 years of maritime experience.',
       fullBio: `Captain Kumar, Director, leads the acquisition and technical evaluation of vessels, oversees commercial negotiations, and manages chartering contracts and maritime logistics. He is responsible for ensuring full regulatory compliance with DG Shipping, classification societies, and international maritime laws, playing a pivotal role in aligning operational efficiency with global maritime standards.
 
