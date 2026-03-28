@@ -113,7 +113,7 @@ const UltraHome = ({ theme = 'teal' }) => {
               <div>
                 {/* Logo from reference */}
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-4 mb-6">
-                  <img src="https://websitesbytechpioneers.com/alfaglobalnew/image/alfa-global-logo-removebg-preview.png" alt="Alfa Global" className="h-16 w-auto" />
+                  <img src="/alfa-hero-logo.png" alt="Alfa Global" className="h-20 sm:h-24 w-auto" />
                 </motion.div>
 
                 {/* Main Headline - from reference */}
