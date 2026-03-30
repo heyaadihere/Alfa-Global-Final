@@ -37,15 +37,18 @@ const DhanveirGroupsShippingPage = ({ theme = 'teal' }) => {
         }}></div>
         
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <motion.img initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} src="https://customer-assets.emergentagent.com/job_6f794281-58c6-49fc-b709-257edb9b4cc6/artifacts/2dga5rwa_dhanveir.png" alt="Dhanveir Groups Shipping" className="h-24 w-auto mx-auto mb-6" style={{ filter: 'brightness(1.1) drop-shadow(0 0 10px rgba(255,255,255,0.3))' }} />
+          <motion.img initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} src="/logos/dhanveir.png" alt="Dhanveir Groups Shipping" className="h-20 w-auto mx-auto mb-6" />
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">Dhanveir Groups Shipping Private Limited</motion.h1>
           <p className="text-white/80 text-lg mb-8">Strategic Maritime Platform | Indian-Flagged Vessel Operations</p>
           <a 
-            href="/contact" 
+            href="https://www.dhanveirgroups.com/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-2 px-8 py-4 ${t.accentBg} text-white font-semibold rounded-lg ${t.accentHover} transition-all`}
             data-testid="find-out-more-cta"
           >
-            Get in Touch
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            Find out More
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
       </section>

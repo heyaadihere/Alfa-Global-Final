@@ -277,7 +277,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
       </section>
 
       {/* Interactive Map */}
-      <section className="py-12">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -286,14 +286,14 @@ const PremiumContact = ({ theme = 'teal' }) => {
             className="text-center mb-8"
           >
             <span className={`${t.accentText} text-sm tracking-[0.2em] uppercase`}>Global Presence</span>
-            <h2 className="text-3xl font-bold text-white mt-2">Our Locations</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Our Locations</h2>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden border border-white/10"
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
             style={{ height: '400px' }}
           >
             <MapContainer
@@ -304,7 +304,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
               />
               {offices.map((office, i) => (
                 <Marker key={i} position={[office.lat, office.lng]}>
