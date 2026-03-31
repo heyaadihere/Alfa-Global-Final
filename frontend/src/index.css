@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global justified text for all paragraphs */
+p {
+  text-align: justify;
+}
+
+
 /* Custom Animations */
 @keyframes fadeIn {
   from {

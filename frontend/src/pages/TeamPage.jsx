@@ -42,21 +42,6 @@ A recognized thought leader and a prominent speaker at national and internationa
 Qualifications: Certified Treasury Manager (ACTM - India), MBA/PGDBM in Finance, and Diploma in Commodities Market (DICM).`
     },
     {
-      name: 'Navin Hariharan',
-      role: 'Cybersecurity Leader & Ethical Hacking Expert',
-      image: '/team/navin.png',
-      shortBio: 'A seasoned cybersecurity professional with over six years of experience in Ethical Hacking and Cybersecurity, leading a team dedicated to strengthening digital security and promoting cyber awareness.',
-      fullBio: `Mr. Navin Hariharan is a seasoned cybersecurity professional with over six years of experience in the field of Ethical Hacking and Cybersecurity. He leads a dynamic cross-functional team dedicated to strengthening digital security and building a safer cyber ecosystem.
-
-Driven by a deep passion for cybersecurity, Mr. Navin focuses on delivering trusted and impactful services that help individuals and organizations protect themselves in an increasingly complex digital environment. He has been actively involved in promoting cyber awareness, strengthening security frameworks, and supporting initiatives aimed at combating cybercrime.
-
-He is actively engaged in efforts to improve cyber safety by addressing critical issues such as cybercrime, cyberbullying, and online harassment, while advocating for stronger cybersecurity practices and responsible digital behavior.
-
-In addition to his leadership role, Mr. Navin holds influential positions across nearly 20 companies and communities, contributing significantly to collaborative initiatives aimed at improving national cyber safety.
-
-His core functional strengths include cybersecurity research, ethical hacking, vulnerability assessment, and digital risk management. Mr. Navin is also associated with several cybersecurity platforms and initiatives, including Hackersdaddy, The Cyber Agents, X-Security, and RESETHACKER, where he contributes to advancing cybersecurity knowledge and strengthening the cybersecurity community.`
-    },
-    {
       name: 'Captain Govindarajan Senthilkumar',
       role: 'Director - Maritime Operations',
       image: '/team/captain.jpg',
@@ -74,6 +59,53 @@ During his association with Titanics India Ltd, he imported about 1,10,000 metri
 During his ETA serving period, he boarded a grounded vessel at Tuticorin, salvaged the vessel, and re-commissioned it (M.V. Coastal Pride). He has handled various emergencies involving collision, fire, flooding etc.
 
 He has been chartering vessels for various companies such as EMPEE Groups, Total Care Consultancy, Shipment Solutions, Titanics India, etc. He has served as Principal, HOD of PKIMSE Maritime College, Tamil Nadu.`
+    },
+    {
+      name: 'Mehul Dhokai',
+      role: 'Entrepreneur | Investor | Strategic Business Leader',
+      image: '/team/mehul.png',
+      shortBio: 'A seasoned entrepreneur and business leader with over 22 years of management experience, including founding Fund Buddy and scaling startups across Capital Markets, AdTech, AgriTech, and CleanTech.',
+      fullBio: `Mehul Dhokai is a seasoned entrepreneur and business leader with over 22 years of management experience, including 17+ years in senior leadership roles across reputed organizations such as Anand Rathi, Kotak Mahindra, Angel Broking, Shell, and Gillette. His background spans capital markets, investment banking, technology platforms, and sustainable innovation.
+
+In 2017, he founded Fund Buddy, a venture investment and business-building platform through which he has invested in and actively scaled startups across Capital Markets, AdTech, AgriTech, and CleanTech.
+
+Current Roles & Leadership:
+- Director, Raru Capital: Leading the NSE IFSC membership setup at GIFT City, with a focus on financial markets, investment banking, and cross-border opportunities.
+- Director, Toya (AgriTech Platform): Driving growth of an AgriTech marketplace platform. Played a key role in raising USD 2 million in pre-Series A funding.
+- Founder, OmniIon (CleanTech): Leading the development of patented CleanTech solutions for air pollution control, developed in collaboration with IIT Delhi and certified by CCMB, Hyderabad.
+- Director, Advision (AdTech / PPP Projects): Spearheading PPP-based OOH media monetization projects, achieving a 3x increase in revenue for Ahmedabad Municipal Corporation over five years.
+
+Core Strengths: Capital Markets & Investment Banking, Startup Investing & Scale-up, Technology-enabled Business Models, Public-Private Partnerships (PPP), CleanTech & Sustainable Innovation.`
+    },
+    {
+      name: 'Dr. K.G. Raghunath',
+      role: 'Senior Legal & Taxation Advisor',
+      image: '/team/raghunath.jpeg',
+      shortBio: 'A veteran legal strategist with over three decades of experience in corporate law, taxation, regulatory enforcement, and criminal litigation, renowned for navigating India\'s legal frameworks.',
+      fullBio: `Dr. K.G. Raghunath is a veteran legal strategist with over three decades of experience spanning corporate law, taxation (both direct and indirect), regulatory enforcement, and criminal litigation. Renowned for his ability to navigate India's intricate legal frameworks, he is a trusted advisor to corporations, investors, and high-net-worth individuals dealing with complex, high-stakes legal challenges.
+
+A Ph.D. holder in Criminology and M.L graduate from the University of Madras, Dr. Raghunath combines academic rigor with courtroom agility. His legal practice spans civil, criminal, constitutional, and tax litigation, with frequent appearances before High Courts of Madras, Karnataka, and Kerala, Income Tax Appellate Tribunal (ITAT), Sales Tax and VAT Appellate Authorities, CESTAT, and special courts under the PMLA, NDPS, and Companies Act.
+
+Criminal & White-Collar Litigation: Dr. Raghunath is widely respected for his defence in high-profile criminal cases involving economic and regulatory offenses, including white-collar crimes, corporate fraud, insider trading, ED investigations under PMLA and FEMA, and customs and GST offenses.
+
+Investment Structuring & Regulatory Advisory: He has architected several fund structures and SPVs, with a focus on compliance, tax efficiency, and cross-border legality. He regularly advises on fund setup under SEBI AIF, RBI, FEMA, and Income Tax regulations.
+
+Author of "Indian Criminal Judiciary System and Custodial Dignity" - seminal works exploring legal reform, judicial integrity, and the rights of the accused within India's criminal justice framework.`
+    },
+    {
+      name: 'Navin Hariharan',
+      role: 'Cybersecurity Leader & Ethical Hacking Expert',
+      image: '/team/navin.png',
+      shortBio: 'A seasoned cybersecurity professional with over six years of experience in Ethical Hacking and Cybersecurity, leading a team dedicated to strengthening digital security and promoting cyber awareness.',
+      fullBio: `Mr. Navin Hariharan is a seasoned cybersecurity professional with over six years of experience in the field of Ethical Hacking and Cybersecurity. He leads a dynamic cross-functional team dedicated to strengthening digital security and building a safer cyber ecosystem.
+
+Driven by a deep passion for cybersecurity, Mr. Navin focuses on delivering trusted and impactful services that help individuals and organizations protect themselves in an increasingly complex digital environment. He has been actively involved in promoting cyber awareness, strengthening security frameworks, and supporting initiatives aimed at combating cybercrime.
+
+He is actively engaged in efforts to improve cyber safety by addressing critical issues such as cybercrime, cyberbullying, and online harassment, while advocating for stronger cybersecurity practices and responsible digital behavior.
+
+In addition to his leadership role, Mr. Navin holds influential positions across nearly 20 companies and communities, contributing significantly to collaborative initiatives aimed at improving national cyber safety.
+
+His core functional strengths include cybersecurity research, ethical hacking, vulnerability assessment, and digital risk management. Mr. Navin is also associated with several cybersecurity platforms and initiatives, including Hackersdaddy, The Cyber Agents, X-Security, and RESETHACKER, where he contributes to advancing cybersecurity knowledge and strengthening the cybersecurity community.`
     },
     {
       name: 'Raj Navneeth',
@@ -94,38 +126,6 @@ Notable Achievements:
 Known for building trusted relationships and delivering client-centric strategies with a focus on discretion, integrity, and long-term value creation.
 
 Academic Credentials: BBA, MBA, MS in International Business (HULT, USA), MS in International Marketing (HULT, USA).`
-    },
-    {
-      name: 'Dr. K.G. Raghunath',
-      role: 'Senior Legal & Taxation Advisor',
-      image: '/team/raghunath.jpeg',
-      shortBio: 'A veteran legal strategist with over three decades of experience in corporate law, taxation, regulatory enforcement, and criminal litigation, renowned for navigating India\'s legal frameworks.',
-      fullBio: `Dr. K.G. Raghunath is a veteran legal strategist with over three decades of experience spanning corporate law, taxation (both direct and indirect), regulatory enforcement, and criminal litigation. Renowned for his ability to navigate India's intricate legal frameworks, he is a trusted advisor to corporations, investors, and high-net-worth individuals dealing with complex, high-stakes legal challenges.
-
-A Ph.D. holder in Criminology and M.L graduate from the University of Madras, Dr. Raghunath combines academic rigor with courtroom agility. His legal practice spans civil, criminal, constitutional, and tax litigation, with frequent appearances before High Courts of Madras, Karnataka, and Kerala, Income Tax Appellate Tribunal (ITAT), Sales Tax and VAT Appellate Authorities, CESTAT, and special courts under the PMLA, NDPS, and Companies Act.
-
-Criminal & White-Collar Litigation: Dr. Raghunath is widely respected for his defence in high-profile criminal cases involving economic and regulatory offenses, including white-collar crimes, corporate fraud, insider trading, ED investigations under PMLA and FEMA, and customs and GST offenses.
-
-Investment Structuring & Regulatory Advisory: He has architected several fund structures and SPVs, with a focus on compliance, tax efficiency, and cross-border legality. He regularly advises on fund setup under SEBI AIF, RBI, FEMA, and Income Tax regulations.
-
-Author of "Indian Criminal Judiciary System and Custodial Dignity" - seminal works exploring legal reform, judicial integrity, and the rights of the accused within India's criminal justice framework.`
-    },
-    {
-      name: 'Mehul Dhokai',
-      role: 'Entrepreneur | Investor | Strategic Business Leader',
-      image: '/team/mehul.png',
-      shortBio: 'A seasoned entrepreneur and business leader with over 22 years of management experience, including founding Fund Buddy and scaling startups across Capital Markets, AdTech, AgriTech, and CleanTech.',
-      fullBio: `Mehul Dhokai is a seasoned entrepreneur and business leader with over 22 years of management experience, including 17+ years in senior leadership roles across reputed organizations such as Anand Rathi, Kotak Mahindra, Angel Broking, Shell, and Gillette. His background spans capital markets, investment banking, technology platforms, and sustainable innovation.
-
-In 2017, he founded Fund Buddy, a venture investment and business-building platform through which he has invested in and actively scaled startups across Capital Markets, AdTech, AgriTech, and CleanTech.
-
-Current Roles & Leadership:
-- Director, Raru Capital: Leading the NSE IFSC membership setup at GIFT City, with a focus on financial markets, investment banking, and cross-border opportunities.
-- Director, Toya (AgriTech Platform): Driving growth of an AgriTech marketplace platform. Played a key role in raising USD 2 million in pre-Series A funding.
-- Founder, OmniIon (CleanTech): Leading the development of patented CleanTech solutions for air pollution control, developed in collaboration with IIT Delhi and certified by CCMB, Hyderabad.
-- Director, Advision (AdTech / PPP Projects): Spearheading PPP-based OOH media monetization projects, achieving a 3x increase in revenue for Ahmedabad Municipal Corporation over five years.
-
-Core Strengths: Capital Markets & Investment Banking, Startup Investing & Scale-up, Technology-enabled Business Models, Public-Private Partnerships (PPP), CleanTech & Sustainable Innovation.`
     },
     {
       name: 'Ambika Aranganathan',
@@ -158,19 +158,6 @@ Her experience includes conducting feasibility analyses related to finance and a
 Her professional approach is characterized by a positive attitude, strong organizational skills, and the ability to manage multiple responsibilities simultaneously while maintaining accuracy and efficiency. Recognized for her reliability and proactive mindset, Nithya continues to enhance her expertise through practical experience and continuous learning.`
     },
     {
-      name: 'Hemalatha Karthikeyan',
-      role: 'Operations & Leadership',
-      image: '/team/hemalatha.jpeg',
-      shortBio: 'An enterprising professional with over four years of experience in followership, leadership, and entrepreneurship, holding a Master\'s degree in Mathematics.',
-      fullBio: `Mrs. Hemalatha Karthikeyan brings over four years of professional experience spanning followership, leadership, and entrepreneurship. She possesses a Master's degree in Mathematics, which strengthens her analytical and problem-solving capabilities and supports her structured approach to management and decision-making.
-
-She is an enterprising professional with a proven track record of contributing to organizational growth and collaborative initiatives. Her experience includes managing operational units alongside team members, streamlining processes, improving productivity, strengthening internal controls, and effectively coordinating cross-functional teams to achieve operational objectives.
-
-Her professional profile reflects a balanced blend of leadership capability, collaborative mindset, and entrepreneurial insight. Through her proactive approach and strategic thinking, she has consistently supported operational efficiency and organizational development.
-
-Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adaptability, and strong sense of responsibility. She continues to contribute positively to the organizations she is associated with, focusing on operational effectiveness, teamwork, and continuous improvement.`
-    },
-    {
       name: 'Dhamodharan Gopalakrishnan',
       role: 'Certified Management Accountant - Finance',
       image: '/team/dhamodharan.jpeg',
@@ -182,6 +169,19 @@ He approaches his responsibilities with dedication, discipline, and a strong wil
 Recognized for his reliability and adaptability, Dhamodharan is capable of working effectively both independently and as part of a collaborative team. He performs particularly well in structured, detail-oriented environments where precision and organization are essential.
 
 Committed to continuous professional development, he actively seeks opportunities to expand his knowledge and enhance his expertise through ongoing learning and practical experience in the field of finance and accounting.`
+    },
+    {
+      name: 'Hemalatha Karthikeyan',
+      role: 'Operations & Leadership',
+      image: '/team/hemalatha.jpeg',
+      shortBio: 'An enterprising professional with over four years of experience in followership, leadership, and entrepreneurship, holding a Master\'s degree in Mathematics.',
+      fullBio: `Mrs. Hemalatha Karthikeyan brings over four years of professional experience spanning followership, leadership, and entrepreneurship. She possesses a Master's degree in Mathematics, which strengthens her analytical and problem-solving capabilities and supports her structured approach to management and decision-making.
+
+She is an enterprising professional with a proven track record of contributing to organizational growth and collaborative initiatives. Her experience includes managing operational units alongside team members, streamlining processes, improving productivity, strengthening internal controls, and effectively coordinating cross-functional teams to achieve operational objectives.
+
+Her professional profile reflects a balanced blend of leadership capability, collaborative mindset, and entrepreneurial insight. Through her proactive approach and strategic thinking, she has consistently supported operational efficiency and organizational development.
+
+Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adaptability, and strong sense of responsibility. She continues to contribute positively to the organizations she is associated with, focusing on operational effectiveness, teamwork, and continuous improvement.`
     }
   ];
 
