@@ -61,8 +61,8 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
   - Alfa Zillion Traders: Indian business partnership/handshake, Indian corporate professional
   - Gazillion Capital: Two Indian team meeting scenes
   - All remaining images are non-people (buildings, charts, ships, icons, abstract silhouettes)
-- [x] Team page: 11 real team members with actual photos from document, short bio + expandable full profile modal
-  - Hariharan Ramachandran, Chetan Bharkhada, Navin Hariharan, Capt. Govindarajan Senthilkumar, Raj Navneeth, Dr. K.G. Raghunath, Mehul Dhokai, Ambika Aranganathan, Nithyasri Balakrishnan, Hemalatha Karthikeyan, Dhamodharan Gopalakrishnan
+- [x] Team page: 12 real team members with actual photos from document, short bio + expandable full profile modal
+  - Hariharan Ramachandran, Chetan Bharkhada, Capt. Govindarajan Senthilkumar, Mehul Dhokai, Reuben Balasingh, Dr. K.G. Raghunath, Navin Hariharan, Raj Navneeth, Ambika Aranganathan, Nithyasri Balakrishnan, Dhamodharan Gopalakrishnan, Hemalatha Karthikeyan
 - [x] Client testimonials with Indian names and photos
 - [x] Newsletter subscription with backend API
 - [x] Contact form saving to MongoDB (POST /api/contact) - WORKING

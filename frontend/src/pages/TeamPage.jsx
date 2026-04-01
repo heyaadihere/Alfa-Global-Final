@@ -78,6 +78,25 @@ Current Roles & Leadership:
 Core Strengths: Capital Markets & Investment Banking, Startup Investing & Scale-up, Technology-enabled Business Models, Public-Private Partnerships (PPP), CleanTech & Sustainable Innovation.`
     },
     {
+      name: 'Reuben Balasingh',
+      role: 'Non-Executive Director - Dhanveir Groups Shipping',
+      image: '/team/reuben.jpeg',
+      shortBio: 'A seasoned global shipping and logistics professional with over 30 years of experience across India, Japan, and the UAE, providing strategic direction and governance oversight for international shipping operations.',
+      fullBio: `Reuben Balasingh is a seasoned global shipping and logistics professional with over 30 years of experience across India, Japan, and the UAE. As a Non-Executive Director at Dhanveir Groups Shipping Pvt Ltd, he provides strategic direction, industry insight, and governance oversight to support the company's expansion in international shipping and maritime operations.
+
+He is the Founder and Managing Director of the TranzOcean Group, a Dubai-based platform specializing in Car Carrier (PCC) vessel operations, ship chartering, automotive logistics, and freight forwarding, with operations spanning key global trade routes including the Far East and the Americas.
+
+Career Highlights:
+- Began his career with Chakiat Agencies Pvt. Ltd., rising to Branch Manager handling global shipping line agency operations.
+- Played a key role at P&O Nedlloyd in developing the automotive logistics vertical in India.
+- Established the non-liner and logistics division at Mitsui OSK Lines India and successfully launched the India-South Africa PCC trade service.
+- As Founder of Radius Value Chain Pvt. Ltd. (2007-2017), he built a leading logistics enterprise serving marquee clients such as Maruti, Tata Motors, Ashok Leyland, Daimler, and Dalmia Cements.
+
+Currently leads multiple global businesses including TranzOcean Line FZE, RVC Shipping LLC, TranzOcean (Japan) Co. Ltd., and Faithbridge Capital FZCO, covering the full spectrum of shipping operations, chartering, logistics, and financial structuring.
+
+Widely regarded for his ability to combine operational execution with strategic vision, and for building scalable, asset-backed platforms in complex and capital-intensive shipping environments. His global exposure and deep industry relationships position him as a key contributor to Dhanveir's long-term growth strategy.`
+    },
+    {
       name: 'Dr. K.G. Raghunath',
       role: 'Senior Legal & Taxation Advisor',
       image: '/team/raghunath.jpeg',
