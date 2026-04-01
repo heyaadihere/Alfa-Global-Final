@@ -261,7 +261,7 @@ Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adapt
                 transition={{ delay: i * 0.08 }}
                 className="group"
               >
-                <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100">
+                <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100 border border-gray-200">
                   <img 
                     src={member.image} 
                     alt={member.name}
