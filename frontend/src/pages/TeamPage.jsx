@@ -24,7 +24,7 @@ Mr. Ramachandran serves as an Advisory Board member for various SEBI-registered 
     },
     {
       name: 'Chetan Bharkhada',
-      role: 'Chief Executive Officer & Treasury Expert',
+      role: 'Director - Wealth Management & Treasury Expert',
       image: '/team/chetan.jpeg',
       shortBio: 'A seasoned financial services professional with over 30 years of experience in consultancy, treasury management, risk management, and international business across Capital Markets, Commodities, and Treasury Operations.',
       fullBio: `With over 30 years of extensive experience in consultancy, treasury management, risk management strategies (including hedging), and international business, Chetan Bharkhada is a seasoned financial services professional with a proven track record across Capital Markets, Commodities, Treasury Operations, and Strategic Financial Management.
@@ -163,7 +163,7 @@ Education & Certifications: B.Tech - Electronics and Communication Engineering. 
     },
     {
       name: 'Nithyasri Balakrishnan',
-      role: 'Accounting, Finance & Compliance',
+      role: 'AVP - Finance',
       image: '/team/nithyasri.jpeg',
       shortBio: 'An energetic and enthusiastic professional with strong work ethic and over half a decade of experience in Accounting, Finance, and Compliance across various industries.',
       fullBio: `Ms. Nithya is an exceptionally energetic and enthusiastic professional known for her strong work ethic and unwavering commitment to her responsibilities. She is inherently self-motivated and possesses a remarkable ability to evaluate situations from multiple perspectives, enabling her to approach challenges with clarity and practical insight.
@@ -178,7 +178,7 @@ Her professional approach is characterized by a positive attitude, strong organi
     },
     {
       name: 'Dhamodharan Gopalakrishnan',
-      role: 'Certified Management Accountant - Finance',
+      role: 'Manager - Finance',
       image: '/team/dhamodharan.jpeg',
       shortBio: 'A finance professional and Certified Management Accountant with experience in Finance and Accounts, focusing on accounting operations, reconciliations, and financial reporting.',
       fullBio: `Dhamodharan is a finance professional and Certified Management Accountant with experience in Finance and Accounts. He has gained hands-on exposure to key financial functions, including accounting operations, reconciliations, and financial reporting, building a solid foundation in financial management.
@@ -191,7 +191,7 @@ Committed to continuous professional development, he actively seeks opportunitie
     },
     {
       name: 'Hemalatha Karthikeyan',
-      role: 'Operations & Leadership',
+      role: 'Sec to MD & HR',
       image: '/team/hemalatha.jpeg',
       shortBio: 'An enterprising professional with over four years of experience in followership, leadership, and entrepreneurship, holding a Master\'s degree in Mathematics.',
       fullBio: `Mrs. Hemalatha Karthikeyan brings over four years of professional experience spanning followership, leadership, and entrepreneurship. She possesses a Master's degree in Mathematics, which strengthens her analytical and problem-solving capabilities and supports her structured approach to management and decision-making.
