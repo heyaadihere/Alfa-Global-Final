@@ -207,7 +207,7 @@ Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adapt
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className={`relative py-24 bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
+      <section className={`relative pt-36 pb-16 bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 50%),
@@ -240,7 +240,7 @@ Mrs. Hemalatha Karthikeyan is recognized for her commitment to excellence, adapt
             initial={{ opacity: 0, y: 30 }} 
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-white/70 text-lg max-w-2xl mx-auto text-justify"
+            className="text-white/70 text-lg max-w-2xl mx-auto text-center"
           >
             Our leadership team brings decades of combined experience in wealth management, investment advisory, cybersecurity, maritime operations, and strategic consulting to help you achieve your goals.
           </motion.p>

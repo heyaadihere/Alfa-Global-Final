@@ -21,7 +21,7 @@ const MKDairyFarmsPage = ({ theme = 'teal' }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className={`relative py-32 bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
+      <section className={`relative pt-36 pb-16 bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 50%),

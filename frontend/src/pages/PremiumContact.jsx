@@ -79,7 +79,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
           >
             <span className={`${t.accentText} text-sm tracking-[0.2em] uppercase`}>Get in Touch</span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Contact Us</h1>
-            <p className="text-white/60">Ready to start your wealth journey? Our team of experts is here to help.</p>
+            <p className="text-white/60 text-center">Ready to start your wealth journey? Our team of experts is here to help.</p>
           </motion.div>
         </div>
       </section>
@@ -277,7 +277,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
       </section>
 
       {/* Interactive Map */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50 relative" style={{ zIndex: 1 }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +285,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <span className={`${t.accentText} text-sm tracking-[0.2em] uppercase`}>Global Presence</span>
+            <span className="text-amber-400 text-sm tracking-[0.2em] uppercase">Global Presence</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2">Our Locations</h2>
           </motion.div>
 
@@ -294,17 +294,21 @@ const PremiumContact = ({ theme = 'teal' }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
-            style={{ height: '400px' }}
+            style={{ height: '400px', position: 'relative', zIndex: 1 }}
           >
             <MapContainer
-              center={[20, 78]}
-              zoom={3}
+              center={[12.9817, 80.1869]}
+              zoom={12}
               style={{ height: '100%', width: '100%' }}
               scrollWheelZoom={false}
+              maxBounds={[[-90, -180], [90, 180]]}
+              maxBoundsViscosity={1.0}
+              minZoom={3}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                noWrap={true}
               />
               {offices.map((office, i) => (
                 <Marker key={i} position={[office.lat, office.lng]}>

@@ -20,10 +20,10 @@ const GlobalAccessPage = ({ theme = 'teal' }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className={`relative py-32 bg-gradient-to-br ${t.heroBg}`}>
+      <section className={`relative pt-36 pb-16 bg-gradient-to-br ${t.heroBg}`}>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">Global Access</motion.h1>
-          <p className="text-white/60 text-lg">Our Expertise</p>
+          <p className="text-white/60 text-lg text-center">Our Expertise</p>
         </div>
       </section>
 

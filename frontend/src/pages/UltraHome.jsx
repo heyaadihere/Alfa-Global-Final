@@ -28,13 +28,29 @@ const UltraHome = ({ theme = 'teal' }) => {
     checkColor: 'text-teal-500', glowColor: 'rgba(45, 212, 191, 0.1)'
   };
 
-  // Market indices
-  const marketData = [
-    { name: 'SENSEX', value: '72,568.45', change: '+0.85%', up: true },
-    { name: 'NIFTY 50', value: '22,045.30', change: '+0.72%', up: true },
-    { name: 'GOLD', value: '₹62,450', change: '-0.12%', up: false },
-    { name: 'USD/INR', value: '83.12', change: '+0.05%', up: true }
-  ];
+  // Market indices - simulated live data
+  const [liveMarketData, setLiveMarketData] = useState([
+    { name: 'SENSEX', baseValue: 72568.45, value: '72,568.45', change: '+0.85%', up: true },
+    { name: 'NIFTY 50', baseValue: 22045.30, value: '22,045.30', change: '+0.72%', up: true },
+    { name: 'GOLD', baseValue: 62450, value: '₹62,450', change: '-0.12%', up: false },
+    { name: 'USD/INR', baseValue: 83.12, value: '83.12', change: '+0.05%', up: true }
+  ]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLiveMarketData(prev => prev.map(item => {
+        const fluctuation = (Math.random() - 0.48) * 0.002;
+        const newValue = item.baseValue * (1 + fluctuation);
+        const changePercent = ((newValue - item.baseValue) / item.baseValue * 100);
+        const isUp = changePercent >= 0;
+        const formatted = item.name === 'USD/INR' ? newValue.toFixed(2)
+          : item.name === 'GOLD' ? `₹${Math.round(newValue).toLocaleString('en-IN')}`
+          : newValue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        return { ...item, value: formatted, change: `${isUp ? '+' : ''}${changePercent.toFixed(2)}%`, up: isUp };
+      }));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Client logos removed as per request
 
@@ -171,8 +187,11 @@ const UltraHome = ({ theme = 'teal' }) => {
       <div className="bg-slate-900 border-y border-white/5 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-3">
           <div className="flex items-center gap-8 overflow-x-auto scrollbar-hide">
-            <span className="text-white/40 text-xs uppercase tracking-wider shrink-0">Live Markets</span>
-            {marketData.map((item, i) => (
+            <span className="text-white/40 text-xs uppercase tracking-wider shrink-0 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              Live Markets
+            </span>
+            {liveMarketData.map((item, i) => (
               <div key={i} className="flex items-center gap-3 shrink-0">
                 <span className="text-white/70 text-sm font-medium">{item.name}</span>
                 <span className="text-white text-sm">{item.value}</span>
@@ -322,16 +341,18 @@ const UltraHome = ({ theme = 'teal' }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {insights.map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${t.accentBorder} group hover:shadow-lg transition-all`}>
-                <div className="aspect-video overflow-hidden"><img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className={`text-xs ${t.accentText} uppercase font-semibold`}>{item.category}</span>
-                    <span className="text-gray-400 text-xs">• {item.read}</span>
+              <Link to="/insights" key={i}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${t.accentBorder} group hover:shadow-lg transition-all cursor-pointer`}>
+                  <div className="aspect-video overflow-hidden"><img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className={`text-xs ${t.accentText} uppercase font-semibold`}>{item.category}</span>
+                      <span className="text-gray-400 text-xs">• {item.read}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
