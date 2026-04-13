@@ -74,7 +74,15 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] Privacy Policy and Terms pages
 - [x] Dhanveir Groups Shipping page with transparent logo
 - [x] FAQs page and links completely removed
-- [x] "Financial Markets & Wealth Access" (removed "Advisory") on Global Access page
+- [x] Live market ticker with simulated real-time data (SENSEX, NIFTY 50, GOLD, USD/INR)
+- [x] Insights/Research page with 6 articles, clickable from homepage
+- [x] Social media links in footer (LinkedIn, X, Facebook)
+- [x] Map z-index fix - no longer overlaps navbar
+- [x] Map single instance - no world tile looping (noWrap + maxBounds)
+- [x] Page subtitle text centered on all hero sections
+- [x] All page hero sections with consistent pt-36 pb-16 padding
+- [x] ScrollToTop on route navigation
+- [x] Docker deployment files (Dockerfile.backend, Dockerfile.frontend, docker-compose.yml, nginx.conf)
 - [x] Investment calculator moved to Alfa Global Wealth Advisors page
 - [x] Homepage sections cleaned up (testimonials, stats counters, badges removed)
 - [x] "THE ALFA ADVANTAGE" section on homepage
@@ -132,8 +140,8 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 
 ## Pending/Future Tasks
 - Contact form email notifications (optional - currently saves to DB only)
+- SEO optimization and meta tags
 - Additional UI refinements based on user feedback
-- SEO optimization
 
 ## Known Issues
-- Contact form stores data but doesn't send email notifications
+- None - all reported bugs fixed (Feb 2026)
