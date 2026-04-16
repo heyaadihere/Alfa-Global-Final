@@ -77,6 +77,9 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] Live market ticker with real-time data from NSE API (NIFTY), Google Finance (SENSEX), open.er-api.com (USD/INR), goodreturns.in fallback (Gold, Silver)
 - [x] Backend API endpoint `/api/market-data` with 5-min cache
 - [x] Insights/Research page with 6 articles, clickable from homepage
+- [x] Individual blog article pages (/insights/:slug) with full long-form content, featured images, author attribution, related articles
+  - Market Outlook 2025, Alternative Investments, Global Economic Trends, Wealth Preservation, Fintech & Digital Finance, Maritime Industry Report
+  - Content mixes neutral industry research with Alfa Global Group expertise references
 - [x] Social media links in footer (LinkedIn, X, Facebook)
 - [x] Map z-index fix - no longer overlaps navbar
 - [x] Map single instance - no world tile looping (noWrap + maxBounds)

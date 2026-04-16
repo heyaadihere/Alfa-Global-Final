@@ -185,7 +185,7 @@ export const insightsData = [
     category: 'Sector',
     date: 'July 2024',
     read: '9 min',
-    image: 'https://images.unsplash.com/photo-1559136560-16e285589b58?w=800',
+    image: 'https://images.unsplash.com/photo-1760165385839-a87ebb370ab5?w=800',
     summary: 'A comprehensive overview of the global shipping and maritime sector, covering fleet dynamics, trade routes, and investment opportunities.',
     author: 'Dhanveir Groups Shipping Research',
     sections: [
