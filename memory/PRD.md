@@ -74,7 +74,8 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
 - [x] Privacy Policy and Terms pages
 - [x] Dhanveir Groups Shipping page with transparent logo
 - [x] FAQs page and links completely removed
-- [x] Live market ticker with simulated real-time data (SENSEX, NIFTY 50, GOLD, USD/INR)
+- [x] Live market ticker with real-time data from NSE API (NIFTY), Google Finance (SENSEX), open.er-api.com (USD/INR), goodreturns.in fallback (Gold, Silver)
+- [x] Backend API endpoint `/api/market-data` with 5-min cache
 - [x] Insights/Research page with 6 articles, clickable from homepage
 - [x] Social media links in footer (LinkedIn, X, Facebook)
 - [x] Map z-index fix - no longer overlaps navbar

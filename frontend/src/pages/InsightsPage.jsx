@@ -11,7 +11,7 @@ const InsightsPage = ({ theme = 'teal' }) => {
     { title: 'Global Economic Trends', category: 'Analysis', date: 'Oct 2024', image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600', read: '6 min', summary: 'Key macroeconomic indicators and geopolitical developments influencing capital flows and investment strategies across global markets.' },
     { title: 'Wealth Preservation Strategies', category: 'Advisory', date: 'Sep 2024', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600', read: '7 min', summary: 'Proven strategies for high-net-worth individuals to preserve and grow wealth across generations through structured planning and asset allocation.' },
     { title: 'Fintech & Digital Finance', category: 'Technology', date: 'Aug 2024', image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600', read: '5 min', summary: 'How financial technology is transforming trading, payments, and wealth management with AI-driven platforms and blockchain innovation.' },
-    { title: 'Maritime Industry Report', category: 'Sector', date: 'Jul 2024', image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=600', read: '9 min', summary: 'A comprehensive overview of the global shipping and maritime sector, covering fleet dynamics, trade routes, and investment opportunities.' }
+    { title: 'Maritime Industry Report', category: 'Sector', date: 'Jul 2024', image: 'https://images.unsplash.com/photo-1559136560-16e285589b58?w=600', read: '9 min', summary: 'A comprehensive overview of the global shipping and maritime sector, covering fleet dynamics, trade routes, and investment opportunities.' }
   ];
 
   return (
