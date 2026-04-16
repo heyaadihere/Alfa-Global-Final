@@ -28,27 +28,37 @@ const UltraHome = ({ theme = 'teal' }) => {
     checkColor: 'text-teal-500', glowColor: 'rgba(45, 212, 191, 0.1)'
   };
 
-  // Market indices - simulated live data
+  // Market indices - fetched from real-time API
   const [liveMarketData, setLiveMarketData] = useState([
-    { name: 'SENSEX', baseValue: 72568.45, value: '72,568.45', change: '+0.85%', up: true },
-    { name: 'NIFTY 50', baseValue: 22045.30, value: '22,045.30', change: '+0.72%', up: true },
-    { name: 'GOLD', baseValue: 62450, value: '₹62,450', change: '-0.12%', up: false },
-    { name: 'USD/INR', baseValue: 83.12, value: '83.12', change: '+0.05%', up: true }
+    { name: 'SENSEX', value: '...', change: '', up: true },
+    { name: 'NIFTY 50', value: '...', change: '', up: true },
+    { name: 'GOLD (22K)', value: '...', change: '', up: true },
+    { name: 'USD/INR', value: '...', change: '', up: true },
+    { name: 'SILVER', value: '...', change: '', up: true }
   ]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setLiveMarketData(prev => prev.map(item => {
-        const fluctuation = (Math.random() - 0.48) * 0.002;
-        const newValue = item.baseValue * (1 + fluctuation);
-        const changePercent = ((newValue - item.baseValue) / item.baseValue * 100);
-        const isUp = changePercent >= 0;
-        const formatted = item.name === 'USD/INR' ? newValue.toFixed(2)
-          : item.name === 'GOLD' ? `₹${Math.round(newValue).toLocaleString('en-IN')}`
-          : newValue.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        return { ...item, value: formatted, change: `${isUp ? '+' : ''}${changePercent.toFixed(2)}%`, up: isUp };
-      }));
-    }, 3000);
+    const API = process.env.REACT_APP_BACKEND_URL;
+    const fetchMarketData = async () => {
+      try {
+        const res = await fetch(`${API}/api/market-data`);
+        const json = await res.json();
+        if (json.success && json.data) {
+          const d = json.data;
+          setLiveMarketData([
+            { name: 'SENSEX', value: d['SENSEX']?.value || '...', change: d['SENSEX']?.change || '', up: d['SENSEX']?.up ?? true },
+            { name: 'NIFTY 50', value: d['NIFTY 50']?.value || '...', change: d['NIFTY 50']?.change || '', up: d['NIFTY 50']?.up ?? true },
+            { name: 'GOLD (22K)', value: d['GOLD (22K)']?.value || '...', change: d['GOLD (22K)']?.change || '', up: d['GOLD (22K)']?.up ?? true },
+            { name: 'USD/INR', value: d['USD/INR']?.value || '...', change: d['USD/INR']?.change || '', up: d['USD/INR']?.up ?? true },
+            { name: 'SILVER', value: d['SILVER']?.value || '...', change: d['SILVER']?.change || '', up: d['SILVER']?.up ?? true }
+          ]);
+        }
+      } catch (e) {
+        console.error('Market data fetch failed:', e);
+      }
+    };
+    fetchMarketData();
+    const interval = setInterval(fetchMarketData, 300000); // Refresh every 5 min
     return () => clearInterval(interval);
   }, []);
 

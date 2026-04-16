@@ -11,7 +11,7 @@ import uuid
 from datetime import datetime, timezone
 
 # Import route modules
-from routes import contact, newsletter, testimonials, insights
+from routes import contact, newsletter, testimonials, insights, market_data
 
 
 ROOT_DIR = Path(__file__).parent
@@ -83,6 +83,7 @@ api_router.include_router(contact.router)
 api_router.include_router(newsletter.router)
 api_router.include_router(testimonials.router)
 api_router.include_router(insights.router)
+api_router.include_router(market_data.router)
 
 # Include the router in the main app
 app.include_router(api_router)
