@@ -106,9 +106,9 @@ const UltraHome = ({ theme = 'teal' }) => {
   ];
 
   const insights = [
-    { title: 'Market Outlook 2025', category: 'Research', date: 'Dec 2024', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400', read: '5 min' },
-    { title: 'Alternative Investments', category: 'Education', date: 'Nov 2024', image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400', read: '8 min' },
-    { title: 'Global Economic Trends', category: 'Analysis', date: 'Oct 2024', image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400', read: '6 min' }
+    { slug: 'market-outlook-2025', title: 'Market Outlook 2025', category: 'Research', date: 'Dec 2024', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400', read: '5 min' },
+    { slug: 'alternative-investments', title: 'Alternative Investments', category: 'Education', date: 'Nov 2024', image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400', read: '8 min' },
+    { slug: 'global-economic-trends', title: 'Global Economic Trends', category: 'Analysis', date: 'Oct 2024', image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400', read: '6 min' }
   ];
 
   return (
@@ -351,13 +351,13 @@ const UltraHome = ({ theme = 'teal' }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {insights.map((item, i) => (
-              <Link to="/insights" key={i}>
+              <Link to={`/insights/${item.slug}`} key={i}>
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${t.accentBorder} group hover:shadow-lg transition-all cursor-pointer`}>
                   <div className="aspect-video overflow-hidden"><img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <span className={`text-xs ${t.accentText} uppercase font-semibold`}>{item.category}</span>
-                      <span className="text-gray-400 text-xs">• {item.read}</span>
+                      <span className="text-gray-400 text-xs">- {item.read}</span>
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                   </div>

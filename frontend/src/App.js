@@ -22,6 +22,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import TeamPage from './pages/TeamPage';
 import InsightsPage from './pages/InsightsPage';
+import InsightArticlePage from './pages/InsightArticlePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -67,6 +68,7 @@ function App() {
             <Route path="/terms" element={<TermsPage theme={theme} />} />
             <Route path="/team" element={<TeamPage theme={theme} />} />
             <Route path="/insights" element={<InsightsPage theme={theme} />} />
+            <Route path="/insights/:slug" element={<InsightArticlePage theme={theme} />} />
           </Routes>
         </main>
         <UltraFooter theme={theme} />
