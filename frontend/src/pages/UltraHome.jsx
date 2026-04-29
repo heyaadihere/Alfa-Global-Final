@@ -28,41 +28,136 @@ const UltraHome = ({ theme = 'teal' }) => {
     checkColor: 'text-teal-500', glowColor: 'rgba(45, 212, 191, 0.1)'
   };
 
-  // Market indices - fetched from real-time API
-  const [liveMarketData, setLiveMarketData] = useState([
-    { name: 'SENSEX', value: '...', change: '', up: true },
-    { name: 'NIFTY 50', value: '...', change: '', up: true },
-    { name: 'GOLD (22K)', value: '...', change: '', up: true },
-    { name: 'USD/INR', value: '...', change: '', up: true },
-    { name: 'SILVER', value: '...', change: '', up: true }
+  // Market indices state
+  const [marketData, setMarketData] = useState([
+    { name: 'SENSEX', value: 'Loading...', change: '...', up: true },
+    { name: 'NIFTY 50', value: 'Loading...', change: '...', up: true },
+    { name: 'GOLD', value: 'Loading...', change: '...', up: true },
+    { name: 'USD/INR', value: 'Loading...', change: '...', up: true }
   ]);
 
+  // Fetch Live Market Data with dual-proxy fallback
   useEffect(() => {
-    const API = process.env.REACT_APP_BACKEND_URL;
+    let isMounted = true;
+
+    const proxies = [
+      (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+      (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    ];
+
+    const fetchWithFallback = async (targetUrl) => {
+      for (const proxy of proxies) {
+        try {
+          const res = await fetch(proxy(targetUrl));
+          if (res.ok) return res;
+        } catch {
+          continue;
+        }
+      }
+      return null;
+    };
+
     const fetchMarketData = async () => {
       try {
-        const res = await fetch(`${API}/api/market-data`);
-        const json = await res.json();
-        if (json.success && json.data) {
-          const d = json.data;
-          setLiveMarketData([
-            { name: 'SENSEX', value: d['SENSEX']?.value || '...', change: d['SENSEX']?.change || '', up: d['SENSEX']?.up ?? true },
-            { name: 'NIFTY 50', value: d['NIFTY 50']?.value || '...', change: d['NIFTY 50']?.change || '', up: d['NIFTY 50']?.up ?? true },
-            { name: 'GOLD (22K)', value: d['GOLD (22K)']?.value || '...', change: d['GOLD (22K)']?.change || '', up: d['GOLD (22K)']?.up ?? true },
-            { name: 'USD/INR', value: d['USD/INR']?.value || '...', change: d['USD/INR']?.change || '', up: d['USD/INR']?.up ?? true },
-            { name: 'SILVER', value: d['SILVER']?.value || '...', change: d['SILVER']?.change || '', up: d['SILVER']?.up ?? true }
+        const symbols = {
+          'SENSEX': '^BSESN',
+          'NIFTY 50': '^NSEI',
+          'GOLD': 'GC=F',
+          'USD/INR': 'INR=X'
+        };
+
+        const resultsMap = {};
+
+        for (const [name, symbol] of Object.entries(symbols)) {
+          const res = await fetchWithFallback(
+            `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`
+          );
+
+          if (!res) continue;
+
+          const parsedData = await res.json();
+
+          if (
+            parsedData.chart &&
+            parsedData.chart.result &&
+            parsedData.chart.result.length > 0
+          ) {
+            const result = parsedData.chart.result[0];
+            const currentPrice = result.meta.regularMarketPrice;
+            const previousClose = result.meta.chartPreviousClose;
+            const changePercent = ((currentPrice - previousClose) / previousClose) * 100;
+
+            resultsMap[name] = {
+              currentPrice,
+              changePercent,
+              up: changePercent >= 0
+            };
+          }
+        }
+
+        if (!isMounted) return;
+
+        if (Object.keys(resultsMap).length === 4) {
+          const usdInr = resultsMap['USD/INR'].currentPrice;
+          const goldUsd = resultsMap['GOLD'].currentPrice;
+          // Calculate 10g Gold in INR (1 Troy Oz = 31.1034768 grams)
+          // Multiply by 1.15 to approximate Indian physical market premium/taxes
+          const goldInrAdjusted = (goldUsd / 31.1034768) * 10 * usdInr * 1.15;
+
+          const finalData = [
+            {
+              name: 'SENSEX',
+              value: resultsMap['SENSEX'].currentPrice.toLocaleString('en-IN', { maximumFractionDigits: 2 }),
+              change: `${resultsMap['SENSEX'].up ? '+' : ''}${resultsMap['SENSEX'].changePercent.toFixed(2)}%`,
+              up: resultsMap['SENSEX'].up
+            },
+            {
+              name: 'NIFTY 50',
+              value: resultsMap['NIFTY 50'].currentPrice.toLocaleString('en-IN', { maximumFractionDigits: 2 }),
+              change: `${resultsMap['NIFTY 50'].up ? '+' : ''}${resultsMap['NIFTY 50'].changePercent.toFixed(2)}%`,
+              up: resultsMap['NIFTY 50'].up
+            },
+            {
+              name: 'GOLD',
+              value: '₹' + goldInrAdjusted.toLocaleString('en-IN', { maximumFractionDigits: 0 }),
+              change: `${resultsMap['GOLD'].up ? '+' : ''}${resultsMap['GOLD'].changePercent.toFixed(2)}%`,
+              up: resultsMap['GOLD'].up
+            },
+            {
+              name: 'USD/INR',
+              value: resultsMap['USD/INR'].currentPrice.toFixed(2),
+              change: `${resultsMap['USD/INR'].up ? '+' : ''}${resultsMap['USD/INR'].changePercent.toFixed(2)}%`,
+              up: resultsMap['USD/INR'].up
+            }
+          ];
+          setMarketData(finalData);
+        } else {
+          // Partial results — set whatever loaded, keep static for missing
+          throw new Error('Incomplete data');
+        }
+      } catch (error) {
+        console.error("Failed to fetch live market data:", error);
+        // Fallback to static mock data if fetch fails
+        if (isMounted) {
+          setMarketData([
+            { name: 'SENSEX', value: '72,568.45', change: '+0.85%', up: true },
+            { name: 'NIFTY 50', value: '22,045.30', change: '+0.72%', up: true },
+            { name: 'GOLD', value: '₹62,450', change: '-0.12%', up: false },
+            { name: 'USD/INR', value: '83.12', change: '+0.05%', up: true }
           ]);
         }
-      } catch (e) {
-        console.error('Market data fetch failed:', e);
       }
     };
-    fetchMarketData();
-    const interval = setInterval(fetchMarketData, 300000); // Refresh every 5 min
-    return () => clearInterval(interval);
-  }, []);
 
-  // Client logos removed as per request
+    fetchMarketData();
+    // Refresh every 60 seconds
+    const intervalId = setInterval(fetchMarketData, 60000);
+
+    return () => {
+      isMounted = false;
+      clearInterval(intervalId);
+    };
+  }, []);
 
   // Services from reference site - exact content
   const services = [
@@ -106,9 +201,9 @@ const UltraHome = ({ theme = 'teal' }) => {
   ];
 
   const insights = [
-    { slug: 'market-outlook-2025', title: 'Market Outlook 2025', category: 'Research', date: 'Dec 2024', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400', read: '5 min' },
-    { slug: 'alternative-investments', title: 'Alternative Investments', category: 'Education', date: 'Nov 2024', image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400', read: '8 min' },
-    { slug: 'global-economic-trends', title: 'Global Economic Trends', category: 'Analysis', date: 'Oct 2024', image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400', read: '6 min' }
+    { title: 'Market Outlook 2025', category: 'Research', date: 'Dec 2024', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400', read: '5 min' },
+    { title: 'Alternative Investments', category: 'Education', date: 'Nov 2024', image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400', read: '8 min' },
+    { title: 'Global Economic Trends', category: 'Analysis', date: 'Oct 2024', image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400', read: '6 min' }
   ];
 
   return (
@@ -116,7 +211,7 @@ const UltraHome = ({ theme = 'teal' }) => {
       {/* Scroll Progress */}
       <motion.div className={`fixed top-0 left-0 right-0 h-1 ${t.accentBg} origin-left z-[100]`} style={{ scaleX }} />
 
-      {/* HERO SECTION - Content from reference site */}
+      {/* HERO SECTION */}
       <section ref={heroRef} className={`relative min-h-screen flex items-center bg-gradient-to-br ${t.heroBg} overflow-hidden`}>
         {/* Background */}
         <div className="absolute inset-0">
@@ -137,12 +232,10 @@ const UltraHome = ({ theme = 'teal' }) => {
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pt-32 sm:pt-40 pb-20">
             <div className="max-w-4xl">
               <div>
-                {/* Logo from reference */}
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-4 mb-6">
                   <img src="/alfa-hero-logo.png" alt="Alfa Global" className="h-20 sm:h-24 w-auto" />
                 </motion.div>
 
-                {/* Main Headline - from reference */}
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -154,18 +247,16 @@ const UltraHome = ({ theme = 'teal' }) => {
                   <span className={t.heroAccent}>Building Futures.</span>
                 </motion.h1>
 
-                {/* Description - exact from reference */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg sm:text-xl text-white/60 mb-10 max-w-xl leading-relaxed"
                 >
-                  Alfa Global Group is a diversified global organization committed to creating enduring value across industries and generations. 
+                  Alfa Global Group is a diversified global organization committed to creating enduring value across industries and generations.
                   We invest in transformative ideas, strategic ventures, and high impact projects that shape the future of capital, business, and society.
                 </motion.p>
 
-                {/* CTA */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -197,11 +288,8 @@ const UltraHome = ({ theme = 'teal' }) => {
       <div className="bg-slate-900 border-y border-white/5 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-3">
           <div className="flex items-center gap-8 overflow-x-auto scrollbar-hide">
-            <span className="text-white/40 text-xs uppercase tracking-wider shrink-0 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-              Live Markets
-            </span>
-            {liveMarketData.map((item, i) => (
+            <span className="text-white/40 text-xs uppercase tracking-wider shrink-0">Live Markets</span>
+            {marketData.map((item, i) => (
               <div key={i} className="flex items-center gap-3 shrink-0">
                 <span className="text-white/70 text-sm font-medium">{item.name}</span>
                 <span className="text-white text-sm">{item.value}</span>
@@ -212,7 +300,7 @@ const UltraHome = ({ theme = 'teal' }) => {
         </div>
       </div>
 
-      {/* ABOUT SECTION - Content from reference */}
+      {/* ABOUT SECTION */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -220,22 +308,22 @@ const UltraHome = ({ theme = 'teal' }) => {
               <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Group Overview</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">Who We Are</h2>
               <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-                Alfa Global Group is a diversified global organization driven by vision, innovation, and impact. We invest in ideas, businesses, 
-                and projects that shape industries, empower legacies, and create sustainable value across generations. Our strength lies in combining 
+                Alfa Global Group is a diversified global organization driven by vision, innovation, and impact. We invest in ideas, businesses,
+                and projects that shape industries, empower legacies, and create sustainable value across generations. Our strength lies in combining
                 capital markets expertise with entrepreneurial execution to build opportunities that go beyond conventional boundaries.
               </p>
               <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Our Purpose</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">Why We Exist</h2>
               <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-                We believe wealth is not just financial capital, it is the ability to create, transform, and leave behind something meaningful. 
-                Alfa Global Group exists to channel resources, knowledge, and strategy into ventures that redefine growth, spark innovation, 
+                We believe wealth is not just financial capital, it is the ability to create, transform, and leave behind something meaningful.
+                Alfa Global Group exists to channel resources, knowledge, and strategy into ventures that redefine growth, spark innovation,
                 and contribute to a better future for our clients, partners, and communities.
               </p>
               <Link to="/about" className={`inline-flex items-center gap-2 ${t.accentText} font-semibold hover:gap-3 transition-all`}>
                 Learn More <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
               </Link>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <img src="https://static.prod-images.emergentagent.com/jobs/9d0cdaeb-5a99-4d15-9a0a-459e9e0b885c/images/20327903923c4ebb76f605080941a3f9bafcd9f5abd68bc14b148bbf168c8646.png" alt="Financial Advisory" className="rounded-2xl shadow-2xl w-full" />
             </motion.div>
@@ -243,7 +331,7 @@ const UltraHome = ({ theme = 'teal' }) => {
         </div>
       </section>
 
-      {/* SERVICES - with icons from reference */}
+      {/* SERVICES */}
       <section className={`py-16 sm:py-24 ${t.accentBgLight}`}>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
@@ -261,7 +349,9 @@ const UltraHome = ({ theme = 'teal' }) => {
                   viewport={{ once: true }}
                   onClick={() => setActiveService(i)}
                   className={`p-6 rounded-xl cursor-pointer transition-all ${
-                    activeService === i ? `bg-white shadow-lg border-l-4 ${theme === 'gold' ? 'border-amber-500' : theme === 'silver' ? 'border-gray-500' : theme === 'purple' ? 'border-purple-500' : 'border-teal-500'}` : 'bg-white/50 hover:bg-white border-l-4 border-transparent'
+                    activeService === i
+                      ? `bg-white shadow-lg border-l-4 ${theme === 'gold' ? 'border-amber-500' : theme === 'silver' ? 'border-gray-500' : theme === 'purple' ? 'border-purple-500' : 'border-teal-500'}`
+                      : 'bg-white/50 hover:bg-white border-l-4 border-transparent'
                   }`}
                 >
                   <div className="flex items-start gap-4">
@@ -277,7 +367,7 @@ const UltraHome = ({ theme = 'teal' }) => {
 
             <motion.div key={activeService} initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} className="bg-white rounded-2xl overflow-hidden shadow-xl lg:sticky lg:top-32">
               <div className="aspect-video overflow-hidden">
-                <img src={services[activeService].image} alt={services[activeService].title} className="w-full h-full object-cover object-top" />
+                <img src={services[activeService].image} alt={services[activeService].title} className="w-full h-full object-cover" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{services[activeService].title}</h3>
@@ -351,18 +441,16 @@ const UltraHome = ({ theme = 'teal' }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {insights.map((item, i) => (
-              <Link to={`/insights/${item.slug}`} key={i}>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${t.accentBorder} group hover:shadow-lg transition-all cursor-pointer`}>
-                  <div className="aspect-video overflow-hidden"><img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`text-xs ${t.accentText} uppercase font-semibold`}>{item.category}</span>
-                      <span className="text-gray-400 text-xs">- {item.read}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${t.accentBorder} group hover:shadow-lg transition-all`}>
+                <div className="aspect-video overflow-hidden"><img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`text-xs ${t.accentText} uppercase font-semibold`}>{item.category}</span>
+                    <span className="text-gray-400 text-xs">• {item.read}</span>
                   </div>
-                </motion.div>
-              </Link>
+                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>

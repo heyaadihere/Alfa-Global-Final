@@ -2,17 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global justified text for paragraphs - except those explicitly centered */
-p:not(.text-center) {
+/* Global justified text for all paragraphs */
+p {
   text-align: justify;
-}
-/* Leaflet map z-index fix - keep below header */
-.leaflet-container {
-  z-index: 1 !important;
-}
-.leaflet-pane,
-.leaflet-control {
-  z-index: 1 !important;
 }
 
 

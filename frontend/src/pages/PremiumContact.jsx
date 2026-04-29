@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const PremiumContact = ({ theme = 'teal' }) => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', companyType: '', areaOfInterest: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -56,7 +56,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', companyType: '', areaOfInterest: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -79,7 +79,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
           >
             <span className={`${t.accentText} text-sm tracking-[0.2em] uppercase`}>Get in Touch</span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Contact Us</h1>
-            <p className="text-white/60 text-center">Ready to start your wealth journey? Our team of experts is here to help.</p>
+            <p className="text-white/60">Ready to start your wealth journey? Our team of experts is here to help.</p>
           </motion.div>
         </div>
       </section>
@@ -135,20 +135,34 @@ const PremiumContact = ({ theme = 'teal' }) => {
                     />
                   </div>
                   <div>
-                    <label className="text-white/70 text-sm mb-2 block">Service Interest</label>
+                    <label className="text-white/70 text-sm mb-2 block">Company Type *</label>
                     <select
-                      value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      required
+                      value={formData.companyType}
+                      onChange={(e) => setFormData({ ...formData, companyType: e.target.value })}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
                     >
-                      <option value="" className="bg-gray-900">Select a service</option>
-                      <option value="wealth" className="bg-gray-900">Wealth Management</option>
-                      <option value="advisory" className="bg-gray-900">Investment Advisory</option>
-                      <option value="family" className="bg-gray-900">Family Office</option>
-                      <option value="portfolio" className="bg-gray-900">Portfolio Management</option>
-                      <option value="other" className="bg-gray-900">Other</option>
+                      <option value="" className="bg-gray-900">Select type</option>
+                      {companyTypes.map((t) => (
+                        <option key={t} value={t} className="bg-gray-900">{t}</option>
+                      ))}
                     </select>
                   </div>
+                </div>
+
+                <div>
+                  <label className="text-white/70 text-sm mb-2 block">Area of Interest *</label>
+                  <select
+                    required
+                    value={formData.areaOfInterest}
+                    onChange={(e) => setFormData({ ...formData, areaOfInterest: e.target.value })}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
+                  >
+                    <option value="" className="bg-gray-900">Select area of interest</option>
+                    {areasOfInterest.map((area) => (
+                      <option key={area} value={area} className="bg-gray-900">{area}</option>
+                    ))}
+                  </select>
                 </div>
 
                 <div>
@@ -277,7 +291,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
       </section>
 
       {/* Interactive Map */}
-      <section className="py-12 bg-gray-50 relative" style={{ zIndex: 1 }}>
+      <section className="py-12 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +299,7 @@ const PremiumContact = ({ theme = 'teal' }) => {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <span className="text-amber-400 text-sm tracking-[0.2em] uppercase">Global Presence</span>
+            <span className={`${t.accentText} text-sm tracking-[0.2em] uppercase`}>Global Presence</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2">Our Locations</h2>
           </motion.div>
 
@@ -294,21 +308,17 @@ const PremiumContact = ({ theme = 'teal' }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm"
-            style={{ height: '400px', position: 'relative', zIndex: 1 }}
+            style={{ height: '400px' }}
           >
             <MapContainer
-              center={[12.9817, 80.1869]}
-              zoom={12}
+              center={[20, 78]}
+              zoom={3}
               style={{ height: '100%', width: '100%' }}
               scrollWheelZoom={false}
-              maxBounds={[[-90, -180], [90, 180]]}
-              maxBoundsViscosity={1.0}
-              minZoom={3}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-                noWrap={true}
               />
               {offices.map((office, i) => (
                 <Marker key={i} position={[office.lat, office.lng]}>
