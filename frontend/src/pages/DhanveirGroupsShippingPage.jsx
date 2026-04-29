@@ -58,7 +58,7 @@ const DhanveirGroupsShippingPage = ({ theme = 'teal' }) => {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Maritime Shipping" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
+              <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Maritime Shipping" className="rounded-2xl shadow-xl w-full max-h-[450px] w-full object-contain" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <span className={`${t.accentText} text-sm font-semibold tracking-widest uppercase`}>Strategic Maritime Platform</span>
@@ -85,7 +85,7 @@ const DhanveirGroupsShippingPage = ({ theme = 'teal' }) => {
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="https://images.pexels.com/photos/29805443/pexels-photo-29805443.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ship Bridge Control Room" className="rounded-2xl shadow-xl w-full h-[350px] object-cover" />
+              <img src="https://images.pexels.com/photos/29805443/pexels-photo-29805443.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ship Bridge Control Room" className="rounded-2xl shadow-xl w-full max-h-[450px] w-full object-contain" />
             </motion.div>
           </div>
         </div>
