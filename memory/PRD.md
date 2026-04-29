@@ -81,7 +81,9 @@ Build a premium, professional website for "Alfa Global Group" - a diversified gl
   - Market Outlook 2025, Alternative Investments, Global Economic Trends, Wealth Preservation, Fintech & Digital Finance, Maritime Industry Report
   - Content mixes neutral industry research with Alfa Global Group expertise references
 - [x] Social media links in footer (LinkedIn, X, Facebook)
-- [x] Map z-index fix - no longer overlaps navbar
+- [x] Removed top bar with phone/email from header
+- [x] Fixed floating WhatsApp and scroll buttons z-index (z-[70]) to prevent clipping on mobile
+- [x] Fixed image alignment on all company sub-pages with object-top to prevent head/face cropping
 - [x] Map single instance - no world tile looping (noWrap + maxBounds)
 - [x] Page subtitle text centered on all hero sections
 - [x] All page hero sections with consistent pt-36 pb-16 padding

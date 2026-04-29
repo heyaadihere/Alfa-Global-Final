@@ -277,7 +277,7 @@ const UltraHome = ({ theme = 'teal' }) => {
 
             <motion.div key={activeService} initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} className="bg-white rounded-2xl overflow-hidden shadow-xl lg:sticky lg:top-32">
               <div className="aspect-video overflow-hidden">
-                <img src={services[activeService].image} alt={services[activeService].title} className="w-full h-full object-cover" />
+                <img src={services[activeService].image} alt={services[activeService].title} className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{services[activeService].title}</h3>

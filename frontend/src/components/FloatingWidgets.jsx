@@ -55,7 +55,7 @@ const FloatingWidgets = ({ theme = 'teal' }) => {
         href="https://wa.me/914422242929?text=Hi%20Alfa%20Global%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-24 right-6 z-50 p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110"
+        className="fixed bottom-24 right-6 z-[70] p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1 }}
@@ -72,7 +72,7 @@ const FloatingWidgets = ({ theme = 'teal' }) => {
         {showBackToTop && (
           <motion.button
             onClick={scrollToTop}
-            className={`fixed bottom-6 right-6 z-50 p-4 ${t.accent} text-white rounded-full shadow-lg ${t.accentHover} transition-colors`}
+            className={`fixed bottom-6 right-6 z-[70] p-4 ${t.accent} text-white rounded-full shadow-lg ${t.accentHover} transition-colors`}
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
